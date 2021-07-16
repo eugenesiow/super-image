@@ -1,0 +1,20 @@
+# Changes here will be overwritten by Copier
+_commit: 0.3.1
+_src_path: https://github.com/pawamoy/copier-poetry.git
+author_email: kyo116@gmail.com
+author_fullname: Eugene Siow
+author_username: eugenesiow
+copyright_date: '2021'
+copyright_holder: Eugene Siow
+copyright_holder_email: kyo116@gmail.com
+copyright_license: Apache License 2.0
+project_description: A library of PyTorch image super resolution algorithms for upscaling
+  single images.
+project_name: super-image
+python_package_command_line_name: super-image
+python_package_distribution_name: super-image
+python_package_import_name: super_image
+repository_name: super-image
+repository_namespace: eugenesiow
+repository_provider: github.com
+use_precommit: true
