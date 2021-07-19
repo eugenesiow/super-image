@@ -1,4 +1,5 @@
-from super_image import Trainer, TrainingArguments, MsrnModel, MsrnConfig
+# from super_image import Trainer, TrainingArguments, MsrnModel, MsrnConfig
+from super_image import Trainer, TrainingArguments, A2nConfig, A2nModel
 from super_image.data import EvalDataset, TrainAugmentDataset
 
 
@@ -11,12 +12,11 @@ def train_model(train_file, eval_file, scale, output_dir):
         num_train_epochs=1000,                  # total number of training epochs
     )
 
-    config = MsrnConfig(
+    config = A2nConfig(
         scale=scale,                                # train a model to upscale 4x
-        supported_scales=[2, 3, 4],
-        bam=False,
+        supported_scales=[2, 3, 4]
     )
-    model = MsrnModel(config)
+    model = A2nModel(config)
 
     trainer = Trainer(
         model=model,                            # the instantiated model to be trained
@@ -28,4 +28,5 @@ def train_model(train_file, eval_file, scale, output_dir):
     trainer.train()
 
 
-train_model('../BAM/DIV2K_train_HR_x4_train.h5', '../BAM/DIV2K_val_HR_x4_val.h5', 4, './results_msrn_4x')
+# train_model('../BAM/DIV2K_train_HR_x4_train.h5', '../BAM/DIV2K_val_HR_x4_val.h5', 4, './results_msrn_4x')
+train_model('../BAM/DIV2K_train_HR_x4_train.h5', '../BAM/DIV2K_val_HR_x4_val.h5', 4, './results_a2n_4x')

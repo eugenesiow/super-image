@@ -13,7 +13,9 @@ from .models import (
     EdsrModel,
     EdsrConfig,
     MsrnModel,
-    MsrnConfig
+    MsrnConfig,
+    A2nModel,
+    A2nConfig
 )
 
 from .data import (
@@ -25,4 +27,5 @@ from typing import List
 __all__: List[str] = ['TrainingArguments', 'Trainer',
                       'EdsrModel', 'EdsrConfig',
                       'MsrnModel', 'MsrnConfig',
+                      'A2nModel', 'A2nConfig',
                       'ImageLoader']  # noqa: WPS410 (the only __variable__ we use)
