@@ -36,6 +36,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eugenesiow.github.io/super-image/reference/configuration/</loc>
+         <lastmod>2021-07-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eugenesiow.github.io/super-image/reference/models/</loc>
+         <lastmod>2021-07-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eugenesiow.github.io/super-image/reference/trainer/</loc>
          <lastmod>2021-07-21</lastmod>
          <changefreq>daily</changefreq>

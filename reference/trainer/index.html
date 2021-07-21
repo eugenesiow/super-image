@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#super_image.trainer.Trainer" class="md-skip">
+        <a href="#trainer" class="md-skip">
           Skip to content
         </a>
       
@@ -382,12 +382,38 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models/" class="md-nav__link">
+        Models
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -403,12 +429,21 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#trainer_1" class="md-nav__link">
+    Trainer
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#super_image.trainer.Trainer" class="md-nav__link">
@@ -441,6 +476,41 @@
         <li class="md-nav__item">
   <a href="#super_image.trainer.Trainer.train" class="md-nav__link">
     train()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trainingarguments" class="md-nav__link">
+    TrainingArguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.training_args.TrainingArguments" class="md-nav__link">
+    super_image.training_args.TrainingArguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.training_args.TrainingArguments.device" class="md-nav__link">
+    device
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.training_args.TrainingArguments.n_gpu" class="md-nav__link">
+    n_gpu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.training_args.TrainingArguments.train_batch_size" class="md-nav__link">
+    train_batch_size
   </a>
   
 </li>
@@ -541,12 +611,21 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#trainer_1" class="md-nav__link">
+    Trainer
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#super_image.trainer.Trainer" class="md-nav__link">
@@ -583,6 +662,41 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#trainingarguments" class="md-nav__link">
+    TrainingArguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.training_args.TrainingArguments" class="md-nav__link">
+    super_image.training_args.TrainingArguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.training_args.TrainingArguments.device" class="md-nav__link">
+    device
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.training_args.TrainingArguments.n_gpu" class="md-nav__link">
+    n_gpu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.training_args.TrainingArguments.train_batch_size" class="md-nav__link">
+    train_batch_size
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -600,9 +714,13 @@
                   </a>
                 
                 
-                  <h1>Trainer</h1>
-                
-                <div class="doc doc-object doc-class">
+                <h1 id="trainer">Trainer<a class="headerlink" href="#trainer" title="Permanent link">#</a></h1>
+<p>The <a href="#trainer_1">Trainer</a> class provides an API for feature-complete training in most standard use cases.</p>
+<p>Before instantiating your <a href="#trainer_1">Trainer</a>, create a <a href="#trainingarguments">TrainingArguments</a> to access all the points of customization during training.</p>
+<h2 id="trainer_1">Trainer<a class="headerlink" href="#trainer_1" title="Permanent link">#</a></h2>
+
+
+  <div class="doc doc-object doc-class">
 
 <a id="super_image.trainer.Trainer"></a>
     <div class="doc doc-contents first">
@@ -679,7 +797,7 @@ The dataset to use for training.</p></td>
 <code class="highlight language-python"><span class="n">get_eval_dataloader</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-<a class="headerlink" href="#super_image.trainer.Trainer.get_eval_dataloader" title="Permanent link">�</a></h2>
+<a class="headerlink" href="#super_image.trainer.Trainer.get_eval_dataloader" title="Permanent link">#</a></h2>
 
     <div class="doc doc-contents ">
 
@@ -716,7 +834,7 @@ The dataset to use for training.</p></td>
 <code class="highlight language-python"><span class="n">get_train_dataloader</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
 
 
-<a class="headerlink" href="#super_image.trainer.Trainer.get_train_dataloader" title="Permanent link">�</a></h2>
+<a class="headerlink" href="#super_image.trainer.Trainer.get_train_dataloader" title="Permanent link">#</a></h2>
 
     <div class="doc doc-contents ">
 
@@ -757,7 +875,7 @@ The dataset to use for training.</p></td>
 <code class="highlight language-python"><span class="n">save_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
 
-<a class="headerlink" href="#super_image.trainer.Trainer.save_model" title="Permanent link">�</a></h2>
+<a class="headerlink" href="#super_image.trainer.Trainer.save_model" title="Permanent link">#</a></h2>
 
     <div class="doc doc-contents ">
 
@@ -803,7 +921,7 @@ Will only save from the main process.</p>
 <code class="highlight language-python"><span class="n">train</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">resume_from_checkpoint</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
-<a class="headerlink" href="#super_image.trainer.Trainer.train" title="Permanent link">�</a></h2>
+<a class="headerlink" href="#super_image.trainer.Trainer.train" title="Permanent link">#</a></h2>
 
     <div class="doc doc-contents ">
 
@@ -938,6 +1056,252 @@ training will resume from the model/optimizer/scheduler states loaded here.</p><
     </div>
 
   </div>
+
+<h2 id="trainingarguments">TrainingArguments<a class="headerlink" href="#trainingarguments" title="Permanent link">#</a></h2>
+
+
+  <div class="doc doc-object doc-class">
+
+<a id="super_image.training_args.TrainingArguments"></a>
+    <div class="doc doc-contents first">
+
+      <p>TrainingArguments is the data class of arguments <strong>which relate to the training loop itself</strong>.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>output_dir</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>str</code>):
+The output directory where the model predictions and checkpoints will be written.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>overwrite_output_dir</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>bool</code>, <code>optional</code>, defaults to :obj:<code>False</code>):
+If :obj:<code>True</code>, overwrite the content of the output directory. Use this to continue training if
+:obj:<code>output_dir</code> points to a checkpoint directory.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>learning_rate</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>float</code>, <code>optional</code>, defaults to 1e-4):
+The initial learning rate for :class:<code>torch.optim.Adam</code> optimizer.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>gamma</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>float</code>, <code>optional</code>, defaults to 0.5):
+The weight decay gamma to apply to the :class:<code>torch.optim.Adam</code> optimizer.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>num_train_epochs(</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>int</code>, <code>optional</code>, defaults to 1000):
+Total number of training epochs to perform.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>save_strategy</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>str</code> or :class:<code>~transformers.trainer_utils.IntervalStrategy</code>, <code>optional</code>, defaults to :obj:<code>"steps"</code>):
+The checkpoint save strategy to adopt during training. Possible values are:
+    * :obj:<code>"no"</code>: No save is done during training.
+    * :obj:<code>"epoch"</code>: Save is done at the end of each epoch.
+    * :obj:<code>"steps"</code>: Save is done every :obj:<code>save_steps</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>save_steps</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>int</code>, <code>optional</code>, defaults to 500):
+Number of updates steps before two checkpoint saves if :obj:<code>save_strategy="steps"</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>save_total_limit</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>int</code>, <code>optional</code>):
+If a value is passed, will limit the total amount of checkpoints. Deletes the older checkpoints in
+:obj:<code>output_dir</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>no_cuda</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>bool</code>, <code>optional</code>, defaults to :obj:<code>False</code>):
+Whether to not use CUDA even when it is available or not.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>seed</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>int</code>, <code>optional</code>, defaults to 42):
+Random seed that will be set at the beginning of training.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>fp16</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>bool</code>, <code>optional</code>, defaults to :obj:<code>False</code>):
+Whether to use 16-bit (mixed) precision training instead of 32-bit training.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>per_device_train_batch_size</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>int</code>, <code>optional</code>, defaults to 16):
+The batch size per GPU/CPU for training.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>local_rank</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>int</code>, <code>optional</code>, defaults to -1):
+Rank of the process during distributed training.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>dataloader_num_workers</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>int</code>, <code>optional</code>, defaults to 0):
+Number of subprocesses to use for data loading. 0 means that the data will be loaded in the
+main process.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>dataloader_pin_memory</code></td>
+        <td><code></code></td>
+        <td><p>obj:<code>bool</code>, <code>optional</code>, defaults to :obj:<code>True</code>):
+Whether you want to pin memory in data loaders or not. Will default to :obj:<code>True</code>.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 class="doc doc-heading" id="super_image.training_args.TrainingArguments.device">
+<code class="highlight language-python"><span class="n">device</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a class="headerlink" href="#super_image.training_args.TrainingArguments.device" title="Permanent link">#</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>The device used by this process.</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 class="doc doc-heading" id="super_image.training_args.TrainingArguments.n_gpu">
+<code class="highlight language-python"><span class="n">n_gpu</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a class="headerlink" href="#super_image.training_args.TrainingArguments.n_gpu" title="Permanent link">#</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>The number of GPUs used by this process.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will only be greater than one when you have multiple GPUs available but are not using distributed
+training. For distributed training, it will always be 1.</p>
+</div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 class="doc doc-heading" id="super_image.training_args.TrainingArguments.train_batch_size">
+<code class="highlight language-python"><span class="n">train_batch_size</span><span class="p">:</span> <span class="nb">int</span></code>
+
+  <span class="doc doc-properties">
+      <small class="doc doc-property doc-property-property"><code>property</code></small>
+      <small class="doc doc-property doc-property-readonly"><code>readonly</code></small>
+  </span>
+
+<a class="headerlink" href="#super_image.training_args.TrainingArguments.train_batch_size" title="Permanent link">#</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>The actual batch size for training (may differ from :obj:<code>per_device_train_batch_size</code> in distributed training).</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
                 
               
               
@@ -956,7 +1320,7 @@ training will resume from the model/optimizer/scheduler states loaded here.</p><
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../cli/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../models/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -965,7 +1329,7 @@ training will resume from the model/optimizer/scheduler states loaded here.</p><
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                CLI
+                Models
               </div>
             </div>
           </a>

@@ -466,6 +466,30 @@
   
   
     <li class="md-nav__item">
+      <a href="reference/configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="reference/models/" class="md-nav__link">
+        Models
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="reference/trainer/" class="md-nav__link">
         Trainer
       </a>
@@ -643,9 +667,9 @@
                 <h1 align="center">super-image</h1>
 
 <p align="center">
-    <!-- <a href="https://eugenesiow.github.io/super-image/">
-        <img alt="documentation" src="https://img.shields.io/badge/docs-mkdocs%20material-blue.svg?style=flat">
-    </a> -->
+    <a href="https://eugenesiow.github.io/super-image/">
+        <img alt="documentation" src="https://img.shields.io/badge/docs-mkdocs-blue.svg?style=flat">
+    </a>
     <a href="https://github.com/eugenesiow/super-image/blob/main/LICENSE">
         <img alt="GitHub" src="https://img.shields.io/github/license/eugenesiow/super-image.svg?color=blue">
     </a>
@@ -658,13 +682,13 @@
     <p>State-of-the-art image super resolution models for PyTorch.</p>
 </h3>
 
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">�</a></h2>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h2>
 <p>super-image requires Python 3.6 or above.</p>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">�</a></h2>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
 <p>With <code>pip</code>:
 <div class="highlight"><pre><span></span><code>pip install super-image
 </code></pre></div></p>
-<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">�</a></h2>
+<h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">#</a></h2>
 <p>Quickly utilise pre-trained models for upscaling your images 2x, 3x and 4x. See the full list of models <a href="#pre-trained-models">below</a>.</p>
 <p><a href="https://colab.research.google.com/github/eugenesiow/super-image/blob/master/notebooks/Upscale_Images_with_Pretrained_super_image_Models.ipynb" title="Open in Colab"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">super_image</span> <span class="kn">import</span> <span class="n">EdsrModel</span><span class="p">,</span> <span class="n">ImageLoader</span>
@@ -681,10 +705,10 @@
 <span class="n">ImageLoader</span><span class="o">.</span><span class="n">save_image</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="s1">&#39;./scaled_2x.png&#39;</span><span class="p">)</span>
 <span class="n">ImageLoader</span><span class="o">.</span><span class="n">save_compare</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">preds</span><span class="p">,</span> <span class="s1">&#39;./scaled_2x_compare.png&#39;</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="pre-trained-models">Pre-trained Models<a class="headerlink" href="#pre-trained-models" title="Permanent link">�</a></h2>
+<h2 id="pre-trained-models">Pre-trained Models<a class="headerlink" href="#pre-trained-models" title="Permanent link">#</a></h2>
 <p>Pre-trained models are available at various scales and hosted at the awesome <a href="https://huggingface.co/models?filter=super-image"><code>huggingface_hub</code></a>. By default the models were pretrained on <a href="https://data.vision.ee.ethz.ch/cvl/DIV2K/">DIV2K</a>, a dataset of 800 high-quality (2K resolution) images for training, augmented to 4000 images and uses a dev set of 100 validation images (images numbered 801 to 900). </p>
 <p>The leaderboard below shows the <a href="https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio#Quality_estimation_with_PSNR">PSNR</a> / <a href="https://en.wikipedia.org/wiki/Structural_similarity#Algorithm">SSIM</a> metrics for each model at various scales on various test sets (<a href="http://people.rennes.inria.fr/Aline.Roumy/results/SR_BMVC12.html">Set5</a>, <a href="https://sites.google.com/site/romanzeyde/research-interests">Set14</a>, <a href="https://www.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/">BSD100</a>, <a href="https://sites.google.com/site/jbhuang0604/publications/struct_sr">Urban100</a>). The higher the better.</p>
-<h3 id="scale-x2">Scale x2<a class="headerlink" href="#scale-x2" title="Permanent link">�</a></h3>
+<h3 id="scale-x2">Scale x2<a class="headerlink" href="#scale-x2" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -718,7 +742,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="scale-x3">Scale x3<a class="headerlink" href="#scale-x3" title="Permanent link">�</a></h3>
+<h3 id="scale-x3">Scale x3<a class="headerlink" href="#scale-x3" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -752,7 +776,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="scale-x4">Scale x4<a class="headerlink" href="#scale-x4" title="Permanent link">�</a></h3>
+<h3 id="scale-x4">Scale x4<a class="headerlink" href="#scale-x4" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
