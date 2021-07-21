@@ -4,7 +4,7 @@ from super_image.data import EvalDataset, TrainAugmentDataset
 
 
 def train_model(train_file, eval_file, scale, output_dir):
-    train_dataset = TrainAugmentDataset(train_file, scale=4)
+    train_dataset = TrainAugmentDataset(train_file, scale=scale)
     val_dataset = EvalDataset(eval_file)
 
     training_args = TrainingArguments(
@@ -14,7 +14,6 @@ def train_model(train_file, eval_file, scale, output_dir):
 
     config = A2nConfig(
         scale=scale,                                # train a model to upscale 4x
-        supported_scales=[2, 3, 4]
     )
     model = A2nModel(config)
 
@@ -29,4 +28,6 @@ def train_model(train_file, eval_file, scale, output_dir):
 
 
 # train_model('../BAM/DIV2K_train_HR_x4_train.h5', '../BAM/DIV2K_val_HR_x4_val.h5', 4, './results_msrn_4x')
-train_model('../BAM/DIV2K_train_HR_x4_train.h5', '../BAM/DIV2K_val_HR_x4_val.h5', 4, './results_a2n_4x')
+# train_model('../BAM/DIV2K_train_HR_x4_train.h5', '../BAM/DIV2K_val_HR_x4_val.h5', 4, './results_a2n_4x')
+train_model('../BAM/DIV2K_train_HR_x2_train.h5', '../BAM/DIV2K_val_HR_x2_val.h5', 2, './results_a2n_2x')
+train_model('../BAM/DIV2K_train_HR_x3_train.h5', '../BAM/DIV2K_val_HR_x3_val.h5', 3, './results_a2n_3x')

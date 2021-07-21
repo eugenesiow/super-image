@@ -2,7 +2,7 @@ import torch
 import cv2
 import numpy as np
 from PIL import Image
-from super_image.models import EdsrModel, EdsrConfig, MsrnModel
+from super_image.models import EdsrModel, EdsrConfig, MsrnModel, A2nConfig, A2nModel
 from torch.utils.data import Dataset
 from torch import nn
 from torch.utils.data.dataloader import DataLoader
@@ -58,14 +58,20 @@ def evaluate_metrics(eval_file,  scale):
     print('scale:{}     eval psnr: {:.6f}   ssim: {:.6f}'.format(str(scale), epoch_psnr.avg, epoch_ssim.avg))
 
 
+def count_parameters(model): return sum(p.numel() for p in model.parameters() if p.requires_grad)
+
+
 def load_pretrained(input_dir, eval_file, scale, model_type='edsr'):
     device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
     eval_dataset = EvalDataset(eval_file)
     eval_dataloader = DataLoader(dataset=eval_dataset, batch_size=1)
     if model_type == 'edsr':
         model = EdsrModel.from_pretrained(input_dir, scale=scale)
+    elif model_type == 'a2n':
+        model = A2nModel.from_pretrained(input_dir, scale=scale)
     else:
         model = MsrnModel.from_pretrained(input_dir, scale=scale)
+    print(f'params: {count_parameters(model)}')
     epoch_psnr = AverageMeter()
     epoch_ssim = AverageMeter()
     for i, data in enumerate(eval_dataloader):
@@ -95,6 +101,8 @@ def output_image(input_dir, eval_file, scale, model_type='edsr'):
     eval_dataloader = DataLoader(dataset=eval_dataset, batch_size=1)
     if model_type == 'edsr':
         model = EdsrModel.from_pretrained(input_dir, scale=scale)
+    elif model_type == 'a2n':
+        model = A2nModel.from_pretrained(input_dir, scale=scale)
     else:
         model = MsrnModel.from_pretrained(input_dir, scale=scale)
     for i, data in enumerate(eval_dataloader):
@@ -166,9 +174,13 @@ def output_image(input_dir, eval_file, scale, model_type='edsr'):
 # load_pretrained('../../../super-image-models/edsr-base', '../../../super-image-models/test/Urban100_x2.h5', 2)
 # output_image('eugenesiow/edsr-base', '../../../super-image-models/test/Set5_x2.h5', 2)
 # output_image('eugenesiow/edsr-base', '../../../super-image-models/test/Set5_x4.h5', 4)
-output_image('../../../super-image-models/msrn-bam', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='msrn')
+output_image('../../../super-image-models/a2n', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='a2n')
+# output_image('../../../super-image-models/msrn-bam', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='msrn')
+# load_pretrained('../../../super-image-models/a2n', '../../../super-image-models/test/Set14_x4.h5', 4, model_type='a2n')
+# load_pretrained('../../../super-image-models/a2n', '../../../super-image-models/test/BSD100_x4.h5', 4, model_type='a2n')
+# load_pretrained('../../../super-image-models/a2n', '../../../super-image-models/test/Urban100_x4.h5', 4, model_type='a2n')
 # load_pretrained('../../../super-image-models/msrn', '../../../super-image-models/test/BSD100_x4.h5', 4, model_type='msrn')
-# load_pretrained('../../../super-image-models/msrn-bam', '../../../super-image-models/test/Urban100_x2.h5', 2, model_type='msrn')
+# load_pretrained('../../../super-image-models/msrn-bam', '../../../super-image-models/test/Set5_x2.h5', 2, model_type='msrn')
 # load_pretrained('../../../super-image-models/msrn-bam', '../../../super-image-models/test/Urban100_x3.h5', 3, model_type='msrn')
 # load_pretrained('../../../super-image-models/edsr', '../../../super-image-models/test/DIV2K_val_HR_x4_val.h5', 4)
 # load_pretrained('../../../super-image-models/msrn', '../../../super-image-models/test/Set5_x4.h5', 4)

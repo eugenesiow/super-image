@@ -57,22 +57,23 @@ The leaderboard below shows the [PSNR](https://en.wikipedia.org/wiki/Peak_signal
 
 ### Scale x2
 
-|Rank   |Model  	                                                |Set5  	            |Set14  	        |BSD100  	        |Urban100  	        |
-|---    |---	                                                    |---                |---	            |---	            |---	            |
-|1      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|38.02/0.9607       |**33.63/0.9177**  	|32.20/0.8998  	    |**32.08/0.9276**   |
-|2      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|38.02/0.9607       |33.57/0.9172       |**32.21/0.8999**   |32.04/0.9276       |
+|Rank   |Model  	                                                |Params         |Set5  	            |Set14  	        |BSD100  	        |Urban100  	        |
+|---    |---	                                                    |---            |---                |---	            |---	            |---	            |
+|1      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|5.9m           |38.02/0.9607       |**33.63/0.9177**  	|32.20/0.8998  	    |**32.08/0.9276**   |
+|2      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|1.5m           |38.02/0.9607       |33.57/0.9172       |**32.21/0.8999**   |32.04/0.9276       |
 
 ### Scale x3
 
-|Rank   |Model  	                                                |Set5  	            |Set14  	        |BSD100  	        |Urban100  	        |
-|---    |---	                                                    |---                |---	            |---	            |---	            |
-|1      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|**35.16/0.9410**   |**30.97/0.8574**  	|**29.67/0.8209**   |**29.31/0.8737**   |
-|2      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|35.04/0.9403       |30.93/0.8567       |29.65/0.8204       |29.23/0.8723       |
+|Rank   |Model  	                                                |Params         |Set5  	            |Set14  	        |BSD100  	        |Urban100  	        |
+|---    |---	                                                    |---            |---                |---	            |---	            |---	            |
+|1      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|5.9m           |**35.16/0.9410**   |**30.97/0.8574**  	|**29.67/0.8209**   |**29.31/0.8737**   |
+|2      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|1.5m           |35.04/0.9403       |30.93/0.8567       |29.65/0.8204       |29.23/0.8723       |
 
 ### Scale x4
 
-|Rank   |Model  	                                                |Set5  	            |Set14  	        |BSD100  	        |Urban100  	        |
-|---    |---	                                                    |---                |---	            |---	            |---	            |
-|1      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|**32.26/0.8955**   |**28.66/0.7829**   |**27.61/0.7369**   |**26.10/0.7857**   |
-|2      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|32.12/0.8947       |28.60/0.7815       |27.61/0.7363       |26.02/0.7832       |
+|Rank   |Model  	                                                |Params         |Set5  	            |Set14  	        |BSD100  	        |Urban100  	        |
+|---    |---	                                                    |---            |---                |---	            |---	            |---	            |
+|1      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|5.9m           |**32.26/0.8955**   |**28.66/0.7829**   |**27.61/0.7369**   |**26.10/0.7857**   |
+|2      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|1.5m           |32.12/0.8947       |28.60/0.7815       |27.61/0.7363       |26.02/0.7832       |
+|3      |[a2n](https://huggingface.co/eugenesiow/a2n)               |1.0m           |32.07/0.8933       |28.56/0.7801       |27.54/0.7342       |25.89/0.7787       |
 

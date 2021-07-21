@@ -104,11 +104,11 @@ class A2nModel(PreTrainedModel):
     def __init__(self, args):
         super(A2nModel, self).__init__(args)
 
-        in_nc = 3
-        out_nc = 3
-        nf = 40
-        unf = 24
-        nb = 16
+        in_nc = args.in_nc
+        out_nc = args.out_nc
+        nf = args.nf
+        unf = args.unf
+        nb = args.nb
         scale = args.scale
 
         # AAB

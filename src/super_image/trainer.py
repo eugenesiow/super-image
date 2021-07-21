@@ -212,18 +212,21 @@ class Trainer:
         Will only save from the main process.
         """
 
-        # Setup scale
-        scale = self.model.config.scale
-        if scale is not None:
-            weights_name = WEIGHTS_NAME_SCALE.format(scale=scale)
-        else:
-            weights_name = WEIGHTS_NAME
-
-        if output_dir is None:
-            output_dir = self.args.output_dir
-        weights = copy.deepcopy(self.model.state_dict())
+        output_dir = output_dir if output_dir is not None else self.args.output_dir
         os.makedirs(output_dir, exist_ok=True)
-        torch.save(weights, os.path.join(output_dir, weights_name))
+
+        if not isinstance(self.model, PreTrainedModel):
+            # Setup scale
+            scale = self.model.config.scale
+            if scale is not None:
+                weights_name = WEIGHTS_NAME_SCALE.format(scale=scale)
+            else:
+                weights_name = WEIGHTS_NAME
+
+            weights = copy.deepcopy(self.model.state_dict())
+            torch.save(weights, os.path.join(output_dir, weights_name))
+        else:
+            self.model.save_pretrained(output_dir)
 
     def get_train_dataloader(self) -> DataLoader:
         """

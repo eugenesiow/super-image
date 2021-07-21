@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "super-image"
-version = "0.1.0"
+version = "0.1.1"
 description = "State-of-the-art image super resolution models for PyTorch."
 authors = ["Eugene Siow <kyo116@gmail.com>"]
 license = "Apache License 2.0"

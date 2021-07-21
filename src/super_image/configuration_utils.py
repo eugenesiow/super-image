@@ -42,6 +42,24 @@ class PretrainedConfig:
 
         return cls.from_dict(config_dict, **kwargs)
 
+    def save_pretrained(self, save_directory: Union[str, os.PathLike]):
+        """
+        Save a configuration object to the directory ``save_directory``, so that it can be re-loaded using the
+        :func:`~super_image.PretrainedConfig.from_pretrained` class method.
+        Args:
+            save_directory (:obj:`str` or :obj:`os.PathLike`):
+                Directory where the configuration JSON file will be saved (will be created if it does not exist).
+        """
+        if os.path.isfile(save_directory):
+            raise AssertionError(f"Provided path ({save_directory}) should be a directory, not a file")
+
+        os.makedirs(save_directory, exist_ok=True)
+        # If we save using the predefined names, we can load using `from_pretrained`
+        output_config_file = os.path.join(save_directory, CONFIG_NAME)
+
+        self.to_json_file(output_config_file)
+        logger.info(f"Configuration saved in {output_config_file}")
+
     @classmethod
     def get_config_dict(
             cls, pretrained_model_name_or_path: Union[str, os.PathLike], **kwargs
@@ -55,7 +73,6 @@ class PretrainedConfig:
         Returns:
             :obj:`Tuple[Dict, Dict]`: The dictionary(ies) that will be used to instantiate the configuration object.
         """
-        supported_scales = kwargs.pop("supported_scales", None)
         scale = kwargs.pop("scale", None)
         cache_dir = kwargs.pop("cache_dir", None)
         revision = kwargs.pop("revision", None)

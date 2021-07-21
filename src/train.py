@@ -30,7 +30,6 @@ training_args = TrainingArguments(
 
 config = EdsrConfig(
     scale=4,                                # train a model to upscale 4x
-    supported_scales=[2, 3, 4],
 )
 model = EdsrModel(config)
 
