@@ -1,9 +1,9 @@
 <h1 align="center">super-image</h1>
 
 <p align="center">
-    <!-- <a href="https://eugenesiow.github.io/super-image/">
-        <img alt="documentation" src="https://img.shields.io/badge/docs-mkdocs%20material-blue.svg?style=flat">
-    </a> -->
+    <a href="https://eugenesiow.github.io/super-image/">
+        <img alt="documentation" src="https://img.shields.io/badge/docs-mkdocs-blue.svg?style=flat">
+    </a>
     <a href="https://github.com/eugenesiow/super-image/blob/main/LICENSE">
 		<img alt="GitHub" src="https://img.shields.io/github/license/eugenesiow/super-image.svg?color=blue">
 	</a>

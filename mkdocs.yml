@@ -1,5 +1,5 @@
 site_name: "super-image"
-site_description: "A library of PyTorch image super resolution algorithms for upscaling single images."
+site_description: "State-of-the-art image super resolution models for PyTorch."
 site_url: "https://eugenesiow.github.io/super-image"
 repo_url: "https://github.com/eugenesiow/super-image"
 repo_name: "eugenesiow/super-image"
@@ -11,8 +11,9 @@ nav:
   - Changelog: changelog.md
   - Credits: credits.md
   - License: license.md
-- Code Reference:
-  - cli.py: reference/cli.md
+- Reference:
+  - CLI: reference/cli.md
+  - Trainer: reference/trainer.md
 - Development:
   - Contributing: contributing.md
   - Code of Conduct: code_of_conduct.md
@@ -40,7 +41,7 @@ markdown_extensions:
 - pymdownx.tabbed
 - pymdownx.tasklist
 - toc:
-    permalink: "¤"
+    permalink: "ï¿½"
 
 plugins:
 - search
@@ -49,5 +50,10 @@ plugins:
 - mkdocstrings:
     watch:
     - src/super_image
+    handlers:
+      python:
+        setup_commands:
+          - import sys
+          - sys.path.append("src")
 - macros:
     module_name: docs/macros

@@ -24,6 +24,13 @@ from .file_utils import (
 logger = logging.getLogger(__name__)
 
 
+def make_layer(block, n_layers):
+    layers = []
+    for _ in range(n_layers):
+        layers.append(block())
+    return nn.Sequential(*layers)
+
+
 def default_conv(in_channels, out_channels, kernel_size, bias=True):
     return nn.Conv2d(
         in_channels, out_channels, kernel_size,
@@ -87,6 +94,20 @@ class Upsampler(nn.Sequential):
             raise NotImplementedError
 
         super(Upsampler, self).__init__(*m)
+
+
+class PixelAttentionBlock(nn.Module):
+    def __init__(self, nf):
+        super(PixelAttentionBlock, self).__init__()
+        self.conv = nn.Conv2d(nf, nf, 1)
+        self.sigmoid = nn.Sigmoid()
+
+    def forward(self, x):
+        y = self.conv(x)
+        y = self.sigmoid(y)
+        out = torch.mul(x, y)
+
+        return out
 
 
 class ChannelAttention(nn.Module):

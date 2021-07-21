@@ -4,3 +4,7 @@ from .msrn.modeling_msrn import MsrnModel
 from .msrn.configuration_msrn import MsrnConfig
 from .a2n.configuration_a2n import A2nConfig
 from .a2n.modeling_a2n import A2nModel
+from .pan.configuration_pan import PanConfig
+from .pan.modeling_pan import PanModel
+from .masa.configuration_masa import MasaConfig
+from .masa.modeling_masa import MasaModel

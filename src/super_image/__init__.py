@@ -15,7 +15,11 @@ from .models import (
     MsrnModel,
     MsrnConfig,
     A2nModel,
-    A2nConfig
+    A2nConfig,
+    PanModel,
+    PanConfig,
+    MasaModel,
+    MasaConfig
 )
 
 from .data import (
@@ -28,4 +32,6 @@ __all__: List[str] = ['TrainingArguments', 'Trainer',
                       'EdsrModel', 'EdsrConfig',
                       'MsrnModel', 'MsrnConfig',
                       'A2nModel', 'A2nConfig',
+                      'PanModel', 'PanConfig',
+                      'MasaModel', 'MasaConfig',
                       'ImageLoader']  # noqa: WPS410 (the only __variable__ we use)
