@@ -1,6 +1,16 @@
 import cv2
 import numpy as np
 
+from torch.utils.data import Dataset
+
+
+def get_scale_from_dataset(dataset: Dataset):
+    lr, hr = dataset[0]
+    dim1 = round(hr.shape[1] / lr.shape[1])
+    dim2 = round(hr.shape[2] / lr.shape[2])
+    scale = max(dim1, dim2)
+    return scale
+
 
 def convert_rgb_to_y(img, dim_order='hwc'):
     if dim_order == 'hwc':
