@@ -706,8 +706,9 @@
 <span class="n">ImageLoader</span><span class="o">.</span><span class="n">save_compare</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">preds</span><span class="p">,</span> <span class="s1">&#39;./scaled_2x_compare.png&#39;</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="pre-trained-models">Pre-trained Models<a class="headerlink" href="#pre-trained-models" title="Permanent link">#</a></h2>
-<p>Pre-trained models are available at various scales and hosted at the awesome <a href="https://huggingface.co/models?filter=super-image"><code>huggingface_hub</code></a>. By default the models were pretrained on <a href="https://data.vision.ee.ethz.ch/cvl/DIV2K/">DIV2K</a>, a dataset of 800 high-quality (2K resolution) images for training, augmented to 4000 images and uses a dev set of 100 validation images (images numbered 801 to 900). </p>
-<p>The leaderboard below shows the <a href="https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio#Quality_estimation_with_PSNR">PSNR</a> / <a href="https://en.wikipedia.org/wiki/Structural_similarity#Algorithm">SSIM</a> metrics for each model at various scales on various test sets (<a href="http://people.rennes.inria.fr/Aline.Roumy/results/SR_BMVC12.html">Set5</a>, <a href="https://sites.google.com/site/romanzeyde/research-interests">Set14</a>, <a href="https://www.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/">BSD100</a>, <a href="https://sites.google.com/site/jbhuang0604/publications/struct_sr">Urban100</a>). The higher the better.</p>
+<p>Pre-trained models are available at various scales and hosted at the awesome <a href="https://huggingface.co/models?filter=super-image"><code>huggingface_hub</code></a>. By default the models were pretrained on <a href="https://huggingface.co/datasets/eugenesiow/Div2k">DIV2K</a>, a dataset of 800 high-quality (2K resolution) images for training, augmented to 4000 images and uses a dev set of 100 validation images (images numbered 801 to 900). </p>
+<p>The leaderboard below shows the <a href="https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio#Quality_estimation_with_PSNR">PSNR</a> / <a href="https://en.wikipedia.org/wiki/Structural_similarity#Algorithm">SSIM</a> metrics for each model at various scales on various test sets (<a href="https://huggingface.co/datasets/eugenesiow/Set5">Set5</a>, <a href="https://sites.google.com/site/romanzeyde/research-interests">Set14</a>, <a href="https://www.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/">BSD100</a>, <a href="https://sites.google.com/site/jbhuang0604/publications/struct_sr">Urban100</a>). The <strong>higher the better</strong>. 
+All training was to 1000 epochs (some publications, like a2n, train to &gt;1000 epochs in their experiments). </p>
 <h3 id="scale-x2">Scale x2<a class="headerlink" href="#scale-x2" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -726,7 +727,7 @@
 <td>1</td>
 <td><a href="https://huggingface.co/eugenesiow/msrn-bam">msrn-bam</a></td>
 <td>5.9m</td>
-<td>38.02/0.9607</td>
+<td><strong>38.02/0.9607</strong></td>
 <td><strong>33.63/0.9177</strong></td>
 <td>32.20/0.8998</td>
 <td><strong>32.08/0.9276</strong></td>
@@ -735,10 +736,19 @@
 <td>2</td>
 <td><a href="https://huggingface.co/eugenesiow/edsr-base">edsr-base</a></td>
 <td>1.5m</td>
-<td>38.02/0.9607</td>
+<td><strong>38.02/0.9607</strong></td>
 <td>33.57/0.9172</td>
 <td><strong>32.21/0.8999</strong></td>
 <td>32.04/0.9276</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://huggingface.co/eugenesiow/a2n">a2n</a></td>
+<td>1.0m</td>
+<td>37.87/0.9602</td>
+<td>33.45/0.9162</td>
+<td>32.11/0.8987</td>
+<td>31.71/0.9240</td>
 </tr>
 </tbody>
 </table>
@@ -795,12 +805,21 @@
 <td><a href="https://huggingface.co/eugenesiow/msrn-bam">msrn-bam</a></td>
 <td>5.9m</td>
 <td><strong>32.26/0.8955</strong></td>
-<td><strong>28.66/0.7829</strong></td>
-<td><strong>27.61/0.7369</strong></td>
-<td><strong>26.10/0.7857</strong></td>
+<td>28.66/0.7829</td>
+<td>27.61/0.7369</td>
+<td>26.10/0.7857</td>
 </tr>
 <tr>
 <td>2</td>
+<td><a href="https://huggingface.co/eugenesiow/msrn">msrn</a></td>
+<td>6.1m</td>
+<td>32.19/0.8951</td>
+<td><strong>28.67/0.7833</strong></td>
+<td><strong>27.63/0.7374</strong></td>
+<td><strong>26.12/0.7866</strong></td>
+</tr>
+<tr>
+<td>3</td>
 <td><a href="https://huggingface.co/eugenesiow/edsr-base">edsr-base</a></td>
 <td>1.5m</td>
 <td>32.12/0.8947</td>
@@ -809,7 +828,7 @@
 <td>26.02/0.7832</td>
 </tr>
 <tr>
-<td>3</td>
+<td>4</td>
 <td><a href="https://huggingface.co/eugenesiow/a2n">a2n</a></td>
 <td>1.0m</td>
 <td>32.07/0.8933</td>
