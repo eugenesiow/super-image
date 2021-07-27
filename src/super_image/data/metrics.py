@@ -37,4 +37,4 @@ class EvalMetrics:
 
             epoch_psnr.update(calc_psnr(preds, labels), len(inputs))
             epoch_ssim.update(calc_ssim(preds, labels), len(inputs))
-        print('scale:{}     eval psnr: {:.6f}   ssim: {:.6f}'.format(str(scale), epoch_psnr.avg, epoch_ssim.avg))
+        print('scale:{}     eval psnr: {:.2f}   ssim: {:.4f}'.format(str(scale), epoch_psnr.avg, epoch_ssim.avg))
