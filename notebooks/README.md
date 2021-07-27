@@ -13,6 +13,8 @@ If you wrote some notebook(s) leveraging 🔎 super-image and would like be list
 | Notebook     |      Description      |   |
 |:----------|:-------------|------:|
 | [Use Pretrained Models](https://github.com/eugenesiow/super-image-notebooks/blob/master/notebooks/Upscale_Images_with_Pretrained_super_image_Models.ipynb)  | Upscale an image with a pretrained super-image model.   |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/super-image-notebooks/blob/master/notebooks/Upscale_Images_with_Pretrained_super_image_Models.ipynb "Open in Colab") |
+| [Evaluate Pretrained Models](https://github.com/eugenesiow/super-image-notebooks/blob/master/notebooks/Evaluate_Pretrained_super_image_Models.ipynb)  | Evaluate a pretrained model on common datasets and metrics.   |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/super-image-notebooks/blob/master/notebooks/Evaluate_Pretrained_super_image_Models.ipynb "Open in Colab") |
+
 
 
 ## Community notebooks:
