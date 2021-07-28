@@ -690,7 +690,7 @@
 </code></pre></div></p>
 <h2 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">#</a></h2>
 <p>Quickly utilise pre-trained models for upscaling your images 2x, 3x and 4x. See the full list of models <a href="#pre-trained-models">below</a>.</p>
-<p><a href="https://colab.research.google.com/github/eugenesiow/super-image/blob/master/notebooks/Upscale_Images_with_Pretrained_super_image_Models.ipynb" title="Open in Colab"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<p><a href="https://colab.research.google.com/github/eugenesiow/super-image-notebooks/blob/master/notebooks/Upscale_Images_with_Pretrained_super_image_Models.ipynb" title="Open in Colab"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">super_image</span> <span class="kn">import</span> <span class="n">EdsrModel</span><span class="p">,</span> <span class="n">ImageLoader</span>
 <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
 <span class="kn">import</span> <span class="nn">requests</span>
@@ -707,7 +707,12 @@
 </code></pre></div>
 <h2 id="pre-trained-models">Pre-trained Models<a class="headerlink" href="#pre-trained-models" title="Permanent link">#</a></h2>
 <p>Pre-trained models are available at various scales and hosted at the awesome <a href="https://huggingface.co/models?filter=super-image"><code>huggingface_hub</code></a>. By default the models were pretrained on <a href="https://huggingface.co/datasets/eugenesiow/Div2k">DIV2K</a>, a dataset of 800 high-quality (2K resolution) images for training, augmented to 4000 images and uses a dev set of 100 validation images (images numbered 801 to 900). </p>
-<p>The leaderboard below shows the <a href="https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio#Quality_estimation_with_PSNR">PSNR</a> / <a href="https://en.wikipedia.org/wiki/Structural_similarity#Algorithm">SSIM</a> metrics for each model at various scales on various test sets (<a href="https://huggingface.co/datasets/eugenesiow/Set5">Set5</a>, <a href="https://sites.google.com/site/romanzeyde/research-interests">Set14</a>, <a href="https://www.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/">BSD100</a>, <a href="https://sites.google.com/site/jbhuang0604/publications/struct_sr">Urban100</a>). The <strong>higher the better</strong>. 
+<p>The leaderboard below shows the 
+<a href="https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio#Quality_estimation_with_PSNR">PSNR</a> / <a href="https://en.wikipedia.org/wiki/Structural_similarity#Algorithm">SSIM</a> 
+metrics for each model at various scales on various test sets (<a href="https://huggingface.co/datasets/eugenesiow/Set5">Set5</a>, 
+<a href="https://huggingface.co/datasets/eugenesiow/Set14">Set14</a>, 
+<a href="https://huggingface.co/datasets/eugenesiow/BSD100">BSD100</a>, 
+<a href="https://huggingface.co/datasets/eugenesiow/Urban100">Urban100</a>). The <strong>higher the better</strong>. 
 All training was to 1000 epochs (some publications, like a2n, train to &gt;1000 epochs in their experiments). </p>
 <h3 id="scale-x2">Scale x2<a class="headerlink" href="#scale-x2" title="Permanent link">#</a></h3>
 <table>
@@ -727,18 +732,18 @@ All training was to 1000 epochs (some publications, like a2n, train to &gt;1000 
 <td>1</td>
 <td><a href="https://huggingface.co/eugenesiow/msrn-bam">msrn-bam</a></td>
 <td>5.9m</td>
-<td><strong>38.02/0.9607</strong></td>
-<td><strong>33.63/0.9177</strong></td>
-<td>32.20/0.8998</td>
+<td><strong>38.02/0.9608</strong></td>
+<td><strong>33.73/0.9186</strong></td>
+<td><strong>33.78/0.9253</strong></td>
 <td><strong>32.08/0.9276</strong></td>
 </tr>
 <tr>
 <td>2</td>
 <td><a href="https://huggingface.co/eugenesiow/edsr-base">edsr-base</a></td>
 <td>1.5m</td>
-<td><strong>38.02/0.9607</strong></td>
-<td>33.57/0.9172</td>
-<td><strong>32.21/0.8999</strong></td>
+<td>38.02/0.9607</td>
+<td>33.66/0.9180</td>
+<td>33.77/0.9254</td>
 <td>32.04/0.9276</td>
 </tr>
 <tr>
@@ -746,8 +751,8 @@ All training was to 1000 epochs (some publications, like a2n, train to &gt;1000 
 <td><a href="https://huggingface.co/eugenesiow/a2n">a2n</a></td>
 <td>1.0m</td>
 <td>37.87/0.9602</td>
-<td>33.45/0.9162</td>
-<td>32.11/0.8987</td>
+<td>33.54/0.9171</td>
+<td>33.67/0.9244</td>
 <td>31.71/0.9240</td>
 </tr>
 </tbody>
@@ -770,19 +775,19 @@ All training was to 1000 epochs (some publications, like a2n, train to &gt;1000 
 <td>1</td>
 <td><a href="https://huggingface.co/eugenesiow/msrn-bam">msrn-bam</a></td>
 <td>5.9m</td>
-<td><strong>35.16/0.9410</strong></td>
-<td><strong>30.97/0.8574</strong></td>
-<td><strong>29.67/0.8209</strong></td>
-<td><strong>29.31/0.8737</strong></td>
+<td><strong>35.13/0.9408</strong></td>
+<td><strong>31.06/0.8588</strong></td>
+<td><strong>29.65/0.8196</strong></td>
+<td><strong>29.26/0.8736</strong></td>
 </tr>
 <tr>
 <td>2</td>
 <td><a href="https://huggingface.co/eugenesiow/edsr-base">edsr-base</a></td>
 <td>1.5m</td>
-<td>35.04/0.9403</td>
-<td>30.93/0.8567</td>
-<td>29.65/0.8204</td>
-<td>29.23/0.8723</td>
+<td>35.01/0.9402</td>
+<td>31.01/0.8583</td>
+<td>29.63/0.8190</td>
+<td>29.19/0.8722</td>
 </tr>
 </tbody>
 </table>
@@ -802,29 +807,29 @@ All training was to 1000 epochs (some publications, like a2n, train to &gt;1000 
 <tbody>
 <tr>
 <td>1</td>
-<td><a href="https://huggingface.co/eugenesiow/msrn-bam">msrn-bam</a></td>
-<td>5.9m</td>
-<td><strong>32.26/0.8955</strong></td>
-<td>28.66/0.7829</td>
-<td>27.61/0.7369</td>
-<td>26.10/0.7857</td>
-</tr>
-<tr>
-<td>2</td>
 <td><a href="https://huggingface.co/eugenesiow/msrn">msrn</a></td>
 <td>6.1m</td>
 <td>32.19/0.8951</td>
-<td><strong>28.67/0.7833</strong></td>
-<td><strong>27.63/0.7374</strong></td>
+<td><strong>28.78/0.7862</strong></td>
+<td><strong>28.53/0.7657</strong></td>
 <td><strong>26.12/0.7866</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://huggingface.co/eugenesiow/msrn-bam">msrn-bam</a></td>
+<td>5.9m</td>
+<td><strong>32.26/0.8955</strong></td>
+<td>28.78/0.7859</td>
+<td>28.51/0.7651</td>
+<td>26.10/0.7857</td>
 </tr>
 <tr>
 <td>3</td>
 <td><a href="https://huggingface.co/eugenesiow/edsr-base">edsr-base</a></td>
 <td>1.5m</td>
 <td>32.12/0.8947</td>
-<td>28.60/0.7815</td>
-<td>27.61/0.7363</td>
+<td>28.72/0.7845</td>
+<td>28.50/0.7644</td>
 <td>26.02/0.7832</td>
 </tr>
 <tr>
@@ -832,8 +837,8 @@ All training was to 1000 epochs (some publications, like a2n, train to &gt;1000 
 <td><a href="https://huggingface.co/eugenesiow/a2n">a2n</a></td>
 <td>1.0m</td>
 <td>32.07/0.8933</td>
-<td>28.56/0.7801</td>
-<td>27.54/0.7342</td>
+<td>28.68/0.7830</td>
+<td>28.44/0.7624</td>
 <td>25.89/0.7787</td>
 </tr>
 </tbody>
