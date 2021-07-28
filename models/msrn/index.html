@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://eugenesiow.github.io/super-image/reference/models/">
+        <link rel="canonical" href="https://eugenesiow.github.io/super-image/models/msrn/">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-6.2.8">
     
     
       
-        <title>Models - super-image</title>
+        <title>MSRN - super-image</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#models" class="md-skip">
+        <a href="#multi-scale-residual-network-for-image-super-resolution-msrn" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              Models
+              MSRN
             
           </span>
         </div>
@@ -184,13 +184,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../models/edsr/" class="md-tabs__link">
+      <a href="../edsr/" class="md-tabs__link md-tabs__link--active">
         Models
       </a>
     </li>
@@ -200,15 +202,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../cli/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../reference/cli/" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -362,12 +362,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
       
       <label class="md-nav__link" for="nav-2">
         Models
@@ -386,77 +388,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../models/edsr/" class="md-nav__link">
+      <a href="../edsr/" class="md-nav__link">
         EDSR
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../models/msrn/" class="md-nav__link">
-        MSRN
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-      
-      <label class="md-nav__link" for="nav-3">
-        Reference
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Reference" data-md-level="1">
-        <label class="md-nav__title" for="nav-3">
-          <span class="md-nav__icon md-icon"></span>
-          Reference
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cli/" class="md-nav__link">
-        CLI
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
-        Configuration
       </a>
     </li>
   
@@ -476,12 +409,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Models
+          MSRN
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Models
+        MSRN
       </a>
       
         
@@ -498,22 +431,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pretrainedmodel" class="md-nav__link">
-    PreTrainedModel
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.modeling_utils.PreTrainedModel" class="md-nav__link">
-    super_image.modeling_utils.PreTrainedModel
+  <a href="#msrnconfig" class="md-nav__link">
+    MsrnConfig
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.modeling_utils.PreTrainedModel.save_pretrained" class="md-nav__link">
-    save_pretrained()
+  <a href="#super_image.models.msrn.configuration_msrn.MsrnConfig" class="md-nav__link">
+    super_image.models.msrn.configuration_msrn.MsrnConfig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msrnmodel" class="md-nav__link">
+    MsrnModel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel" class="md-nav__link">
+    super_image.models.msrn.modeling_msrn.MsrnModel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel.load_state_dict" class="md-nav__link">
+    load_state_dict()
   </a>
   
 </li>
@@ -526,12 +487,79 @@
   
 
           
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        Reference
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Reference" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
             
   
   
   
     <li class="md-nav__item">
-      <a href="../trainer/" class="md-nav__link">
+      <a href="../../reference/cli/" class="md-nav__link">
+        CLI
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/models/" class="md-nav__link">
+        Models
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/trainer/" class="md-nav__link">
         Trainer
       </a>
     </li>
@@ -636,22 +664,50 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pretrainedmodel" class="md-nav__link">
-    PreTrainedModel
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.modeling_utils.PreTrainedModel" class="md-nav__link">
-    super_image.modeling_utils.PreTrainedModel
+  <a href="#msrnconfig" class="md-nav__link">
+    MsrnConfig
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.modeling_utils.PreTrainedModel.save_pretrained" class="md-nav__link">
-    save_pretrained()
+  <a href="#super_image.models.msrn.configuration_msrn.MsrnConfig" class="md-nav__link">
+    super_image.models.msrn.configuration_msrn.MsrnConfig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#msrnmodel" class="md-nav__link">
+    MsrnModel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel" class="md-nav__link">
+    super_image.models.msrn.modeling_msrn.MsrnModel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel.load_state_dict" class="md-nav__link">
+    load_state_dict()
   </a>
   
 </li>
@@ -668,19 +724,54 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/eugenesiow/super-image/edit/master/docs/reference/models.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/eugenesiow/super-image/edit/master/docs/models/msrn.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="models">Models<a class="headerlink" href="#models" title="Permanent link">#</a></h1>
-<p>The base class <a href="#pretrainedmodel">PreTrainedModel</a> implements the common methods for loading/saving a model either from a local file or directory, or from a pretrained model configuration provided by the library (downloaded from <a href="https://huggingface.co/models?filter=super-image">HuggingFace's Hub</a>).</p>
-<h2 id="pretrainedmodel">PreTrainedModel<a class="headerlink" href="#pretrainedmodel" title="Permanent link">#</a></h2>
+                <h1 id="multi-scale-residual-network-for-image-super-resolution-msrn">Multi-scale Residual Network for Image Super-Resolution (MSRN)<a class="headerlink" href="#multi-scale-residual-network-for-image-super-resolution-msrn" title="Permanent link">#</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
+<p>The MSRN model proposes a feature extraction structure called the multi-scale residual block. This module can "adaptively detect image features at different scales" and "exploit the potential features of the image".</p>
+<p>This model also applies the balanced attention (BAM) method invented by <a href="https://arxiv.org/abs/2104.07566">Wang et al. (2021)</a> to further improve the results.</p>
+<p>It was introduced in the paper <a href="https://openaccess.thecvf.com/content_ECCV_2018/html/Juncheng_Li_Multi-scale_Residual_Network_ECCV_2018_paper.html">Multi-scale Residual Network for Image Super-Resolution</a> by Li et al. (2018) and first released in <a href="https://github.com/MIVRC/MSRN-PyTorch">this repository</a>. </p>
+<h2 id="msrnconfig">MsrnConfig<a class="headerlink" href="#msrnconfig" title="Permanent link">#</a></h2>
 
 
   <div class="doc doc-object doc-class">
 
-<a id="super_image.modeling_utils.PreTrainedModel"></a>
+<a id="super_image.models.msrn.configuration_msrn.MsrnConfig"></a>
+    <div class="doc doc-contents first">
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+<h2 id="msrnmodel">MsrnModel<a class="headerlink" href="#msrnmodel" title="Permanent link">#</a></h2>
+
+
+  <div class="doc doc-object doc-class">
+
+<a id="super_image.models.msrn.modeling_msrn.MsrnModel"></a>
     <div class="doc doc-contents first">
 
 
@@ -703,16 +794,63 @@
 
 
 
-<h2 class="doc doc-heading" id="super_image.modeling_utils.PreTrainedModel.save_pretrained">
-<code class="highlight language-python"><span class="n">save_pretrained</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">save_directory</span><span class="p">,</span> <span class="n">save_config</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">state_dict</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">save_function</span><span class="o">=&lt;</span><span class="n">function</span> <span class="n">save</span> <span class="n">at</span> <span class="mh">0x000002866B3333A8</span><span class="o">&gt;</span><span class="p">)</span></code>
+<h2 class="doc doc-heading" id="super_image.models.msrn.modeling_msrn.MsrnModel.forward">
+<code class="highlight language-python"><span class="n">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code>
 
 
-<a class="headerlink" href="#super_image.modeling_utils.PreTrainedModel.save_pretrained" title="Permanent link">#</a></h2>
+<a class="headerlink" href="#super_image.models.msrn.modeling_msrn.MsrnModel.forward" title="Permanent link">#</a></h2>
 
     <div class="doc doc-contents ">
 
-      <p>Save a model and its configuration file to a directory, so that it can be re-loaded using the
-<code>:func:</code>~super_image.PreTrainedModel.from_pretrained`` class method.</p>
+      <p>Defines the computation performed at every call.</p>
+<p>Should be overridden by all subclasses.</p>
+<p>.. note::
+    Although the recipe for forward pass needs to be defined within
+    this function, one should call the :class:<code>Module</code> instance afterwards
+    instead of this since the former takes care of running the
+    registered hooks while the latter silently ignores them.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>super_image\models\msrn\modeling_msrn.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="c1"># x = self.sub_mean(x)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">x</span>
+
+    <span class="n">MSRB_out</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_blocks</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="n">i</span><span class="p">](</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">MSRB_out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">MSRB_out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+
+    <span class="n">res</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span><span class="n">MSRB_out</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+    <span class="c1"># x = self.add_mean(x)</span>
+    <span class="k">return</span> <span class="n">x</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h2 class="doc doc-heading" id="super_image.models.msrn.modeling_msrn.MsrnModel.load_state_dict">
+<code class="highlight language-python"><span class="n">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+
+<a class="headerlink" href="#super_image.models.msrn.modeling_msrn.MsrnModel.load_state_dict" title="Permanent link">#</a></h2>
+
+    <div class="doc doc-contents ">
+
+      <p>Copies parameters and buffers from :attr:<code>state_dict</code> into
+this module and its descendants. If :attr:<code>strict</code> is <code>True</code>, then
+the keys of :attr:<code>state_dict</code> must exactly match the keys returned
+by this module's :meth:<code>~torch.nn.Module.state_dict</code> function.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -726,95 +864,67 @@
   </thead>
   <tbody>
       <tr>
-        <td><code>save_directory</code></td>
-        <td><code>Union[str, os.PathLike]</code></td>
-        <td><p>obj:<code>str</code> or :obj:<code>os.PathLike</code>):
-Directory to which to save. Will be created if it doesn't exist.</p></td>
+        <td><code>state_dict</code></td>
+        <td><code>dict</code></td>
+        <td><p>a dict containing parameters and
+persistent buffers.</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
-        <td><code>save_config</code></td>
+        <td><code>strict</code></td>
         <td><code>bool</code></td>
-        <td><p>obj:<code>bool</code>, <code>optional</code>, defaults to :obj:<code>True</code>):
-Whether or not to save the config of the model. Useful when in distributed training like TPUs and need
-to call this function on all processes. In this case, set :obj:<code>save_config=True</code> only on the main
-process to avoid race conditions.</p></td>
+        <td><p>whether to strictly enforce that the keys
+in :attr:<code>state_dict</code> match the keys returned by this module's
+:meth:<code>~torch.nn.Module.state_dict</code> function. Default: <code>True</code></p></td>
         <td><code>True</code></td>
-      </tr>
-      <tr>
-        <td><code>state_dict</code></td>
-        <td><code>Optional[dict]</code></td>
-        <td><p>obj:<code>torch.Tensor</code>):
-The state dictionary of the model to save. Will default to :obj:<code>self.state_dict()</code>, but can be used to
-only save parts of the model or if special precautions need to be taken when recovering the state
-dictionary of a model (like when using model parallelism).</p></td>
-        <td><code>None</code></td>
-      </tr>
-      <tr>
-        <td><code>save_function</code></td>
-        <td><code>Callable</code></td>
-        <td><p>obj:<code>Callable</code>):
-The function to use to save the state dictionary. When we need to replace :obj:<code>torch.save</code> by another
-method.</p></td>
-        <td><code>&lt;function save at 0x000002866B3333A8&gt;</code></td>
       </tr>
   </tbody>
 </table>
+<p><strong>Returns:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>``NamedTuple`` with ``missing_keys`` and ``unexpected_keys`` fields</code></td>
+      <td><ul>
+<li><strong>missing_keys</strong> is a list of str containing the missing keys<ul>
+<li><strong>unexpected_keys</strong> is a list of str containing the unexpected keys</li>
+</ul>
+</li>
+</ul></td>
+    </tr>
+  </tbody>
+</table>
         <details class="quote">
-          <summary>Source code in <code>super_image\modeling_utils.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">save_pretrained</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span>
-        <span class="n">save_directory</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">PathLike</span><span class="p">],</span>
-        <span class="n">save_config</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-        <span class="n">state_dict</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-        <span class="n">save_function</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">,</span>
-<span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Save a model and its configuration file to a directory, so that it can be re-loaded using the</span>
-<span class="sd">    `:func:`~super_image.PreTrainedModel.from_pretrained`` class method.</span>
-<span class="sd">    Arguments:</span>
-<span class="sd">        save_directory (:obj:`str` or :obj:`os.PathLike`):</span>
-<span class="sd">            Directory to which to save. Will be created if it doesn&#39;t exist.</span>
-<span class="sd">        save_config (:obj:`bool`, `optional`, defaults to :obj:`True`):</span>
-<span class="sd">            Whether or not to save the config of the model. Useful when in distributed training like TPUs and need</span>
-<span class="sd">            to call this function on all processes. In this case, set :obj:`save_config=True` only on the main</span>
-<span class="sd">            process to avoid race conditions.</span>
-<span class="sd">        state_dict (nested dictionary of :obj:`torch.Tensor`):</span>
-<span class="sd">            The state dictionary of the model to save. Will default to :obj:`self.state_dict()`, but can be used to</span>
-<span class="sd">            only save parts of the model or if special precautions need to be taken when recovering the state</span>
-<span class="sd">            dictionary of a model (like when using model parallelism).</span>
-<span class="sd">        save_function (:obj:`Callable`):</span>
-<span class="sd">            The function to use to save the state dictionary. When we need to replace :obj:`torch.save` by another</span>
-<span class="sd">            method.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">save_directory</span><span class="p">):</span>
-        <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Provided path (</span><span class="si">{</span><span class="n">save_directory</span><span class="si">}</span><span class="s2">) should be a directory, not a file&quot;</span><span class="p">)</span>
-        <span class="k">return</span>
+          <summary>Source code in <code>super_image\models\msrn\modeling_msrn.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="n">own_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">state_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">own_state</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">Parameter</span><span class="p">):</span>
+                <span class="n">param</span> <span class="o">=</span> <span class="n">param</span><span class="o">.</span><span class="n">data</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">own_state</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">copy_</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;tail&#39;</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Replace pre-trained upsampler to new one...&#39;</span><span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;While copying the parameter named </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">, &#39;</span>
+                                       <span class="sa">f</span><span class="s1">&#39;whose dimensions in the model are </span><span class="si">{</span><span class="n">own_state</span><span class="p">[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="si">}</span><span class="s1"> and &#39;</span>
+                                       <span class="sa">f</span><span class="s1">&#39;whose dimensions in the checkpoint are </span><span class="si">{</span><span class="n">param</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">strict</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;tail&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;unexpected key &quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">&quot; in state_dict&#39;</span><span class="p">)</span>
 
-    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">save_directory</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-    <span class="n">model_to_save</span> <span class="o">=</span> <span class="bp">self</span>
-
-    <span class="c1"># Setup scale</span>
-    <span class="n">scale</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">scale</span>
-    <span class="k">if</span> <span class="n">scale</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">weights_name</span> <span class="o">=</span> <span class="n">WEIGHTS_NAME_SCALE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">scale</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">weights_name</span> <span class="o">=</span> <span class="n">WEIGHTS_NAME</span>
-
-    <span class="c1"># Save the config</span>
-    <span class="k">if</span> <span class="n">save_config</span><span class="p">:</span>
-        <span class="n">model_to_save</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">save_pretrained</span><span class="p">(</span><span class="n">save_directory</span><span class="p">)</span>
-
-    <span class="c1"># Save the model</span>
-    <span class="k">if</span> <span class="n">state_dict</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">state_dict</span> <span class="o">=</span> <span class="n">model_to_save</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()</span>
-
-    <span class="c1"># If we save using the predefined names, we can load using `from_pretrained`</span>
-    <span class="n">output_model_file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_directory</span><span class="p">,</span> <span class="n">weights_name</span><span class="p">)</span>
-    <span class="n">save_function</span><span class="p">(</span><span class="n">state_dict</span><span class="p">,</span> <span class="n">output_model_file</span><span class="p">)</span>
-
-    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Model weights saved in </span><span class="si">{</span><span class="n">output_model_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">strict</span><span class="p">:</span>
+        <span class="n">missing</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">own_state</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">state_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">missing</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;missing keys in state_dict: &quot;</span><span class="si">{</span><span class="n">missing</span><span class="si">}</span><span class="s1">&quot;&#39;</span><span class="p">)</span>
 </code></pre></div>
         </details>
     </div>
@@ -848,7 +958,7 @@ method.</p></td>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../configuration/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../edsr/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -857,19 +967,19 @@ method.</p></td>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Configuration
+                EDSR
               </div>
             </div>
           </a>
         
         
-          <a href="../trainer/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../reference/cli/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Trainer
+                CLI
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

@@ -31,6 +31,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eugenesiow.github.io/super-image/models/edsr/</loc>
+         <lastmod>2021-07-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eugenesiow.github.io/super-image/models/msrn/</loc>
+         <lastmod>2021-07-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eugenesiow.github.io/super-image/reference/cli/</loc>
          <lastmod>2021-07-28</lastmod>
          <changefreq>daily</changefreq>

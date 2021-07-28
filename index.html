@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#requirements" class="md-skip">
+        <a href="#installation" class="md-skip">
           Skip to content
         </a>
       
@@ -178,6 +178,22 @@
     <li class="md-tabs__item">
       <a href="." class="md-tabs__link md-tabs__link--active">
         Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="models/edsr/" class="md-tabs__link">
+        Models
       </a>
     </li>
   
@@ -320,13 +336,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
@@ -371,6 +380,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#train-models" class="md-nav__link">
+    Train Models
+  </a>
   
 </li>
       
@@ -438,11 +454,66 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
       
       <label class="md-nav__link" for="nav-2">
+        Models
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Models" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Models
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/edsr/" class="md-nav__link">
+        EDSR
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/msrn/" class="md-nav__link">
+        MSRN
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
         Reference
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Reference" data-md-level="1">
-        <label class="md-nav__title" for="nav-2">
+        <label class="md-nav__title" for="nav-3">
           <span class="md-nav__icon md-icon"></span>
           Reference
         </label>
@@ -514,14 +585,14 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
       
-      <label class="md-nav__link" for="nav-3">
+      <label class="md-nav__link" for="nav-4">
         Development
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Development" data-md-level="1">
-        <label class="md-nav__title" for="nav-3">
+        <label class="md-nav__title" for="nav-4">
           <span class="md-nav__icon md-icon"></span>
           Development
         </label>
@@ -593,13 +664,6 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    Requirements
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     Installation
   </a>
@@ -647,6 +711,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#train-models" class="md-nav__link">
+    Train Models
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -682,8 +753,6 @@
     <p>State-of-the-art image super resolution models for PyTorch.</p>
 </h3>
 
-<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h2>
-<p>super-image requires Python 3.6 or above.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
 <p>With <code>pip</code>:
 <div class="highlight"><pre><span></span><code>pip install super-image
@@ -843,6 +912,44 @@ All training was to 1000 epochs (some publications, like a2n, train to &gt;1000 
 </tr>
 </tbody>
 </table>
+<p>You can find a notebook to easily run evaluation on pretrained models below:</p>
+<p><a href="https://colab.research.google.com/github/eugenesiow/super-image-notebooks/blob/master/notebooks/Evaluate_Pretrained_super_image_Models.ipynb" title="Open in Colab"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<h2 id="train-models">Train Models<a class="headerlink" href="#train-models" title="Permanent link">#</a></h2>
+<p>We need the huggingface <a href="https://huggingface.co/datasets?filter=task_ids:other-other-image-super-resolution">datasets</a> library to download the data:
+<div class="highlight"><pre><span></span><code>pip install datasets
+</code></pre></div>
+The following code gets the data and preprocesses/augments the data.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datasets</span> <span class="kn">import</span> <span class="n">load_dataset</span>
+<span class="kn">from</span> <span class="nn">super_image.data</span> <span class="kn">import</span> <span class="n">EvalDataset</span><span class="p">,</span> <span class="n">TrainDataset</span><span class="p">,</span> <span class="n">augment_five_crop</span>
+
+<span class="n">augmented_dataset</span> <span class="o">=</span> <span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;eugenesiow/Div2k&#39;</span><span class="p">,</span> <span class="s1">&#39;bicubic_x4&#39;</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="s1">&#39;train&#39;</span><span class="p">)</span>\
+    <span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">augment_five_crop</span><span class="p">,</span> <span class="n">batched</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Augmenting Dataset&quot;</span><span class="p">)</span>                                <span class="c1"># download and augment the data with the five_crop method</span>
+<span class="n">train_dataset</span> <span class="o">=</span> <span class="n">TrainDataset</span><span class="p">(</span><span class="n">augmented_dataset</span><span class="p">)</span>                                                     <span class="c1"># prepare the train dataset for loading PyTorch DataLoader</span>
+<span class="n">eval_dataset</span> <span class="o">=</span> <span class="n">EvalDataset</span><span class="p">(</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;eugenesiow/Div2k&#39;</span><span class="p">,</span> <span class="s1">&#39;bicubic_x4&#39;</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="s1">&#39;validation&#39;</span><span class="p">))</span>      <span class="c1"># prepare the eval dataset for the PyTorch DataLoader</span>
+</code></pre></div>
+<p>The training code is provided below:
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">super_image</span> <span class="kn">import</span> <span class="n">Trainer</span><span class="p">,</span> <span class="n">TrainingArguments</span><span class="p">,</span> <span class="n">EdsrModel</span><span class="p">,</span> <span class="n">EdsrConfig</span>
+
+<span class="n">training_args</span> <span class="o">=</span> <span class="n">TrainingArguments</span><span class="p">(</span>
+    <span class="n">output_dir</span><span class="o">=</span><span class="s1">&#39;./results&#39;</span><span class="p">,</span>                 <span class="c1"># output directory</span>
+    <span class="n">num_train_epochs</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>                  <span class="c1"># total number of training epochs</span>
+<span class="p">)</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">EdsrConfig</span><span class="p">(</span>
+    <span class="n">scale</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>                                <span class="c1"># train a model to upscale 4x</span>
+<span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">EdsrModel</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+
+<span class="n">trainer</span> <span class="o">=</span> <span class="n">Trainer</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>                         <span class="c1"># the instantiated model to be trained</span>
+    <span class="n">args</span><span class="o">=</span><span class="n">training_args</span><span class="p">,</span>                  <span class="c1"># training arguments, defined above</span>
+    <span class="n">train_dataset</span><span class="o">=</span><span class="n">train_dataset</span><span class="p">,</span>         <span class="c1"># training dataset</span>
+    <span class="n">eval_dataset</span><span class="o">=</span><span class="n">eval_dataset</span>            <span class="c1"># evaluation dataset</span>
+<span class="p">)</span>
+
+<span class="n">trainer</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+</code></pre></div></p>
+<p><a href="https://colab.research.google.com/github/eugenesiow/super-image-notebooks/blob/master/notebooks/Train_super_image_Models.ipynb" title="Open in Colab"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
                 
               
               
