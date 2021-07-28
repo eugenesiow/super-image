@@ -1,5 +1,5 @@
 from super_image import Trainer, TrainingArguments, EdsrConfig, EdsrModel
-from super_image.data import EvalDataset, TrainAugmentDataset, DatasetBuilder
+from super_image.data import EvalDataset, DatasetBuilder
 
 # DatasetBuilder.prepare(
 #     base_path='../../super-image-datasets/DIV2K2017/DIV2K/DIV2K_train_HR',

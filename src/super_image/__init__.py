@@ -19,7 +19,9 @@ from .models import (
     PanModel,
     PanConfig,
     MasaModel,
-    MasaConfig
+    MasaConfig,
+    CarnModel,
+    CarnConfig
 )
 
 from .data import (
@@ -34,4 +36,5 @@ __all__: List[str] = ['TrainingArguments', 'Trainer',
                       'A2nModel', 'A2nConfig',
                       'PanModel', 'PanConfig',
                       'MasaModel', 'MasaConfig',
+                      'CarnModel', 'CarnConfig',
                       'ImageLoader']  # noqa: WPS410 (the only __variable__ we use)

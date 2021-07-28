@@ -74,7 +74,10 @@ class Trainer:
         if model is None:
             raise RuntimeError("`Trainer` requires a `model`")
 
-        self.model = model.cuda()
+        if torch.cuda.is_available():
+            self.model = model.cuda()
+        else:
+            self.model = model
         self.train_dataset = train_dataset
         self.eval_dataset = eval_dataset
         self.best_epoch = 0

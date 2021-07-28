@@ -8,3 +8,5 @@ from .pan.configuration_pan import PanConfig
 from .pan.modeling_pan import PanModel
 from .masa.configuration_masa import MasaConfig
 from .masa.modeling_masa import MasaModel
+from .carn.configuration_carn import CarnConfig
+from .carn.modeling_carn import CarnModel
