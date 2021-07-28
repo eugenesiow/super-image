@@ -11,6 +11,9 @@ nav:
   - Changelog: changelog.md
   - Credits: credits.md
   - License: license.md
+- Models:
+  - EDSR: models/edsr.md
+  - MSRN: models/msrn.md
 - Reference:
   - CLI: reference/cli.md
   - Configuration: reference/configuration.md
