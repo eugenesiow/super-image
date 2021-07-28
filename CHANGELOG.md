@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.3] - 2021-07-28
+### Added
+- `TrainDataset(dataset)` with support for huggingface datasets.
+- `augment_five_crop` function for use with `dataset.map(augment_five_crop, batched=True)`
+
 ## [0.1.2] - 2021-07-26
 ### Added
 - Added metrics `EvalMetrics().evaluate(model, eval_dataset)` class to calculate PSNR and SSIM on a model and 
