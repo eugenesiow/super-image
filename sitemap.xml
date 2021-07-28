@@ -21,12 +21,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://eugenesiow.github.io/super-image/credits/</loc>
+         <loc>https://eugenesiow.github.io/super-image/evaluation/</loc>
          <lastmod>2021-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://eugenesiow.github.io/super-image/license/</loc>
+         <lastmod>2021-07-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eugenesiow.github.io/super-image/prediction/</loc>
+         <lastmod>2021-07-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eugenesiow.github.io/super-image/training/</loc>
+         <lastmod>2021-07-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://eugenesiow.github.io/super-image/models/a2n/</loc>
          <lastmod>2021-07-28</lastmod>
          <changefreq>daily</changefreq>
     </url>

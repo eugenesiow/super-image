@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://eugenesiow.github.io/super-image/models/edsr/">
+        <link rel="canonical" href="https://eugenesiow.github.io/super-image/models/a2n/">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-6.2.8">
     
     
       
-        <title>EDSR - super-image</title>
+        <title>A2N - super-image</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#enhanced-deep-residual-networks-for-single-image-super-resolution-edsr" class="md-skip">
+        <a href="#attention-in-attention-network-for-image-super-resolution-a2n" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              EDSR
+              A2N
             
           </span>
         </div>
@@ -192,7 +192,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../edsr/" class="md-tabs__link md-tabs__link--active">
         Models
       </a>
     </li>
@@ -438,6 +438,30 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../edsr/" class="md-nav__link">
+        EDSR
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../msrn/" class="md-nav__link">
+        MSRN
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -449,12 +473,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          EDSR
+          A2N
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        EDSR
+        A2N
       </a>
       
         
@@ -478,69 +502,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#edsrconfig" class="md-nav__link">
-    EdsrConfig
+  <a href="#a2nconfig" class="md-nav__link">
+    A2nConfig
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.edsr.configuration_edsr.EdsrConfig" class="md-nav__link">
-    super_image.models.edsr.configuration_edsr.EdsrConfig
+  <a href="#super_image.models.a2n.configuration_a2n.A2nConfig" class="md-nav__link">
+    super_image.models.a2n.configuration_a2n.A2nConfig
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.edsr.configuration_edsr.EdsrConfig.__init__" class="md-nav__link">
-    __init__()
+  <a href="#a2nmodel" class="md-nav__link">
+    A2nModel
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#edsrmodel" class="md-nav__link">
-    EdsrModel
+  <a href="#super_image.models.a2n.modeling_a2n.A2nModel" class="md-nav__link">
+    super_image.models.a2n.modeling_a2n.A2nModel
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel" class="md-nav__link">
-    super_image.models.edsr.modeling_edsr.EdsrModel
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.config_class" class="md-nav__link">
-    config_class
-  </a>
-  
-    <nav class="md-nav" aria-label="config_class">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.config_class.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.forward" class="md-nav__link">
+  <a href="#super_image.models.a2n.modeling_a2n.A2nModel.forward" class="md-nav__link">
     forward()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.load_state_dict" class="md-nav__link">
+  <a href="#super_image.models.a2n.modeling_a2n.A2nModel.load_state_dict" class="md-nav__link">
     load_state_dict()
   </a>
   
@@ -550,30 +547,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../msrn/" class="md-nav__link">
-        MSRN
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../a2n/" class="md-nav__link">
-        A2N
-      </a>
     </li>
   
 
@@ -762,69 +735,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#edsrconfig" class="md-nav__link">
-    EdsrConfig
+  <a href="#a2nconfig" class="md-nav__link">
+    A2nConfig
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.edsr.configuration_edsr.EdsrConfig" class="md-nav__link">
-    super_image.models.edsr.configuration_edsr.EdsrConfig
+  <a href="#super_image.models.a2n.configuration_a2n.A2nConfig" class="md-nav__link">
+    super_image.models.a2n.configuration_a2n.A2nConfig
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.edsr.configuration_edsr.EdsrConfig.__init__" class="md-nav__link">
-    __init__()
+  <a href="#a2nmodel" class="md-nav__link">
+    A2nModel
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#edsrmodel" class="md-nav__link">
-    EdsrModel
+  <a href="#super_image.models.a2n.modeling_a2n.A2nModel" class="md-nav__link">
+    super_image.models.a2n.modeling_a2n.A2nModel
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel" class="md-nav__link">
-    super_image.models.edsr.modeling_edsr.EdsrModel
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.config_class" class="md-nav__link">
-    config_class
-  </a>
-  
-    <nav class="md-nav" aria-label="config_class">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.config_class.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.forward" class="md-nav__link">
+  <a href="#super_image.models.a2n.modeling_a2n.A2nModel.forward" class="md-nav__link">
     forward()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.load_state_dict" class="md-nav__link">
+  <a href="#super_image.models.a2n.modeling_a2n.A2nModel.load_state_dict" class="md-nav__link">
     load_state_dict()
   </a>
   
@@ -842,173 +788,22 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/eugenesiow/super-image/edit/master/docs/models/edsr.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/eugenesiow/super-image/edit/master/docs/models/a2n.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="enhanced-deep-residual-networks-for-single-image-super-resolution-edsr">Enhanced Deep Residual Networks for Single Image Super-Resolution (EDSR)<a class="headerlink" href="#enhanced-deep-residual-networks-for-single-image-super-resolution-edsr" title="Permanent link">#</a></h1>
+                <h1 id="attention-in-attention-network-for-image-super-resolution-a2n">Attention in Attention Network for Image Super-Resolution (A2N)<a class="headerlink" href="#attention-in-attention-network-for-image-super-resolution-a2n" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>EDSR is a model that uses both deeper and wider architecture (32 ResBlocks and 256 channels) to improve performance. 
-It uses both global and local skip connections, and up-scaling is done at the end of the network. 
-It doesn't use batch normalization layers (input and output have similar distributions, normalizing intermediate 
-features may not be desirable) instead it uses constant scaling layers to ensure stable training. 
-An L1 loss function (absolute error) is used instead of L2 (MSE), the authors showed better performance empirically 
-and it requires less computation.</p>
-<p>The default parameters are for the base model (~5mb vs ~100mb) that includes just 16 ResBlocks and 64 channels.</p>
-<p>It was introduced in the paper <a href="https://arxiv.org/abs/1707.02921">Enhanced Deep Residual Networks for Single Image Super-Resolution</a> by Lim et al. (2017) and first released in <a href="https://github.com/sanghyun-son/EDSR-PyTorch">this repository</a>. </p>
-<h2 id="edsrconfig">EdsrConfig<a class="headerlink" href="#edsrconfig" title="Permanent link">#</a></h2>
+<p>The A2N model proposes an attention in attention network (A2N) for highly accurate image SR. Specifically, the A2N consists of a non-attention branch and a coupling attention branch. Attention dropout module is proposed to generate dynamic attention weights for these two branches based on input features that can suppress unwanted attention adjustments. This allows attention modules to specialize to beneficial examples without otherwise penalties and thus greatly improve the capacity of the attention network with little parameter overhead. </p>
+<p>More importantly the model is lightweight and fast to train (~1.5m parameters, ~4mb).</p>
+<p>It was introduced in the paper <a href="https://arxiv.org/abs/2104.09497">Attention in Attention Network for Image Super-Resolution</a> by Chen et al. (2021) and first released in <a href="https://github.com/haoyuc/A2N">this repository</a>. </p>
+<h2 id="a2nconfig">A2nConfig<a class="headerlink" href="#a2nconfig" title="Permanent link">#</a></h2>
 
 
   <div class="doc doc-object doc-class">
 
-<a id="super_image.models.edsr.configuration_edsr.EdsrConfig"></a>
-    <div class="doc doc-contents first">
-
-      <p>This is the configuration class to store the configuration of a :class:<code>~super_image.EdsrModel</code>.
-It is used to instantiate the model according to the specified arguments, defining the model architecture.
-Instantiating a configuration with the defaults will yield a similar
-configuration to that of the <a href="https://huggingface.co/eugenesiow/edsr-base">EDSR base</a> architecture.
-Configuration objects inherit from :class:<code>~super_image.PretrainedConfig</code> and can be used to control the model
-outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig</code> for more information.</p>
-
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">super_image</span> <span class="kn">import</span> <span class="n">EdsrModel</span><span class="p">,</span> <span class="n">EdsrConfig</span>
-<span class="c1"># Initializing a configuration</span>
-<span class="n">config</span> <span class="o">=</span> <span class="n">EdsrConfig</span><span class="p">(</span>
-    <span class="n">scale</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>                                <span class="c1"># train a model to upscale 4x</span>
-<span class="p">)</span>
-<span class="c1"># Initializing a model from the configuration</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">EdsrModel</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-<span class="c1"># Accessing the model configuration</span>
-<span class="n">configuration</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span>
-</code></pre></div>
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h2 class="doc doc-heading" id="super_image.models.edsr.configuration_edsr.EdsrConfig.__init__">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_resblocks</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">n_feats</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">n_colors</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">rgb_range</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">res_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-special"><code>special</code></small>
-  </span>
-
-<a class="headerlink" href="#super_image.models.edsr.configuration_edsr.EdsrConfig.__init__" title="Permanent link">#</a></h2>
-
-    <div class="doc doc-contents ">
-
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>scale</code></td>
-        <td><code>int</code></td>
-        <td><p>Scale for the model to train an upscaler/super-res model.</p></td>
-        <td><code>None</code></td>
-      </tr>
-      <tr>
-        <td><code>n_resblocks</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of residual blocks.</p></td>
-        <td><code>16</code></td>
-      </tr>
-      <tr>
-        <td><code>n_feats</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of features.</p></td>
-        <td><code>64</code></td>
-      </tr>
-      <tr>
-        <td><code>n_colors</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of color channels.</p></td>
-        <td><code>3</code></td>
-      </tr>
-      <tr>
-        <td><code>rgb_range</code></td>
-        <td><code>int</code></td>
-        <td><p>Range of RGB as a multiplier to the MeanShift.</p></td>
-        <td><code>255</code></td>
-      </tr>
-      <tr>
-        <td><code>res_scale</code></td>
-        <td><code>int</code></td>
-        <td><p>The res scale multiplier.</p></td>
-        <td><code>1</code></td>
-      </tr>
-  </tbody>
-</table>
-        <details class="quote">
-          <summary>Source code in <code>super_image\models\edsr\configuration_edsr.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n_resblocks</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">n_feats</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">n_colors</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">rgb_range</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span>
-             <span class="n">res_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Args:</span>
-<span class="sd">        scale (int): Scale for the model to train an upscaler/super-res model.</span>
-<span class="sd">        n_resblocks (int): Number of residual blocks.</span>
-<span class="sd">        n_feats (int): Number of features.</span>
-<span class="sd">        n_colors (int):</span>
-<span class="sd">            Number of color channels.</span>
-<span class="sd">        rgb_range (int):</span>
-<span class="sd">            Range of RGB as a multiplier to the MeanShift.</span>
-<span class="sd">        res_scale (int):</span>
-<span class="sd">            The res scale multiplier.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">scale</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_resblocks</span> <span class="o">=</span> <span class="n">n_resblocks</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_feats</span> <span class="o">=</span> <span class="n">n_feats</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_colors</span> <span class="o">=</span> <span class="n">n_colors</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">rgb_range</span> <span class="o">=</span> <span class="n">rgb_range</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">res_scale</span> <span class="o">=</span> <span class="n">res_scale</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">data_parallel</span> <span class="o">=</span> <span class="n">data_parallel</span>
-</code></pre></div>
-        </details>
-    </div>
-
-  </div>
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-<h2 id="edsrmodel">EdsrModel<a class="headerlink" href="#edsrmodel" title="Permanent link">#</a></h2>
-
-
-  <div class="doc doc-object doc-class">
-
-<a id="super_image.models.edsr.modeling_edsr.EdsrModel"></a>
+<a id="super_image.models.a2n.configuration_a2n.A2nConfig"></a>
     <div class="doc doc-contents first">
 
 
@@ -1023,37 +818,26 @@ outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig<
 
 
 
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+<h2 id="a2nmodel">A2nModel<a class="headerlink" href="#a2nmodel" title="Permanent link">#</a></h2>
+
+
   <div class="doc doc-object doc-class">
 
+<a id="super_image.models.a2n.modeling_a2n.A2nModel"></a>
+    <div class="doc doc-contents first">
 
-
-<h2 class="doc doc-heading" id="super_image.models.edsr.modeling_edsr.EdsrModel.config_class">
-        <code>config_class</code>
-
-
-
-<a class="headerlink" href="#super_image.models.edsr.modeling_edsr.EdsrModel.config_class" title="Permanent link">#</a></h2>
-
-    <div class="doc doc-contents ">
-
-      <p>This is the configuration class to store the configuration of a :class:<code>~super_image.EdsrModel</code>.
-It is used to instantiate the model according to the specified arguments, defining the model architecture.
-Instantiating a configuration with the defaults will yield a similar
-configuration to that of the <a href="https://huggingface.co/eugenesiow/edsr-base">EDSR base</a> architecture.
-Configuration objects inherit from :class:<code>~super_image.PretrainedConfig</code> and can be used to control the model
-outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig</code> for more information.</p>
-
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">super_image</span> <span class="kn">import</span> <span class="n">EdsrModel</span><span class="p">,</span> <span class="n">EdsrConfig</span>
-<span class="c1"># Initializing a configuration</span>
-<span class="n">config</span> <span class="o">=</span> <span class="n">EdsrConfig</span><span class="p">(</span>
-    <span class="n">scale</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>                                <span class="c1"># train a model to upscale 4x</span>
-<span class="p">)</span>
-<span class="c1"># Initializing a model from the configuration</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">EdsrModel</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-<span class="c1"># Accessing the model configuration</span>
-<span class="n">configuration</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span>
-</code></pre></div>
 
 
 
@@ -1069,125 +853,16 @@ outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig<
 
 
 
-  <div class="doc doc-object doc-method">
-
-
-
-<h3 class="doc doc-heading" id="super_image.models.edsr.modeling_edsr.EdsrModel.config_class.__init__">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_resblocks</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">n_feats</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">n_colors</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">rgb_range</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">res_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-special"><code>special</code></small>
-  </span>
-
-<a class="headerlink" href="#super_image.models.edsr.modeling_edsr.EdsrModel.config_class.__init__" title="Permanent link">#</a></h3>
-
-    <div class="doc doc-contents ">
-
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>scale</code></td>
-        <td><code>int</code></td>
-        <td><p>Scale for the model to train an upscaler/super-res model.</p></td>
-        <td><code>None</code></td>
-      </tr>
-      <tr>
-        <td><code>n_resblocks</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of residual blocks.</p></td>
-        <td><code>16</code></td>
-      </tr>
-      <tr>
-        <td><code>n_feats</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of features.</p></td>
-        <td><code>64</code></td>
-      </tr>
-      <tr>
-        <td><code>n_colors</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of color channels.</p></td>
-        <td><code>3</code></td>
-      </tr>
-      <tr>
-        <td><code>rgb_range</code></td>
-        <td><code>int</code></td>
-        <td><p>Range of RGB as a multiplier to the MeanShift.</p></td>
-        <td><code>255</code></td>
-      </tr>
-      <tr>
-        <td><code>res_scale</code></td>
-        <td><code>int</code></td>
-        <td><p>The res scale multiplier.</p></td>
-        <td><code>1</code></td>
-      </tr>
-  </tbody>
-</table>
-        <details class="quote">
-          <summary>Source code in <code>super_image\models\edsr\modeling_edsr.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n_resblocks</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">n_feats</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">n_colors</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">rgb_range</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span>
-             <span class="n">res_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Args:</span>
-<span class="sd">        scale (int): Scale for the model to train an upscaler/super-res model.</span>
-<span class="sd">        n_resblocks (int): Number of residual blocks.</span>
-<span class="sd">        n_feats (int): Number of features.</span>
-<span class="sd">        n_colors (int):</span>
-<span class="sd">            Number of color channels.</span>
-<span class="sd">        rgb_range (int):</span>
-<span class="sd">            Range of RGB as a multiplier to the MeanShift.</span>
-<span class="sd">        res_scale (int):</span>
-<span class="sd">            The res scale multiplier.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">scale</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_resblocks</span> <span class="o">=</span> <span class="n">n_resblocks</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_feats</span> <span class="o">=</span> <span class="n">n_feats</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_colors</span> <span class="o">=</span> <span class="n">n_colors</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">rgb_range</span> <span class="o">=</span> <span class="n">rgb_range</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">res_scale</span> <span class="o">=</span> <span class="n">res_scale</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">data_parallel</span> <span class="o">=</span> <span class="n">data_parallel</span>
-</code></pre></div>
-        </details>
-    </div>
-
-  </div>
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-
-
-
-
 
   <div class="doc doc-object doc-method">
 
 
 
-<h2 class="doc doc-heading" id="super_image.models.edsr.modeling_edsr.EdsrModel.forward">
+<h2 class="doc doc-heading" id="super_image.models.a2n.modeling_a2n.A2nModel.forward">
 <code class="highlight language-python"><span class="n">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code>
 
 
-<a class="headerlink" href="#super_image.models.edsr.modeling_edsr.EdsrModel.forward" title="Permanent link">#</a></h2>
+<a class="headerlink" href="#super_image.models.a2n.modeling_a2n.A2nModel.forward" title="Permanent link">#</a></h2>
 
     <div class="doc doc-contents ">
 
@@ -1200,16 +875,31 @@ outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig<
     registered hooks while the latter silently ignores them.</p>
 
         <details class="quote">
-          <summary>Source code in <code>super_image\models\edsr\modeling_edsr.py</code></summary>
+          <summary>Source code in <code>super_image\models\a2n\modeling_a2n.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-    <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">res</span> <span class="o">+=</span> <span class="n">x</span>
+    <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_first</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">trunk</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trunk_conv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">AAB_trunk</span><span class="p">(</span><span class="n">fea</span><span class="p">))</span>
+    <span class="n">fea</span> <span class="o">=</span> <span class="n">fea</span> <span class="o">+</span> <span class="n">trunk</span>
 
-    <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upconv1</span><span class="p">(</span><span class="n">functional</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">fea</span><span class="p">,</span> <span class="n">scale_factor</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">))</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lrelu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">att1</span><span class="p">(</span><span class="n">fea</span><span class="p">))</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lrelu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">HRconv1</span><span class="p">(</span><span class="n">fea</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upconv1</span><span class="p">(</span><span class="n">functional</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">fea</span><span class="p">,</span> <span class="n">scale_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">))</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lrelu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">att1</span><span class="p">(</span><span class="n">fea</span><span class="p">))</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lrelu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">HRconv1</span><span class="p">(</span><span class="n">fea</span><span class="p">))</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upconv2</span><span class="p">(</span><span class="n">functional</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">fea</span><span class="p">,</span> <span class="n">scale_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">))</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lrelu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">att2</span><span class="p">(</span><span class="n">fea</span><span class="p">))</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lrelu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">HRconv2</span><span class="p">(</span><span class="n">fea</span><span class="p">))</span>
 
-    <span class="k">return</span> <span class="n">x</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_last</span><span class="p">(</span><span class="n">fea</span><span class="p">)</span>
+
+    <span class="n">ilr</span> <span class="o">=</span> <span class="n">functional</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">scale_factor</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">,</span> <span class="n">align_corners</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">out</span> <span class="o">+</span> <span class="n">ilr</span>
+
+    <span class="k">return</span> <span class="n">out</span>
 </code></pre></div>
         </details>
     </div>
@@ -1222,11 +912,11 @@ outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig<
 
 
 
-<h2 class="doc doc-heading" id="super_image.models.edsr.modeling_edsr.EdsrModel.load_state_dict">
+<h2 class="doc doc-heading" id="super_image.models.a2n.modeling_a2n.A2nModel.load_state_dict">
 <code class="highlight language-python"><span class="n">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 
-<a class="headerlink" href="#super_image.models.edsr.modeling_edsr.EdsrModel.load_state_dict" title="Permanent link">#</a></h2>
+<a class="headerlink" href="#super_image.models.a2n.modeling_a2n.A2nModel.load_state_dict" title="Permanent link">#</a></h2>
 
     <div class="doc doc-contents ">
 
@@ -1284,7 +974,7 @@ in :attr:<code>state_dict</code> match the keys returned by this module's
   </tbody>
 </table>
         <details class="quote">
-          <summary>Source code in <code>super_image\models\edsr\modeling_edsr.py</code></summary>
+          <summary>Source code in <code>super_image\models\a2n\modeling_a2n.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="n">own_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">state_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -1334,7 +1024,7 @@ in :attr:<code>state_dict</code> match the keys returned by this module's
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../license/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../msrn/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1343,19 +1033,19 @@ in :attr:<code>state_dict</code> match the keys returned by this module's
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                License
+                MSRN
               </div>
             </div>
           </a>
         
         
-          <a href="../msrn/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../reference/cli/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                MSRN
+                CLI
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
