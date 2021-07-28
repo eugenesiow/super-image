@@ -16,11 +16,6 @@
     <p>State-of-the-art image super resolution models for PyTorch.</p>
 </h3>
 
-
-## Requirements
-
-super-image requires Python 3.6 or above.
-
 ## Installation
 
 With `pip`:
@@ -84,3 +79,51 @@ All training was to 1000 epochs (some publications, like a2n, train to >1000 epo
 |2      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|5.9m           |**32.26/0.8955**   |28.78/0.7859       |28.51/0.7651       |26.10/0.7857       |
 |3      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|1.5m           |32.12/0.8947       |28.72/0.7845       |28.50/0.7644       |26.02/0.7832       |
 |4      |[a2n](https://huggingface.co/eugenesiow/a2n)               |1.0m           |32.07/0.8933       |28.68/0.7830       |28.44/0.7624       |25.89/0.7787       |
+
+You can find a notebook to easily run evaluation on pretrained models below:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/super-image-notebooks/blob/master/notebooks/Evaluate_Pretrained_super_image_Models.ipynb "Open in Colab")
+
+## Train Models
+
+We need the huggingface [datasets](https://huggingface.co/datasets?filter=task_ids:other-other-image-super-resolution) library to download the data:
+```bash
+pip install datasets
+```
+The following code gets the data and preprocesses/augments the data.
+
+```python
+from datasets import load_dataset
+from super_image.data import EvalDataset, TrainDataset, augment_five_crop
+
+augmented_dataset = load_dataset('eugenesiow/Div2k', 'bicubic_x4', split='train')\
+    .map(augment_five_crop, batched=True, desc="Augmenting Dataset")                                # download and augment the data with the five_crop method
+train_dataset = TrainDataset(augmented_dataset)                                                     # prepare the train dataset for loading PyTorch DataLoader
+eval_dataset = EvalDataset(load_dataset('eugenesiow/Div2k', 'bicubic_x4', split='validation'))      # prepare the eval dataset for the PyTorch DataLoader
+```
+
+The training code is provided below:
+```python
+from super_image import Trainer, TrainingArguments, EdsrModel, EdsrConfig
+
+training_args = TrainingArguments(
+    output_dir='./results',                 # output directory
+    num_train_epochs=1000,                  # total number of training epochs
+)
+
+config = EdsrConfig(
+    scale=4,                                # train a model to upscale 4x
+)
+model = EdsrModel(config)
+
+trainer = Trainer(
+    model=model,                         # the instantiated model to be trained
+    args=training_args,                  # training arguments, defined above
+    train_dataset=train_dataset,         # training dataset
+    eval_dataset=eval_dataset            # evaluation dataset
+)
+
+trainer.train()
+```
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eugenesiow/super-image-notebooks/blob/master/notebooks/Train_super_image_Models.ipynb "Open in Colab")
