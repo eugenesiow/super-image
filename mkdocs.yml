@@ -8,12 +8,16 @@ site_dir: "site"
 nav:
 - Home:
   - Overview: index.md
+  - Tutorials:
+      - Prediction: prediction.md
+      - Training: training.md
+      - Evaluation: evaluation.md
   - Changelog: changelog.md
-  - Credits: credits.md
   - License: license.md
 - Models:
   - EDSR: models/edsr.md
   - MSRN: models/msrn.md
+  - A2N: models/a2n.md
 - Reference:
   - CLI: reference/cli.md
   - Configuration: reference/configuration.md
