@@ -1,7 +1,11 @@
 import cv2
 import numpy as np
 
+from tqdm.auto import tqdm
+
+import torch
 from torch.utils.data import Dataset
+from torch.utils.data.dataloader import DataLoader
 
 
 def get_scale_from_dataset(dataset: Dataset):
@@ -105,3 +109,28 @@ def compute_metrics(eval_prediction, scale):
         'psnr': calc_psnr(preds, labels),
         'ssim': calc_ssim(preds, labels)
     }
+
+
+def calculate_mean_std(dataset):
+    image_loader = DataLoader(dataset,
+                              batch_size=1,
+                              shuffle=False,
+                              pin_memory=True)
+
+    psum = torch.tensor([0.0, 0.0, 0.0])
+    psum_sq = torch.tensor([0.0, 0.0, 0.0])
+    count = 0
+
+    for inputs in tqdm(image_loader, desc='Calculating RGB pixel mean and std'):
+        lr, hr = inputs
+        psum += hr.sum(axis=[0, 2, 3])
+        psum_sq += (hr ** 2).sum(axis=[0, 2, 3])
+        count += hr.shape[2] * hr.shape[3]
+
+    total_mean = psum / count
+    total_var = (psum_sq / count) - (total_mean ** 2)
+    total_std = torch.sqrt(total_var)
+
+    np.set_printoptions(precision=4)
+    print(f'mean: {str(total_mean.numpy())}')
+    print(f'std: {str(total_std.numpy())}')

@@ -9,7 +9,7 @@ from torch.utils.data.dataloader import DataLoader
 from torchvision.utils import save_image
 import torch.nn.functional as nnf
 import torchvision.transforms.functional as F
-from super_image.data import TrainAugmentDataset, EvalDataset
+from super_image.data import EvalDataset
 from super_image.utils.metrics import AverageMeter, calc_psnr, calc_ssim, convert_rgb_to_y, denormalize
 
 

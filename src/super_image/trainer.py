@@ -191,7 +191,7 @@ class Trainer:
             epoch_psnr.update(metrics['psnr'], len(inputs))
             epoch_ssim.update(metrics['ssim'], len(inputs))
 
-        print(f'epoch: psnr: {epoch_psnr.avg:.6f}   ssim: {epoch_ssim.avg:.4f}')
+        print(f'scale:{str(scale)}      eval psnr: {epoch_psnr.avg:.2f}     ssim: {epoch_ssim.avg:.4f}')
 
         if epoch_psnr.avg > self.best_metric:
             self.best_epoch = epoch

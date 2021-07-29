@@ -46,8 +46,8 @@ class EdsrModel(PreTrainedModel):
         scale = args.scale
         rgb_range = args.rgb_range
         act = nn.ReLU(True)
-        self.sub_mean = MeanShift(rgb_range)  # standardize input
-        self.add_mean = MeanShift(rgb_range, sign=1)  # restore output
+        self.sub_mean = MeanShift(rgb_range, rgb_mean=args.rgb_mean, rgb_std=args.rgb_std)  # standardize input
+        self.add_mean = MeanShift(rgb_range, sign=1, rgb_mean=args.rgb_mean, rgb_std=args.rgb_std)  # restore output
 
         # define head module, channels: 3->64
         m_head = [conv(n_colors, n_feats, kernel_size)]

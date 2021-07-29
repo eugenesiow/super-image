@@ -79,7 +79,7 @@ class MsrnModel(PreTrainedModel):
         scale = args.scale
         act = nn.ReLU(True)
 
-        self.sub_mean = MeanShift(rgb_range)
+        self.sub_mean = MeanShift(rgb_range, rgb_mean=args.rgb_mean, rgb_std=args.rgb_std)
 
         # define head module
         modules_head = [conv(3, n_feats, kernel_size)]
@@ -99,7 +99,7 @@ class MsrnModel(PreTrainedModel):
             Upsampler(conv, scale, n_feats, act=False),
             conv(n_feats, 3, kernel_size)]
 
-        self.add_mean = MeanShift(rgb_range, sign=1)
+        self.add_mean = MeanShift(rgb_range, sign=1, rgb_mean=args.rgb_mean, rgb_std=args.rgb_std)
 
         self.head = nn.Sequential(*modules_head)
         self.body = nn.Sequential(*modules_body)

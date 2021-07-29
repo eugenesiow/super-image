@@ -5,7 +5,8 @@ from torch import nn
 from torch.utils.data import Dataset
 from torch.utils.data.dataloader import DataLoader
 
-from ..utils.metrics import AverageMeter, calc_psnr, calc_ssim, convert_rgb_to_y, denormalize, get_scale_from_dataset
+from ..utils.metrics import AverageMeter, compute_metrics, get_scale_from_dataset
+from ..trainer_utils import EvalPrediction
 
 
 class EvalMetrics:
@@ -22,19 +23,15 @@ class EvalMetrics:
         eval_dataloader = DataLoader(dataset=dataset, batch_size=1)
         epoch_psnr = AverageMeter()
         epoch_ssim = AverageMeter()
-        for i, data in tqdm(enumerate(eval_dataloader), total=len(dataset)):
+        for i, data in tqdm(enumerate(eval_dataloader), total=len(dataset), desc='Evaluating dataset'):
             inputs, labels = data
             inputs = inputs.to(self.device)
             labels = labels.to(self.device)
             with torch.no_grad():
                 preds = model(inputs)
 
-            preds = convert_rgb_to_y(denormalize(preds.squeeze(0)), dim_order='chw')
-            labels = convert_rgb_to_y(denormalize(labels.squeeze(0)), dim_order='chw')
+            metrics = compute_metrics(EvalPrediction(predictions=preds, labels=labels), scale=scale)
 
-            preds = preds[scale:-scale, scale:-scale]
-            labels = labels[scale:-scale, scale:-scale]
-
-            epoch_psnr.update(calc_psnr(preds, labels), len(inputs))
-            epoch_ssim.update(calc_ssim(preds, labels), len(inputs))
-        print('scale:{}     eval psnr: {:.2f}   ssim: {:.4f}'.format(str(scale), epoch_psnr.avg, epoch_ssim.avg))
+            epoch_psnr.update(metrics['psnr'], len(inputs))
+            epoch_ssim.update(metrics['ssim'], len(inputs))
+        print(f'scale:{str(scale)}      eval psnr: {epoch_psnr.avg:.2f}     ssim: {epoch_ssim.avg:.4f}')
