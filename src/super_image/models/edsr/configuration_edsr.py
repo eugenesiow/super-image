@@ -29,7 +29,7 @@ class EdsrConfig(PretrainedConfig):
     model_type = 'EDSR'
 
     def __init__(self, scale: int = None, n_resblocks=16, n_feats=64, n_colors=3, rgb_range=255,
-                 rgb_mean=DIV2K_RGB_MEAN, rgb_std=DIV2K_RGB_STD,
+                 rgb_mean=DIV2K_RGB_MEAN, rgb_std=DIV2K_RGB_STD, no_upsampling=False,
                  res_scale=1, data_parallel=False, **kwargs):
         """
         Args:
@@ -48,6 +48,8 @@ class EdsrConfig(PretrainedConfig):
             rgb_std (tuple):
                 The RGB standard deviation of the train dataset.
                 You can use `~super_image.utils.metrics.calculate_mean_std` to calculate it.
+            no_upsampling (bool):
+                Option to turn off upsampling.
             data_parallel (bool):
                 Option to use multiple GPUs for training.
         """
@@ -60,4 +62,5 @@ class EdsrConfig(PretrainedConfig):
         self.res_scale = res_scale
         self.rgb_mean = rgb_mean
         self.rgb_std = rgb_std
+        self.no_upsampling = no_upsampling
         self.data_parallel = data_parallel

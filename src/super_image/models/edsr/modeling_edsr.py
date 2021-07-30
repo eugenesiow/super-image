@@ -60,15 +60,19 @@ class EdsrModel(PreTrainedModel):
         ]
         m_body.append(conv(n_feats, n_feats, kernel_size))
 
-        # define tail module
-        m_tail = [
-            Upsampler(conv, scale, n_feats, act=False),
-            conv(n_feats, n_colors, kernel_size)
-        ]
-
         self.head = nn.Sequential(*m_head)
         self.body = nn.Sequential(*m_body)
-        self.tail = nn.Sequential(*m_tail)
+
+        if args.no_upsampling:
+            self.out_dim = n_feats
+        else:
+            self.out_dim = args.n_colors
+            # define tail module
+            m_tail = [
+                Upsampler(conv, scale, n_feats, act=False),
+                conv(n_feats, n_colors, kernel_size)
+            ]
+            self.tail = nn.Sequential(*m_tail)
 
     def forward(self, x):
         x = self.head(x)
@@ -76,7 +80,10 @@ class EdsrModel(PreTrainedModel):
         res = self.body(x)
         res += x
 
-        x = self.tail(res)
+        if self.args.no_upsampling:
+            x = res
+        else:
+            x = self.tail(res)
 
         return x
 

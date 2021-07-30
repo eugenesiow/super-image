@@ -1,5 +1,6 @@
 from datasets import load_dataset
-from super_image import Trainer, TrainingArguments, CarnModel, CarnConfig, EdsrModel, EdsrConfig
+from super_image import Trainer, TrainingArguments, CarnModel, CarnConfig, EdsrModel, EdsrConfig, \
+    MasaModel, MasaConfig, JiifConfig, JiifModel, LiifConfig, LiifModel, SmsrModel, SmsrConfig
 from super_image.data import EvalDataset, TrainDataset, augment_five_crop
 
 
@@ -17,16 +18,30 @@ training_args = TrainingArguments(
 )
 
 # config = CarnConfig(
-#     scale=2,                                # train a model to upscale 4x
+#     scale=2,
 #     bam=True,
 # )
 # model = CarnModel(config)
 
-config = EdsrConfig(
-    scale=2,                                # train a model to upscale 4x
-)
-model = EdsrModel(config)
+# config = EdsrConfig(
+#     scale=2,
+# )
+# model = EdsrModel(config)
 
+# config = MasaConfig(
+#     scale=2,
+# )
+# model = MasaModel(config)
+
+# config = LiifConfig(
+#     scale=2,
+# )
+# model = LiifModel(config)
+
+config = SmsrConfig(
+    scale=2,
+)
+model = SmsrModel(config)
 
 trainer = Trainer(
     model=model,                            # the instantiated model to be trained

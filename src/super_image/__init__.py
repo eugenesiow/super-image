@@ -10,18 +10,15 @@ from .trainer import Trainer
 from .training_args import TrainingArguments
 
 from .models import (
-    EdsrModel,
-    EdsrConfig,
-    MsrnModel,
-    MsrnConfig,
-    A2nModel,
-    A2nConfig,
-    PanModel,
-    PanConfig,
-    MasaModel,
-    MasaConfig,
-    CarnModel,
-    CarnConfig
+    EdsrModel, EdsrConfig,
+    MsrnModel, MsrnConfig,
+    A2nModel, A2nConfig,
+    PanModel, PanConfig,
+    MasaModel, MasaConfig,
+    CarnModel, CarnConfig,
+    JiifModel, JiifConfig,
+    LiifModel, LiifConfig,
+    SmsrModel, SmsrConfig,
 )
 
 from .data import (
@@ -37,4 +34,7 @@ __all__: List[str] = ['TrainingArguments', 'Trainer',
                       'PanModel', 'PanConfig',
                       'MasaModel', 'MasaConfig',
                       'CarnModel', 'CarnConfig',
+                      'JiifModel', 'JiifConfig',
+                      'LiifModel', 'LiifConfig',
+                      'SmsrModel', 'SmsrConfig',
                       'ImageLoader']  # noqa: WPS410 (the only __variable__ we use)

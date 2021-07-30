@@ -99,11 +99,21 @@ def compute_metrics(eval_prediction, scale):
     preds = eval_prediction.predictions
     labels = eval_prediction.labels
 
+    # from piq import ssim, psnr
+    # print(psnr(denormalize(preds), denormalize(labels), data_range=255.),
+    #       ssim(denormalize(preds), denormalize(labels), data_range=255.))
+
+    # original = preds[0][0][0][0]
+
     preds = convert_rgb_to_y(denormalize(preds.squeeze(0)), dim_order='chw')
     labels = convert_rgb_to_y(denormalize(labels.squeeze(0)), dim_order='chw')
 
+    # print(preds[0][0], original * 255.)
+
     preds = preds[scale:-scale, scale:-scale]
     labels = labels[scale:-scale, scale:-scale]
+
+    # print(calc_psnr(preds, labels), calc_ssim(preds, labels))
 
     return {
         'psnr': calc_psnr(preds, labels),

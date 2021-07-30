@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- `calculate_mean_std(dataset)` to `~super_image.utils.metrics` for calculating RGB pixel mean and standard deviation over a dataset.
+
+### Updated
+- Update `EdsrModel` to include `no_upsampling` option so it can be reused for `JiifModel`.
 
 ## [0.1.3] - 2021-07-28
 ### Added
