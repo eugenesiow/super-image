@@ -151,6 +151,13 @@ class Trainer:
                     inputs = inputs.to(device)
                     labels = labels.to(device)
 
+                    if self.model.config.model_type == 'SMSR':
+                        # update tau for gumbel softmax
+                        tau = max(1 - (epoch - 1) / 500, 0.4)
+                        for m in self.model.modules():
+                            if hasattr(m, '_set_tau'):
+                                m._set_tau(tau)
+
                     preds = self.model(inputs)
                     criterion = nn.L1Loss()
                     loss = criterion(preds, labels)

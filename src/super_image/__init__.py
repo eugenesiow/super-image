@@ -19,6 +19,7 @@ from .models import (
     JiifModel, JiifConfig,
     LiifModel, LiifConfig,
     SmsrModel, SmsrConfig,
+    DrlnModel, DrlnConfig,
 )
 
 from .data import (
@@ -37,4 +38,5 @@ __all__: List[str] = ['TrainingArguments', 'Trainer',
                       'JiifModel', 'JiifConfig',
                       'LiifModel', 'LiifConfig',
                       'SmsrModel', 'SmsrConfig',
+                      'DrlnModel', 'DrlnConfig',
                       'ImageLoader']  # noqa: WPS410 (the only __variable__ we use)
