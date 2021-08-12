@@ -18,3 +18,5 @@ from .smsr.configuration_smsr import SmsrConfig
 from .smsr.modeling_smsr import SmsrModel
 from .drln.modeling_drln import DrlnModel
 from .drln.configuration_drln import DrlnConfig
+from .rcan.modeling_rcan import RcanModel
+from .rcan.configuration_rcan import RcanConfig

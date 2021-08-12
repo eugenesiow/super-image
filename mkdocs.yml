@@ -18,6 +18,8 @@ nav:
   - EDSR: models/edsr.md
   - MSRN: models/msrn.md
   - A2N: models/a2n.md
+  - PAN: models/pan.md
+  - CARN: models/carn.md
 - Reference:
   - CLI: reference/cli.md
   - Configuration: reference/configuration.md

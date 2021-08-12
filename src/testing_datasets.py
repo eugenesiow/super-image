@@ -1,5 +1,5 @@
 from datasets import load_dataset
-from super_image import EdsrModel, MsrnModel, A2nModel, PanModel
+from super_image import EdsrModel, MsrnModel, A2nModel, PanModel, CarnModel
 from super_image.data import EvalDataset, EvalMetrics
 
 
@@ -7,13 +7,13 @@ def count_parameters(model): return sum(p.numel() for p in model.parameters() if
 
 
 # dataset = dataset.map(map_to_array)
-dataset = load_dataset('eugenesiow/Set5', 'bicubic_x2', split='validation')
+dataset = load_dataset('eugenesiow/BSD100', 'bicubic_x4', split='validation')
 # dataset = load_dataset('eugenesiow/Set5', 'bicubic_x2', split='validation')
 # dataset = load_dataset('eugenesiow/PIRM', 'bicubic_x2', split='test')
 eval_dataset = EvalDataset(dataset)
 # model = A2nModel.from_pretrained('eugenesiow/a2n', scale=2)
 # model = A2nModel.from_pretrained('../../super-image-models/a2n', scale=3)
-model = PanModel.from_pretrained('../../super-image-models/pan-bam', scale=2)
+model = CarnModel.from_pretrained('../../super-image-models/carn-bam', scale=4)
 print(count_parameters(model))
 # model = EdsrModel.from_pretrained('./results', scale=2)
 # model = EdsrModel.from_pretrained('eugenesiow/edsr-base', scale=2)
