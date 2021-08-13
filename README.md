@@ -63,16 +63,18 @@ All training was to 1000 epochs (some publications, like a2n, train to >1000 epo
 |1      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|5.9m           |**38.02/0.9608**   |**33.73/0.9186**  	|**33.78/0.9253**   |**32.08/0.9276**   |
 |2      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|1.5m           |38.02/0.9607       |33.66/0.9180       |33.77/0.9254       |32.04/0.9276       |
 |3      |[a2n](https://huggingface.co/eugenesiow/a2n)   	        |1.0m           |37.87/0.9602       |33.54/0.9171       |33.67/0.9244       |31.71/0.9240       |
-|4      |[pan-bam](https://huggingface.co/eugenesiow/pan-bam)       |260k           |37.7/0.9596        |33.4/0.9161        |33.6/0.9234        |31.35/0.92         |
+|4      |[carn-bam](https://huggingface.co/eugenesiow/carn-bam)     |1.6m           |37.83/0.96         |33.51/0.9166       |33.64/0.924        |31.53/0.922        |
+|5      |[pan-bam](https://huggingface.co/eugenesiow/pan-bam)       |260k           |37.7/0.9596        |33.4/0.9161        |33.6/0.9234        |31.35/0.92         |
 
 ### Scale x3
 
 |Rank   |Model  	                                                |Params         |Set5  	            |Set14  	        |BSD100  	        |Urban100  	        |
 |---    |---	                                                    |---            |---                |---	            |---	            |---	            |
-|1      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|5.9m           |**35.13/0.9408**   |**31.06/0.8588**  	|**29.65/0.8196**   |**29.26/0.8736**   |
-|2      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|1.5m           |35.01/0.9402       |31.01/0.8583       |29.63/0.8190       |29.19/0.8722       |
-|3      |[a2n](https://huggingface.co/eugenesiow/a2n)   	        |1.0m           |34.8/0.9387        |30.94/0.8568       |29.56/0.8173       |28.95/0.8671       |
-|4      |[pan-bam](https://huggingface.co/eugenesiow/pan-bam)       |260k           |34.62/0.9371       |30.83/0.8545       |29.47/0.8153       |28.64/0.861        |
+|1      |[msrn](https://huggingface.co/eugenesiow/msrn)             |6.1m           |35.12/0.9409       |**31.08/0.8593**   |**29.67/0.8198**   |**29.31/0.8743**   |
+|2      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|5.9m           |**35.13/0.9408**   |31.06/0.8588  	    |29.65/0.8196       |29.26/0.8736       |
+|3      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|1.5m           |35.01/0.9402       |31.01/0.8583       |29.63/0.8190       |29.19/0.8722       |
+|4      |[a2n](https://huggingface.co/eugenesiow/a2n)   	        |1.0m           |34.8/0.9387        |30.94/0.8568       |29.56/0.8173       |28.95/0.8671       |
+|5      |[pan-bam](https://huggingface.co/eugenesiow/pan-bam)       |260k           |34.62/0.9371       |30.83/0.8545       |29.47/0.8153       |28.64/0.861        |
 
 ### Scale x4
 
@@ -82,7 +84,7 @@ All training was to 1000 epochs (some publications, like a2n, train to >1000 epo
 |2      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|5.9m           |**32.26/0.8955**   |28.78/0.7859       |28.51/0.7651       |26.10/0.7857       |
 |3      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|1.5m           |32.12/0.8947       |28.72/0.7845       |28.50/0.7644       |26.02/0.7832       |
 |4      |[a2n](https://huggingface.co/eugenesiow/a2n)               |1.0m           |32.07/0.8933       |28.68/0.7830       |28.44/0.7624       |25.89/0.7787       |
-|5      |[carn-bam](https://huggingface.co/eugenesiow/carn-bam)     |1.6m           |32.0/0.8923        |28.62/0.7822       |28.41/0.7614       |25.77/0.7741        |
+|5      |[carn-bam](https://huggingface.co/eugenesiow/carn-bam)     |1.6m           |32.0/0.8923        |28.62/0.7822       |28.41/0.7614       |25.77/0.7741       |
 |6      |[pan-bam](https://huggingface.co/eugenesiow/pan-bam)       |270k           |31.9/0.8911        |28.54/0.7795       |28.32/0.7591       |25.6/0.7691        |
 
 You can find a notebook to easily run evaluation on pretrained models below:
