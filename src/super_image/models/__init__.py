@@ -20,3 +20,5 @@ from .drln.modeling_drln import DrlnModel
 from .drln.configuration_drln import DrlnConfig
 from .rcan.modeling_rcan import RcanModel
 from .rcan.configuration_rcan import RcanConfig
+from .mdsr.modeling_mdsr import MdsrModel
+from .mdsr.configuration_mdsr import MdsrConfig

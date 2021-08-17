@@ -30,7 +30,7 @@ class RcanConfig(PretrainedConfig):
 
     def __init__(self, scale: int = None, n_resgroups=10, n_resblocks=20, n_feats=64, n_colors=3,
                  reduction=16, rgb_range=255, rgb_mean=DIV2K_RGB_MEAN, rgb_std=DIV2K_RGB_STD,
-                 res_scale=1, data_parallel=False, **kwargs):
+                 res_scale=1, bam=False, data_parallel=False, **kwargs):
         """
         Args:
             scale (int): Scale for the model to train an upscaler/super-res model.
@@ -62,4 +62,5 @@ class RcanConfig(PretrainedConfig):
         self.res_scale = res_scale
         self.rgb_mean = rgb_mean
         self.rgb_std = rgb_std
+        self.bam = bam
         self.data_parallel = data_parallel

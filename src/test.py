@@ -179,7 +179,7 @@ def output_image(input_dir, eval_file, scale, model_type='edsr'):
 # output_image('eugenesiow/edsr-base', '../../../super-image-models/test/Set5_x2.h5', 2)
 # output_image('eugenesiow/edsr-base', '../../../super-image-models/test/Set5_x4.h5', 4)
 # output_image('eugenesiow/a2n', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='a2n')
-output_image('../../../super-image-models/carn-bam', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='carn')
+output_image('../../../super-image-models/carn', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='carn')
 # output_image('../../../super-image-models/msrn-bam', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='msrn')
 # load_pretrained('eugenesiow/a2n', '../../../super-image-models/test/Set14_x4.h5', 4, model_type='a2n')
 # load_pretrained('../../../super-image-models/a2n', '../../../super-image-models/test/BSD100_x4.h5', 4, model_type='a2n')
