@@ -6,7 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+
+## [0.1.4] - 2021-08-17
+### Added
 - `calculate_mean_std(dataset)` to `~super_image.utils.metrics` for calculating RGB pixel mean and standard deviation over a dataset.
+- New model: `DrlnModel`
+- New model: `RcanModel`
+- New model: `MdsrModel`
+- New model: `CarnModel`
+- New model: `PanModel`
 
 ### Updated
 - Update `EdsrModel` to include `no_upsampling` option so it can be reused for `JiifModel`.
