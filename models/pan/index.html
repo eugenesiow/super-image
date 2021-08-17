@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://eugenesiow.github.io/super-image/models/msrn/">
+        <link rel="canonical" href="https://eugenesiow.github.io/super-image/models/pan/">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-6.2.8">
     
     
       
-        <title>MSRN - super-image</title>
+        <title>PAN - super-image</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#multi-scale-residual-network-for-image-super-resolution-msrn" class="md-skip">
+        <a href="#pixel-attention-network-pan" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              MSRN
+              PAN
             
           </span>
         </div>
@@ -450,6 +450,30 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../msrn/" class="md-nav__link">
+        MSRN
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a2n/" class="md-nav__link">
+        A2N
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -461,12 +485,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          MSRN
+          PAN
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        MSRN
+        PAN
       </a>
       
         
@@ -490,69 +514,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#msrnconfig" class="md-nav__link">
-    MsrnConfig
+  <a href="#panconfig" class="md-nav__link">
+    PanConfig
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.msrn.configuration_msrn.MsrnConfig" class="md-nav__link">
-    super_image.models.msrn.configuration_msrn.MsrnConfig
+  <a href="#super_image.models.pan.configuration_pan.PanConfig" class="md-nav__link">
+    super_image.models.pan.configuration_pan.PanConfig
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.msrn.configuration_msrn.MsrnConfig.__init__" class="md-nav__link">
-    __init__()
+  <a href="#panmodel" class="md-nav__link">
+    PanModel
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#msrnmodel" class="md-nav__link">
-    MsrnModel
+  <a href="#super_image.models.pan.modeling_pan.PanModel" class="md-nav__link">
+    super_image.models.pan.modeling_pan.PanModel
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel" class="md-nav__link">
-    super_image.models.msrn.modeling_msrn.MsrnModel
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel.config_class" class="md-nav__link">
-    config_class
-  </a>
-  
-    <nav class="md-nav" aria-label="config_class">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel.config_class.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel.forward" class="md-nav__link">
+  <a href="#super_image.models.pan.modeling_pan.PanModel.forward" class="md-nav__link">
     forward()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel.load_state_dict" class="md-nav__link">
+  <a href="#super_image.models.pan.modeling_pan.PanModel.load_state_dict" class="md-nav__link">
     load_state_dict()
   </a>
   
@@ -562,30 +559,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../a2n/" class="md-nav__link">
-        A2N
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pan/" class="md-nav__link">
-        PAN
-      </a>
     </li>
   
 
@@ -786,69 +759,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#msrnconfig" class="md-nav__link">
-    MsrnConfig
+  <a href="#panconfig" class="md-nav__link">
+    PanConfig
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.msrn.configuration_msrn.MsrnConfig" class="md-nav__link">
-    super_image.models.msrn.configuration_msrn.MsrnConfig
+  <a href="#super_image.models.pan.configuration_pan.PanConfig" class="md-nav__link">
+    super_image.models.pan.configuration_pan.PanConfig
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.msrn.configuration_msrn.MsrnConfig.__init__" class="md-nav__link">
-    __init__()
+  <a href="#panmodel" class="md-nav__link">
+    PanModel
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#msrnmodel" class="md-nav__link">
-    MsrnModel
+  <a href="#super_image.models.pan.modeling_pan.PanModel" class="md-nav__link">
+    super_image.models.pan.modeling_pan.PanModel
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel" class="md-nav__link">
-    super_image.models.msrn.modeling_msrn.MsrnModel
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel.config_class" class="md-nav__link">
-    config_class
-  </a>
-  
-    <nav class="md-nav" aria-label="config_class">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel.config_class.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel.forward" class="md-nav__link">
+  <a href="#super_image.models.pan.modeling_pan.PanModel.forward" class="md-nav__link">
     forward()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.msrn.modeling_msrn.MsrnModel.load_state_dict" class="md-nav__link">
+  <a href="#super_image.models.pan.modeling_pan.PanModel.load_state_dict" class="md-nav__link">
     load_state_dict()
   </a>
   
@@ -866,170 +812,22 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/eugenesiow/super-image/edit/master/docs/models/msrn.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/eugenesiow/super-image/edit/master/docs/models/pan.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="multi-scale-residual-network-for-image-super-resolution-msrn">Multi-scale Residual Network for Image Super-Resolution (MSRN)<a class="headerlink" href="#multi-scale-residual-network-for-image-super-resolution-msrn" title="Permanent link">#</a></h1>
+                <h1 id="pixel-attention-network-pan">Pixel Attention Network (PAN)<a class="headerlink" href="#pixel-attention-network-pan" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>The MSRN model proposes a feature extraction structure called the multi-scale residual block. This module can "adaptively detect image features at different scales" and "exploit the potential features of the image".</p>
+<p>The PAN model proposes a a lightweight convolutional neural network for image super resolution. Pixel attention (PA) is similar to channel attention and spatial attention in formulation. PA however produces 3D attention maps instead of a 1D attention vector or a 2D map. This attention scheme introduces fewer additional parameters but generates better SR results.</p>
 <p>This model also applies the balanced attention (BAM) method invented by <a href="https://arxiv.org/abs/2104.07566">Wang et al. (2021)</a> to further improve the results.</p>
-<p>It was introduced in the paper <a href="https://openaccess.thecvf.com/content_ECCV_2018/html/Juncheng_Li_Multi-scale_Residual_Network_ECCV_2018_paper.html">Multi-scale Residual Network for Image Super-Resolution</a> by Li et al. (2018) and first released in <a href="https://github.com/MIVRC/MSRN-PyTorch">this repository</a>. </p>
-<h2 id="msrnconfig">MsrnConfig<a class="headerlink" href="#msrnconfig" title="Permanent link">#</a></h2>
+<p>It was introduced in the paper  <a href="https://arxiv.org/abs/2010.01073">Efficient Image Super-Resolution Using Pixel Attention</a> by Zhao et al. (2020) and first released in <a href="https://github.com/zhaohengyuan1/PAN">this repository</a>.  </p>
+<h2 id="panconfig">PanConfig<a class="headerlink" href="#panconfig" title="Permanent link">#</a></h2>
 
 
   <div class="doc doc-object doc-class">
 
-<a id="super_image.models.msrn.configuration_msrn.MsrnConfig"></a>
-    <div class="doc doc-contents first">
-
-      <p>This is the configuration class to store the configuration of a :class:<code>~super_image.MsrnModel</code>.
-It is used to instantiate the model according to the specified arguments, defining the model architecture.
-Instantiating a configuration with the defaults will yield a similar
-configuration to that of the <a href="https://huggingface.co/eugenesiow/msrn-bam">MSRN BAM</a> architecture.
-Configuration objects inherit from :class:<code>~super_image.PretrainedConfig</code> and can be used to control the model
-outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig</code> for more information.</p>
-
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">super_image</span> <span class="kn">import</span> <span class="n">MsrnModel</span><span class="p">,</span> <span class="n">MsrnConfig</span>
-<span class="c1"># Initializing a configuration</span>
-<span class="n">config</span> <span class="o">=</span> <span class="n">MsrnConfig</span><span class="p">(</span>
-    <span class="n">scale</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>                                <span class="c1"># train a model to upscale 4x</span>
-    <span class="n">bam</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>                               <span class="c1"># use balanced attention (BAM)</span>
-<span class="p">)</span>
-<span class="c1"># Initializing a model from the configuration</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">MsrnModel</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-<span class="c1"># Accessing the model configuration</span>
-<span class="n">configuration</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span>
-</code></pre></div>
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h2 class="doc doc-heading" id="super_image.models.msrn.configuration_msrn.MsrnConfig.__init__">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_blocks</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">n_feats</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">rgb_range</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">bam</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">rgb_mean</span><span class="o">=</span><span class="p">(</span><span class="mf">0.4488</span><span class="p">,</span> <span class="mf">0.4371</span><span class="p">,</span> <span class="mf">0.404</span><span class="p">),</span> <span class="n">rgb_std</span><span class="o">=</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-special"><code>special</code></small>
-  </span>
-
-<a class="headerlink" href="#super_image.models.msrn.configuration_msrn.MsrnConfig.__init__" title="Permanent link">#</a></h2>
-
-    <div class="doc doc-contents ">
-
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>scale</code></td>
-        <td><code>int</code></td>
-        <td><p>Scale for the model to train an upscaler/super-res model.</p></td>
-        <td><code>None</code></td>
-      </tr>
-      <tr>
-        <td><code>n_blocks</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of blocks.</p></td>
-        <td><code>8</code></td>
-      </tr>
-      <tr>
-        <td><code>n_feats</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of filters.</p></td>
-        <td><code>64</code></td>
-      </tr>
-      <tr>
-        <td><code>rgb_range</code></td>
-        <td><code>int</code></td>
-        <td><p>Range of RGB as a multiplier to the MeanShift.</p></td>
-        <td><code>255</code></td>
-      </tr>
-      <tr>
-        <td><code>data_parallel</code></td>
-        <td><code>bool</code></td>
-        <td><p>Option to use multiple GPUs for training.</p></td>
-        <td><code>False</code></td>
-      </tr>
-      <tr>
-        <td><code>bam</code></td>
-        <td><code>bool</code></td>
-        <td><p>Option to use balanced attention modules instead (BAM)</p></td>
-        <td><code>False</code></td>
-      </tr>
-  </tbody>
-</table>
-        <details class="quote">
-          <summary>Source code in <code>super_image\models\msrn\configuration_msrn.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_blocks</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">n_feats</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">rgb_range</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">bam</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-             <span class="n">rgb_mean</span><span class="o">=</span><span class="n">DIV2K_RGB_MEAN</span><span class="p">,</span> <span class="n">rgb_std</span><span class="o">=</span><span class="n">DIV2K_RGB_STD</span><span class="p">,</span>
-             <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Args:</span>
-<span class="sd">        scale (int): Scale for the model to train an upscaler/super-res model.</span>
-<span class="sd">        n_blocks (int): Number of blocks.</span>
-<span class="sd">        n_feats (int): Number of filters.</span>
-<span class="sd">        rgb_range (int):</span>
-<span class="sd">            Range of RGB as a multiplier to the MeanShift.</span>
-<span class="sd">        data_parallel (bool):</span>
-<span class="sd">            Option to use multiple GPUs for training.</span>
-<span class="sd">        bam (bool): Option to use balanced attention modules instead (BAM)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">scale</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_blocks</span> <span class="o">=</span> <span class="n">n_blocks</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_feats</span> <span class="o">=</span> <span class="n">n_feats</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">rgb_range</span> <span class="o">=</span> <span class="n">rgb_range</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">rgb_mean</span> <span class="o">=</span> <span class="n">rgb_mean</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">rgb_std</span> <span class="o">=</span> <span class="n">rgb_std</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">data_parallel</span> <span class="o">=</span> <span class="n">data_parallel</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">bam</span> <span class="o">=</span> <span class="n">bam</span>
-</code></pre></div>
-        </details>
-    </div>
-
-  </div>
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-<h2 id="msrnmodel">MsrnModel<a class="headerlink" href="#msrnmodel" title="Permanent link">#</a></h2>
-
-
-  <div class="doc doc-object doc-class">
-
-<a id="super_image.models.msrn.modeling_msrn.MsrnModel"></a>
+<a id="super_image.models.pan.configuration_pan.PanConfig"></a>
     <div class="doc doc-contents first">
 
 
@@ -1044,38 +842,26 @@ outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig<
 
 
 
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+  </div>
+
+<h2 id="panmodel">PanModel<a class="headerlink" href="#panmodel" title="Permanent link">#</a></h2>
+
+
   <div class="doc doc-object doc-class">
 
+<a id="super_image.models.pan.modeling_pan.PanModel"></a>
+    <div class="doc doc-contents first">
 
-
-<h2 class="doc doc-heading" id="super_image.models.msrn.modeling_msrn.MsrnModel.config_class">
-        <code>config_class</code>
-
-
-
-<a class="headerlink" href="#super_image.models.msrn.modeling_msrn.MsrnModel.config_class" title="Permanent link">#</a></h2>
-
-    <div class="doc doc-contents ">
-
-      <p>This is the configuration class to store the configuration of a :class:<code>~super_image.MsrnModel</code>.
-It is used to instantiate the model according to the specified arguments, defining the model architecture.
-Instantiating a configuration with the defaults will yield a similar
-configuration to that of the <a href="https://huggingface.co/eugenesiow/msrn-bam">MSRN BAM</a> architecture.
-Configuration objects inherit from :class:<code>~super_image.PretrainedConfig</code> and can be used to control the model
-outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig</code> for more information.</p>
-
-<p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">super_image</span> <span class="kn">import</span> <span class="n">MsrnModel</span><span class="p">,</span> <span class="n">MsrnConfig</span>
-<span class="c1"># Initializing a configuration</span>
-<span class="n">config</span> <span class="o">=</span> <span class="n">MsrnConfig</span><span class="p">(</span>
-    <span class="n">scale</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>                                <span class="c1"># train a model to upscale 4x</span>
-    <span class="n">bam</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>                               <span class="c1"># use balanced attention (BAM)</span>
-<span class="p">)</span>
-<span class="c1"># Initializing a model from the configuration</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">MsrnModel</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
-<span class="c1"># Accessing the model configuration</span>
-<span class="n">configuration</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span>
-</code></pre></div>
 
 
 
@@ -1091,126 +877,16 @@ outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig<
 
 
 
-  <div class="doc doc-object doc-method">
-
-
-
-<h3 class="doc doc-heading" id="super_image.models.msrn.modeling_msrn.MsrnModel.config_class.__init__">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_blocks</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">n_feats</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">rgb_range</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">bam</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">rgb_mean</span><span class="o">=</span><span class="p">(</span><span class="mf">0.4488</span><span class="p">,</span> <span class="mf">0.4371</span><span class="p">,</span> <span class="mf">0.404</span><span class="p">),</span> <span class="n">rgb_std</span><span class="o">=</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
-
-  <span class="doc doc-properties">
-      <small class="doc doc-property doc-property-special"><code>special</code></small>
-  </span>
-
-<a class="headerlink" href="#super_image.models.msrn.modeling_msrn.MsrnModel.config_class.__init__" title="Permanent link">#</a></h3>
-
-    <div class="doc doc-contents ">
-
-
-<p><strong>Parameters:</strong></p>
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Default</th>
-    </tr>
-  </thead>
-  <tbody>
-      <tr>
-        <td><code>scale</code></td>
-        <td><code>int</code></td>
-        <td><p>Scale for the model to train an upscaler/super-res model.</p></td>
-        <td><code>None</code></td>
-      </tr>
-      <tr>
-        <td><code>n_blocks</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of blocks.</p></td>
-        <td><code>8</code></td>
-      </tr>
-      <tr>
-        <td><code>n_feats</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of filters.</p></td>
-        <td><code>64</code></td>
-      </tr>
-      <tr>
-        <td><code>rgb_range</code></td>
-        <td><code>int</code></td>
-        <td><p>Range of RGB as a multiplier to the MeanShift.</p></td>
-        <td><code>255</code></td>
-      </tr>
-      <tr>
-        <td><code>data_parallel</code></td>
-        <td><code>bool</code></td>
-        <td><p>Option to use multiple GPUs for training.</p></td>
-        <td><code>False</code></td>
-      </tr>
-      <tr>
-        <td><code>bam</code></td>
-        <td><code>bool</code></td>
-        <td><p>Option to use balanced attention modules instead (BAM)</p></td>
-        <td><code>False</code></td>
-      </tr>
-  </tbody>
-</table>
-        <details class="quote">
-          <summary>Source code in <code>super_image\models\msrn\modeling_msrn.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_blocks</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">n_feats</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">rgb_range</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">bam</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-             <span class="n">rgb_mean</span><span class="o">=</span><span class="n">DIV2K_RGB_MEAN</span><span class="p">,</span> <span class="n">rgb_std</span><span class="o">=</span><span class="n">DIV2K_RGB_STD</span><span class="p">,</span>
-             <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Args:</span>
-<span class="sd">        scale (int): Scale for the model to train an upscaler/super-res model.</span>
-<span class="sd">        n_blocks (int): Number of blocks.</span>
-<span class="sd">        n_feats (int): Number of filters.</span>
-<span class="sd">        rgb_range (int):</span>
-<span class="sd">            Range of RGB as a multiplier to the MeanShift.</span>
-<span class="sd">        data_parallel (bool):</span>
-<span class="sd">            Option to use multiple GPUs for training.</span>
-<span class="sd">        bam (bool): Option to use balanced attention modules instead (BAM)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">scale</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_blocks</span> <span class="o">=</span> <span class="n">n_blocks</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_feats</span> <span class="o">=</span> <span class="n">n_feats</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">rgb_range</span> <span class="o">=</span> <span class="n">rgb_range</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">rgb_mean</span> <span class="o">=</span> <span class="n">rgb_mean</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">rgb_std</span> <span class="o">=</span> <span class="n">rgb_std</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">data_parallel</span> <span class="o">=</span> <span class="n">data_parallel</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">bam</span> <span class="o">=</span> <span class="n">bam</span>
-</code></pre></div>
-        </details>
-    </div>
-
-  </div>
-
-
-
-
-
-  </div>
-
-    </div>
-
-  </div>
-
-
-
-
-
 
   <div class="doc doc-object doc-method">
 
 
 
-<h2 class="doc doc-heading" id="super_image.models.msrn.modeling_msrn.MsrnModel.forward">
+<h2 class="doc doc-heading" id="super_image.models.pan.modeling_pan.PanModel.forward">
 <code class="highlight language-python"><span class="n">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code>
 
 
-<a class="headerlink" href="#super_image.models.msrn.modeling_msrn.MsrnModel.forward" title="Permanent link">#</a></h2>
+<a class="headerlink" href="#super_image.models.pan.modeling_pan.PanModel.forward" title="Permanent link">#</a></h2>
 
     <div class="doc doc-contents ">
 
@@ -1223,22 +899,29 @@ outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig<
     registered hooks while the latter silently ignores them.</p>
 
         <details class="quote">
-          <summary>Source code in <code>super_image\models\msrn\modeling_msrn.py</code></summary>
+          <summary>Source code in <code>super_image\models\pan\modeling_pan.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="c1"># x = self.sub_mean(x)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="n">x</span>
+    <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_first</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">trunk</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trunk_conv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">SCPA_trunk</span><span class="p">(</span><span class="n">fea</span><span class="p">))</span>
+    <span class="n">fea</span> <span class="o">=</span> <span class="n">fea</span> <span class="o">+</span> <span class="n">trunk</span>
 
-    <span class="n">MSRB_out</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_blocks</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">[</span><span class="n">i</span><span class="p">](</span><span class="n">x</span><span class="p">)</span>
-        <span class="n">MSRB_out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">MSRB_out</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upconv1</span><span class="p">(</span><span class="n">functional</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">fea</span><span class="p">,</span> <span class="n">scale_factor</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">))</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lrelu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">att1</span><span class="p">(</span><span class="n">fea</span><span class="p">))</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lrelu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">HRconv1</span><span class="p">(</span><span class="n">fea</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upconv1</span><span class="p">(</span><span class="n">functional</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">fea</span><span class="p">,</span> <span class="n">scale_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">))</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lrelu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">att1</span><span class="p">(</span><span class="n">fea</span><span class="p">))</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lrelu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">HRconv1</span><span class="p">(</span><span class="n">fea</span><span class="p">))</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upconv2</span><span class="p">(</span><span class="n">functional</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">fea</span><span class="p">,</span> <span class="n">scale_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">))</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lrelu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">att2</span><span class="p">(</span><span class="n">fea</span><span class="p">))</span>
+        <span class="n">fea</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lrelu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">HRconv2</span><span class="p">(</span><span class="n">fea</span><span class="p">))</span>
 
-    <span class="n">res</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span><span class="n">MSRB_out</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-    <span class="c1"># x = self.add_mean(x)</span>
-    <span class="k">return</span> <span class="n">x</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conv_last</span><span class="p">(</span><span class="n">fea</span><span class="p">)</span>
+
+    <span class="n">ilr</span> <span class="o">=</span> <span class="n">functional</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">scale_factor</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">,</span> <span class="n">align_corners</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">out</span> <span class="o">+</span> <span class="n">ilr</span>
+    <span class="k">return</span> <span class="n">out</span>
 </code></pre></div>
         </details>
     </div>
@@ -1251,11 +934,11 @@ outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig<
 
 
 
-<h2 class="doc doc-heading" id="super_image.models.msrn.modeling_msrn.MsrnModel.load_state_dict">
+<h2 class="doc doc-heading" id="super_image.models.pan.modeling_pan.PanModel.load_state_dict">
 <code class="highlight language-python"><span class="n">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 
-<a class="headerlink" href="#super_image.models.msrn.modeling_msrn.MsrnModel.load_state_dict" title="Permanent link">#</a></h2>
+<a class="headerlink" href="#super_image.models.pan.modeling_pan.PanModel.load_state_dict" title="Permanent link">#</a></h2>
 
     <div class="doc doc-contents ">
 
@@ -1313,7 +996,7 @@ in :attr:<code>state_dict</code> match the keys returned by this module's
   </tbody>
 </table>
         <details class="quote">
-          <summary>Source code in <code>super_image\models\msrn\modeling_msrn.py</code></summary>
+          <summary>Source code in <code>super_image\models\pan\modeling_pan.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="n">own_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">state_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -1370,7 +1053,7 @@ in :attr:<code>state_dict</code> match the keys returned by this module's
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../edsr/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../a2n/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1379,19 +1062,19 @@ in :attr:<code>state_dict</code> match the keys returned by this module's
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                EDSR
+                A2N
               </div>
             </div>
           </a>
         
         
-          <a href="../a2n/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../carn/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                A2N
+                CARN
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

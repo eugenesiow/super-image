@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://eugenesiow.github.io/super-image/models/edsr/">
+        <link rel="canonical" href="https://eugenesiow.github.io/super-image/models/carn/">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-6.2.8">
     
     
       
-        <title>EDSR - super-image</title>
+        <title>CARN - super-image</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#enhanced-deep-residual-networks-for-single-image-super-resolution-edsr" class="md-skip">
+        <a href="#cascading-residual-network-carn" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              EDSR
+              CARN
             
           </span>
         </div>
@@ -192,7 +192,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../edsr/" class="md-tabs__link md-tabs__link--active">
         Models
       </a>
     </li>
@@ -438,118 +438,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          EDSR
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../edsr/" class="md-nav__link">
         EDSR
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#edsrconfig" class="md-nav__link">
-    EdsrConfig
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#super_image.models.edsr.configuration_edsr.EdsrConfig" class="md-nav__link">
-    super_image.models.edsr.configuration_edsr.EdsrConfig
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#super_image.models.edsr.configuration_edsr.EdsrConfig.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#edsrmodel" class="md-nav__link">
-    EdsrModel
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel" class="md-nav__link">
-    super_image.models.edsr.modeling_edsr.EdsrModel
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.config_class" class="md-nav__link">
-    config_class
-  </a>
-  
-    <nav class="md-nav" aria-label="config_class">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.config_class.__init__" class="md-nav__link">
-    __init__()
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.forward" class="md-nav__link">
-    forward()
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.load_state_dict" class="md-nav__link">
-    load_state_dict()
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -593,11 +486,118 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../carn/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CARN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         CARN
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#carnconfig" class="md-nav__link">
+    CarnConfig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.models.carn.configuration_carn.CarnConfig" class="md-nav__link">
+    super_image.models.carn.configuration_carn.CarnConfig
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.models.carn.configuration_carn.CarnConfig.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#carnmodel" class="md-nav__link">
+    CarnModel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.models.carn.modeling_carn.CarnModel" class="md-nav__link">
+    super_image.models.carn.modeling_carn.CarnModel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.models.carn.modeling_carn.CarnModel.config_class" class="md-nav__link">
+    config_class
+  </a>
+  
+    <nav class="md-nav" aria-label="config_class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#super_image.models.carn.modeling_carn.CarnModel.config_class.__init__" class="md-nav__link">
+    __init__()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.models.carn.modeling_carn.CarnModel.forward" class="md-nav__link">
+    forward()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#super_image.models.carn.modeling_carn.CarnModel.load_state_dict" class="md-nav__link">
+    load_state_dict()
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -786,42 +786,42 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#edsrconfig" class="md-nav__link">
-    EdsrConfig
+  <a href="#carnconfig" class="md-nav__link">
+    CarnConfig
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.edsr.configuration_edsr.EdsrConfig" class="md-nav__link">
-    super_image.models.edsr.configuration_edsr.EdsrConfig
+  <a href="#super_image.models.carn.configuration_carn.CarnConfig" class="md-nav__link">
+    super_image.models.carn.configuration_carn.CarnConfig
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.edsr.configuration_edsr.EdsrConfig.__init__" class="md-nav__link">
+  <a href="#super_image.models.carn.configuration_carn.CarnConfig.__init__" class="md-nav__link">
     __init__()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#edsrmodel" class="md-nav__link">
-    EdsrModel
+  <a href="#carnmodel" class="md-nav__link">
+    CarnModel
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel" class="md-nav__link">
-    super_image.models.edsr.modeling_edsr.EdsrModel
+  <a href="#super_image.models.carn.modeling_carn.CarnModel" class="md-nav__link">
+    super_image.models.carn.modeling_carn.CarnModel
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.config_class" class="md-nav__link">
+  <a href="#super_image.models.carn.modeling_carn.CarnModel.config_class" class="md-nav__link">
     config_class
   </a>
   
@@ -829,7 +829,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.config_class.__init__" class="md-nav__link">
+  <a href="#super_image.models.carn.modeling_carn.CarnModel.config_class.__init__" class="md-nav__link">
     __init__()
   </a>
   
@@ -841,14 +841,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.forward" class="md-nav__link">
+  <a href="#super_image.models.carn.modeling_carn.CarnModel.forward" class="md-nav__link">
     forward()
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#super_image.models.edsr.modeling_edsr.EdsrModel.load_state_dict" class="md-nav__link">
+  <a href="#super_image.models.carn.modeling_carn.CarnModel.load_state_dict" class="md-nav__link">
     load_state_dict()
   </a>
   
@@ -866,44 +866,39 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/eugenesiow/super-image/edit/master/docs/models/edsr.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/eugenesiow/super-image/edit/master/docs/models/carn.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="enhanced-deep-residual-networks-for-single-image-super-resolution-edsr">Enhanced Deep Residual Networks for Single Image Super-Resolution (EDSR)<a class="headerlink" href="#enhanced-deep-residual-networks-for-single-image-super-resolution-edsr" title="Permanent link">#</a></h1>
+                <h1 id="cascading-residual-network-carn">Cascading Residual Network (CARN)<a class="headerlink" href="#cascading-residual-network-carn" title="Permanent link">#</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>EDSR is a model that uses both deeper and wider architecture (32 ResBlocks and 256 channels) to improve performance. 
-It uses both global and local skip connections, and up-scaling is done at the end of the network. 
-It doesn't use batch normalization layers (input and output have similar distributions, normalizing intermediate 
-features may not be desirable) instead it uses constant scaling layers to ensure stable training. 
-An L1 loss function (absolute error) is used instead of L2 (MSE), the authors showed better performance empirically 
-and it requires less computation.</p>
-<p>The default parameters are for the base model (~5mb vs ~100mb) that includes just 16 ResBlocks and 64 channels.</p>
-<p>It was introduced in the paper <a href="https://arxiv.org/abs/1707.02921">Enhanced Deep Residual Networks for Single Image Super-Resolution</a> by Lim et al. (2017) and first released in <a href="https://github.com/sanghyun-son/EDSR-PyTorch">this repository</a>. </p>
-<h2 id="edsrconfig">EdsrConfig<a class="headerlink" href="#edsrconfig" title="Permanent link">#</a></h2>
+<p>The CARN model proposes an architecture that implements a cascading mechanism upon a residual network for accurate and lightweight image super-resolution.</p>
+<p>This model also applies the balanced attention (BAM) method invented by <a href="https://arxiv.org/abs/2104.07566">Wang et al. (2021)</a> to further improve the results.</p>
+<p>It was introduced in the paper <a href="https://arxiv.org/abs/1803.08664">Fast, Accurate, and Lightweight Super-Resolution with Cascading Residual Network</a> by Ahn et al. (2018) and first released in <a href="https://github.com/nmhkahn/CARN-pytorch">this repository</a>.  </p>
+<h2 id="carnconfig">CarnConfig<a class="headerlink" href="#carnconfig" title="Permanent link">#</a></h2>
 
 
   <div class="doc doc-object doc-class">
 
-<a id="super_image.models.edsr.configuration_edsr.EdsrConfig"></a>
+<a id="super_image.models.carn.configuration_carn.CarnConfig"></a>
     <div class="doc doc-contents first">
 
-      <p>This is the configuration class to store the configuration of a :class:<code>~super_image.EdsrModel</code>.
+      <p>This is the configuration class to store the configuration of a :class:<code>~super_image.CarnModel</code>.
 It is used to instantiate the model according to the specified arguments, defining the model architecture.
 Instantiating a configuration with the defaults will yield a similar
-configuration to that of the <a href="https://huggingface.co/eugenesiow/edsr-base">EDSR base</a> architecture.
+configuration to that of the <a href="https://huggingface.co/eugenesiow/carn">CARN</a> architecture.
 Configuration objects inherit from :class:<code>~super_image.PretrainedConfig</code> and can be used to control the model
 outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig</code> for more information.</p>
 
 <p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">super_image</span> <span class="kn">import</span> <span class="n">EdsrModel</span><span class="p">,</span> <span class="n">EdsrConfig</span>
+    <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">super_image</span> <span class="kn">import</span> <span class="n">CarnModel</span><span class="p">,</span> <span class="n">CarnConfig</span>
 <span class="c1"># Initializing a configuration</span>
-<span class="n">config</span> <span class="o">=</span> <span class="n">EdsrConfig</span><span class="p">(</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">CarnConfig</span><span class="p">(</span>
     <span class="n">scale</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>                                <span class="c1"># train a model to upscale 4x</span>
 <span class="p">)</span>
 <span class="c1"># Initializing a model from the configuration</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">EdsrModel</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">CarnModel</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 <span class="c1"># Accessing the model configuration</span>
 <span class="n">configuration</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span>
 </code></pre></div>
@@ -926,14 +921,14 @@ outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig<
 
 
 
-<h2 class="doc doc-heading" id="super_image.models.edsr.configuration_edsr.EdsrConfig.__init__">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_resblocks</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">n_feats</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">n_colors</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">rgb_range</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">rgb_mean</span><span class="o">=</span><span class="p">(</span><span class="mf">0.4488</span><span class="p">,</span> <span class="mf">0.4371</span><span class="p">,</span> <span class="mf">0.404</span><span class="p">),</span> <span class="n">rgb_std</span><span class="o">=</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">no_upsampling</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">res_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<h2 class="doc doc-heading" id="super_image.models.carn.configuration_carn.CarnConfig.__init__">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bam</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">rgb_mean</span><span class="o">=</span><span class="p">(</span><span class="mf">0.4488</span><span class="p">,</span> <span class="mf">0.4371</span><span class="p">,</span> <span class="mf">0.404</span><span class="p">),</span> <span class="n">rgb_std</span><span class="o">=</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
   <span class="doc doc-properties">
       <small class="doc doc-property doc-property-special"><code>special</code></small>
   </span>
 
-<a class="headerlink" href="#super_image.models.edsr.configuration_edsr.EdsrConfig.__init__" title="Permanent link">#</a></h2>
+<a class="headerlink" href="#super_image.models.carn.configuration_carn.CarnConfig.__init__" title="Permanent link">#</a></h2>
 
     <div class="doc doc-contents ">
 
@@ -956,34 +951,10 @@ outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig<
         <td><code>None</code></td>
       </tr>
       <tr>
-        <td><code>n_resblocks</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of residual blocks.</p></td>
-        <td><code>16</code></td>
-      </tr>
-      <tr>
-        <td><code>n_feats</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of filters.</p></td>
-        <td><code>64</code></td>
-      </tr>
-      <tr>
-        <td><code>n_colors</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of color channels.</p></td>
-        <td><code>3</code></td>
-      </tr>
-      <tr>
-        <td><code>rgb_range</code></td>
-        <td><code>int</code></td>
-        <td><p>Range of RGB as a multiplier to the MeanShift.</p></td>
-        <td><code>255</code></td>
-      </tr>
-      <tr>
-        <td><code>res_scale</code></td>
-        <td><code>int</code></td>
-        <td><p>The res scale multiplier.</p></td>
-        <td><code>1</code></td>
+        <td><code>bam</code></td>
+        <td><code>bool</code></td>
+        <td><p>Train using balanced attention.</p></td>
+        <td><code>False</code></td>
       </tr>
       <tr>
         <td><code>rgb_mean</code></td>
@@ -1000,12 +971,6 @@ You can use <code>~super_image.utils.metrics.calculate_mean_std</code> to calcul
         <td><code>(1.0, 1.0, 1.0)</code></td>
       </tr>
       <tr>
-        <td><code>no_upsampling</code></td>
-        <td><code>bool</code></td>
-        <td><p>Option to turn off upsampling.</p></td>
-        <td><code>False</code></td>
-      </tr>
-      <tr>
         <td><code>data_parallel</code></td>
         <td><code>bool</code></td>
         <td><p>Option to use multiple GPUs for training.</p></td>
@@ -1014,42 +979,27 @@ You can use <code>~super_image.utils.metrics.calculate_mean_std</code> to calcul
   </tbody>
 </table>
         <details class="quote">
-          <summary>Source code in <code>super_image\models\edsr\configuration_edsr.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n_resblocks</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">n_feats</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">n_colors</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">rgb_range</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span>
-             <span class="n">rgb_mean</span><span class="o">=</span><span class="n">DIV2K_RGB_MEAN</span><span class="p">,</span> <span class="n">rgb_std</span><span class="o">=</span><span class="n">DIV2K_RGB_STD</span><span class="p">,</span> <span class="n">no_upsampling</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-             <span class="n">res_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+          <summary>Source code in <code>super_image\models\carn\configuration_carn.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">bam</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">rgb_mean</span><span class="o">=</span><span class="n">DIV2K_RGB_MEAN</span><span class="p">,</span> <span class="n">rgb_std</span><span class="o">=</span><span class="n">DIV2K_RGB_STD</span><span class="p">,</span>
+             <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Args:</span>
 <span class="sd">        scale (int): Scale for the model to train an upscaler/super-res model.</span>
-<span class="sd">        n_resblocks (int): Number of residual blocks.</span>
-<span class="sd">        n_feats (int): Number of filters.</span>
-<span class="sd">        n_colors (int):</span>
-<span class="sd">            Number of color channels.</span>
-<span class="sd">        rgb_range (int):</span>
-<span class="sd">            Range of RGB as a multiplier to the MeanShift.</span>
-<span class="sd">        res_scale (int):</span>
-<span class="sd">            The res scale multiplier.</span>
+<span class="sd">        bam (bool): Train using balanced attention.</span>
 <span class="sd">        rgb_mean (tuple):</span>
 <span class="sd">            The RGB mean of the train dataset.</span>
 <span class="sd">            You can use `~super_image.utils.metrics.calculate_mean_std` to calculate it.</span>
 <span class="sd">        rgb_std (tuple):</span>
 <span class="sd">            The RGB standard deviation of the train dataset.</span>
 <span class="sd">            You can use `~super_image.utils.metrics.calculate_mean_std` to calculate it.</span>
-<span class="sd">        no_upsampling (bool):</span>
-<span class="sd">            Option to turn off upsampling.</span>
 <span class="sd">        data_parallel (bool):</span>
 <span class="sd">            Option to use multiple GPUs for training.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">scale</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_resblocks</span> <span class="o">=</span> <span class="n">n_resblocks</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_feats</span> <span class="o">=</span> <span class="n">n_feats</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_colors</span> <span class="o">=</span> <span class="n">n_colors</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">rgb_range</span> <span class="o">=</span> <span class="n">rgb_range</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">res_scale</span> <span class="o">=</span> <span class="n">res_scale</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">bam</span> <span class="o">=</span> <span class="n">bam</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">rgb_mean</span> <span class="o">=</span> <span class="n">rgb_mean</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">rgb_std</span> <span class="o">=</span> <span class="n">rgb_std</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">no_upsampling</span> <span class="o">=</span> <span class="n">no_upsampling</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">data_parallel</span> <span class="o">=</span> <span class="n">data_parallel</span>
 </code></pre></div>
         </details>
@@ -1067,12 +1017,12 @@ You can use <code>~super_image.utils.metrics.calculate_mean_std</code> to calcul
 
   </div>
 
-<h2 id="edsrmodel">EdsrModel<a class="headerlink" href="#edsrmodel" title="Permanent link">#</a></h2>
+<h2 id="carnmodel">CarnModel<a class="headerlink" href="#carnmodel" title="Permanent link">#</a></h2>
 
 
   <div class="doc doc-object doc-class">
 
-<a id="super_image.models.edsr.modeling_edsr.EdsrModel"></a>
+<a id="super_image.models.carn.modeling_carn.CarnModel"></a>
     <div class="doc doc-contents first">
 
 
@@ -1091,30 +1041,30 @@ You can use <code>~super_image.utils.metrics.calculate_mean_std</code> to calcul
 
 
 
-<h2 class="doc doc-heading" id="super_image.models.edsr.modeling_edsr.EdsrModel.config_class">
+<h2 class="doc doc-heading" id="super_image.models.carn.modeling_carn.CarnModel.config_class">
         <code>config_class</code>
 
 
 
-<a class="headerlink" href="#super_image.models.edsr.modeling_edsr.EdsrModel.config_class" title="Permanent link">#</a></h2>
+<a class="headerlink" href="#super_image.models.carn.modeling_carn.CarnModel.config_class" title="Permanent link">#</a></h2>
 
     <div class="doc doc-contents ">
 
-      <p>This is the configuration class to store the configuration of a :class:<code>~super_image.EdsrModel</code>.
+      <p>This is the configuration class to store the configuration of a :class:<code>~super_image.CarnModel</code>.
 It is used to instantiate the model according to the specified arguments, defining the model architecture.
 Instantiating a configuration with the defaults will yield a similar
-configuration to that of the <a href="https://huggingface.co/eugenesiow/edsr-base">EDSR base</a> architecture.
+configuration to that of the <a href="https://huggingface.co/eugenesiow/carn">CARN</a> architecture.
 Configuration objects inherit from :class:<code>~super_image.PretrainedConfig</code> and can be used to control the model
 outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig</code> for more information.</p>
 
 <p><strong>Examples:</strong></p>
-    <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">super_image</span> <span class="kn">import</span> <span class="n">EdsrModel</span><span class="p">,</span> <span class="n">EdsrConfig</span>
+    <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">super_image</span> <span class="kn">import</span> <span class="n">CarnModel</span><span class="p">,</span> <span class="n">CarnConfig</span>
 <span class="c1"># Initializing a configuration</span>
-<span class="n">config</span> <span class="o">=</span> <span class="n">EdsrConfig</span><span class="p">(</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">CarnConfig</span><span class="p">(</span>
     <span class="n">scale</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>                                <span class="c1"># train a model to upscale 4x</span>
 <span class="p">)</span>
 <span class="c1"># Initializing a model from the configuration</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">EdsrModel</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">CarnModel</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
 <span class="c1"># Accessing the model configuration</span>
 <span class="n">configuration</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">config</span>
 </code></pre></div>
@@ -1137,14 +1087,14 @@ outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig<
 
 
 
-<h3 class="doc doc-heading" id="super_image.models.edsr.modeling_edsr.EdsrModel.config_class.__init__">
-<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_resblocks</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">n_feats</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">n_colors</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">rgb_range</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">rgb_mean</span><span class="o">=</span><span class="p">(</span><span class="mf">0.4488</span><span class="p">,</span> <span class="mf">0.4371</span><span class="p">,</span> <span class="mf">0.404</span><span class="p">),</span> <span class="n">rgb_std</span><span class="o">=</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">no_upsampling</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">res_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+<h3 class="doc doc-heading" id="super_image.models.carn.modeling_carn.CarnModel.config_class.__init__">
+<code class="highlight language-python"><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bam</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">rgb_mean</span><span class="o">=</span><span class="p">(</span><span class="mf">0.4488</span><span class="p">,</span> <span class="mf">0.4371</span><span class="p">,</span> <span class="mf">0.404</span><span class="p">),</span> <span class="n">rgb_std</span><span class="o">=</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span> <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
   <span class="doc doc-properties">
       <small class="doc doc-property doc-property-special"><code>special</code></small>
   </span>
 
-<a class="headerlink" href="#super_image.models.edsr.modeling_edsr.EdsrModel.config_class.__init__" title="Permanent link">#</a></h3>
+<a class="headerlink" href="#super_image.models.carn.modeling_carn.CarnModel.config_class.__init__" title="Permanent link">#</a></h3>
 
     <div class="doc doc-contents ">
 
@@ -1167,34 +1117,10 @@ outputs. Read the documentation from :class:<code>~super_image.PretrainedConfig<
         <td><code>None</code></td>
       </tr>
       <tr>
-        <td><code>n_resblocks</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of residual blocks.</p></td>
-        <td><code>16</code></td>
-      </tr>
-      <tr>
-        <td><code>n_feats</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of filters.</p></td>
-        <td><code>64</code></td>
-      </tr>
-      <tr>
-        <td><code>n_colors</code></td>
-        <td><code>int</code></td>
-        <td><p>Number of color channels.</p></td>
-        <td><code>3</code></td>
-      </tr>
-      <tr>
-        <td><code>rgb_range</code></td>
-        <td><code>int</code></td>
-        <td><p>Range of RGB as a multiplier to the MeanShift.</p></td>
-        <td><code>255</code></td>
-      </tr>
-      <tr>
-        <td><code>res_scale</code></td>
-        <td><code>int</code></td>
-        <td><p>The res scale multiplier.</p></td>
-        <td><code>1</code></td>
+        <td><code>bam</code></td>
+        <td><code>bool</code></td>
+        <td><p>Train using balanced attention.</p></td>
+        <td><code>False</code></td>
       </tr>
       <tr>
         <td><code>rgb_mean</code></td>
@@ -1211,12 +1137,6 @@ You can use <code>~super_image.utils.metrics.calculate_mean_std</code> to calcul
         <td><code>(1.0, 1.0, 1.0)</code></td>
       </tr>
       <tr>
-        <td><code>no_upsampling</code></td>
-        <td><code>bool</code></td>
-        <td><p>Option to turn off upsampling.</p></td>
-        <td><code>False</code></td>
-      </tr>
-      <tr>
         <td><code>data_parallel</code></td>
         <td><code>bool</code></td>
         <td><p>Option to use multiple GPUs for training.</p></td>
@@ -1225,42 +1145,27 @@ You can use <code>~super_image.utils.metrics.calculate_mean_std</code> to calcul
   </tbody>
 </table>
         <details class="quote">
-          <summary>Source code in <code>super_image\models\edsr\modeling_edsr.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">n_resblocks</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">n_feats</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">n_colors</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">rgb_range</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span>
-             <span class="n">rgb_mean</span><span class="o">=</span><span class="n">DIV2K_RGB_MEAN</span><span class="p">,</span> <span class="n">rgb_std</span><span class="o">=</span><span class="n">DIV2K_RGB_STD</span><span class="p">,</span> <span class="n">no_upsampling</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-             <span class="n">res_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+          <summary>Source code in <code>super_image\models\carn\modeling_carn.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scale</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">bam</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">rgb_mean</span><span class="o">=</span><span class="n">DIV2K_RGB_MEAN</span><span class="p">,</span> <span class="n">rgb_std</span><span class="o">=</span><span class="n">DIV2K_RGB_STD</span><span class="p">,</span>
+             <span class="n">data_parallel</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Args:</span>
 <span class="sd">        scale (int): Scale for the model to train an upscaler/super-res model.</span>
-<span class="sd">        n_resblocks (int): Number of residual blocks.</span>
-<span class="sd">        n_feats (int): Number of filters.</span>
-<span class="sd">        n_colors (int):</span>
-<span class="sd">            Number of color channels.</span>
-<span class="sd">        rgb_range (int):</span>
-<span class="sd">            Range of RGB as a multiplier to the MeanShift.</span>
-<span class="sd">        res_scale (int):</span>
-<span class="sd">            The res scale multiplier.</span>
+<span class="sd">        bam (bool): Train using balanced attention.</span>
 <span class="sd">        rgb_mean (tuple):</span>
 <span class="sd">            The RGB mean of the train dataset.</span>
 <span class="sd">            You can use `~super_image.utils.metrics.calculate_mean_std` to calculate it.</span>
 <span class="sd">        rgb_std (tuple):</span>
 <span class="sd">            The RGB standard deviation of the train dataset.</span>
 <span class="sd">            You can use `~super_image.utils.metrics.calculate_mean_std` to calculate it.</span>
-<span class="sd">        no_upsampling (bool):</span>
-<span class="sd">            Option to turn off upsampling.</span>
 <span class="sd">        data_parallel (bool):</span>
 <span class="sd">            Option to use multiple GPUs for training.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">scale</span> <span class="o">=</span> <span class="n">scale</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_resblocks</span> <span class="o">=</span> <span class="n">n_resblocks</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_feats</span> <span class="o">=</span> <span class="n">n_feats</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">n_colors</span> <span class="o">=</span> <span class="n">n_colors</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">rgb_range</span> <span class="o">=</span> <span class="n">rgb_range</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">res_scale</span> <span class="o">=</span> <span class="n">res_scale</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">bam</span> <span class="o">=</span> <span class="n">bam</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">rgb_mean</span> <span class="o">=</span> <span class="n">rgb_mean</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">rgb_std</span> <span class="o">=</span> <span class="n">rgb_std</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">no_upsampling</span> <span class="o">=</span> <span class="n">no_upsampling</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">data_parallel</span> <span class="o">=</span> <span class="n">data_parallel</span>
 </code></pre></div>
         </details>
@@ -1287,11 +1192,11 @@ You can use <code>~super_image.utils.metrics.calculate_mean_std</code> to calcul
 
 
 
-<h2 class="doc doc-heading" id="super_image.models.edsr.modeling_edsr.EdsrModel.forward">
+<h2 class="doc doc-heading" id="super_image.models.carn.modeling_carn.CarnModel.forward">
 <code class="highlight language-python"><span class="n">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code>
 
 
-<a class="headerlink" href="#super_image.models.edsr.modeling_edsr.EdsrModel.forward" title="Permanent link">#</a></h2>
+<a class="headerlink" href="#super_image.models.carn.modeling_carn.CarnModel.forward" title="Permanent link">#</a></h2>
 
     <div class="doc doc-contents ">
 
@@ -1304,19 +1209,30 @@ You can use <code>~super_image.utils.metrics.calculate_mean_std</code> to calcul
     registered hooks while the latter silently ignores them.</p>
 
         <details class="quote">
-          <summary>Source code in <code>super_image\models\edsr\modeling_edsr.py</code></summary>
+          <summary>Source code in <code>super_image\models\carn\modeling_carn.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sub_mean</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">entry</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">c0</span> <span class="o">=</span> <span class="n">o0</span> <span class="o">=</span> <span class="n">x</span>
 
-    <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">res</span> <span class="o">+=</span> <span class="n">x</span>
+    <span class="n">b1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b1</span><span class="p">(</span><span class="n">o0</span><span class="p">)</span>
+    <span class="n">c1</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">c0</span><span class="p">,</span> <span class="n">b1</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">o1</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c1</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">no_upsampling</span><span class="p">:</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">res</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+    <span class="n">b2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b2</span><span class="p">(</span><span class="n">o1</span><span class="p">)</span>
+    <span class="n">c2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">c1</span><span class="p">,</span> <span class="n">b2</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">o2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c2</span><span class="p">(</span><span class="n">c2</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">x</span>
+    <span class="n">b3</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">b3</span><span class="p">(</span><span class="n">o2</span><span class="p">)</span>
+    <span class="n">c3</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">c2</span><span class="p">,</span> <span class="n">b3</span><span class="p">],</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">o3</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">c3</span><span class="p">(</span><span class="n">c3</span><span class="p">)</span>
+
+    <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upsample</span><span class="p">(</span><span class="n">o3</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">scale</span><span class="p">)</span>
+
+    <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_mean</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">out</span>
 </code></pre></div>
         </details>
     </div>
@@ -1329,11 +1245,11 @@ You can use <code>~super_image.utils.metrics.calculate_mean_std</code> to calcul
 
 
 
-<h2 class="doc doc-heading" id="super_image.models.edsr.modeling_edsr.EdsrModel.load_state_dict">
+<h2 class="doc doc-heading" id="super_image.models.carn.modeling_carn.CarnModel.load_state_dict">
 <code class="highlight language-python"><span class="n">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 
-<a class="headerlink" href="#super_image.models.edsr.modeling_edsr.EdsrModel.load_state_dict" title="Permanent link">#</a></h2>
+<a class="headerlink" href="#super_image.models.carn.modeling_carn.CarnModel.load_state_dict" title="Permanent link">#</a></h2>
 
     <div class="doc doc-contents ">
 
@@ -1391,7 +1307,7 @@ in :attr:<code>state_dict</code> match the keys returned by this module's
   </tbody>
 </table>
         <details class="quote">
-          <summary>Source code in <code>super_image\models\edsr\modeling_edsr.py</code></summary>
+          <summary>Source code in <code>super_image\models\carn\modeling_carn.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">load_state_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state_dict</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="n">own_state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">state_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -1441,7 +1357,7 @@ in :attr:<code>state_dict</code> match the keys returned by this module's
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../license/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../pan/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1450,19 +1366,19 @@ in :attr:<code>state_dict</code> match the keys returned by this module's
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                License
+                PAN
               </div>
             </div>
           </a>
         
         
-          <a href="../msrn/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../reference/cli/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                MSRN
+                CLI
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

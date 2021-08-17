@@ -553,6 +553,30 @@
   
 
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/pan/" class="md-nav__link">
+        PAN
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/carn/" class="md-nav__link">
+        CARN
+      </a>
+    </li>
+  
+
+          
         </ul>
       </nav>
     </li>
@@ -863,12 +887,21 @@ All training was to 1000 epochs (some publications, like a2n, train to &gt;1000 
 <tbody>
 <tr>
 <td>1</td>
+<td><a href="https://huggingface.co/eugenesiow/msrn">msrn</a></td>
+<td>5.9m</td>
+<td><strong>38.08/0.9609</strong></td>
+<td><strong>33.75/0.9183</strong></td>
+<td><strong>33.82/0.9258</strong></td>
+<td><strong>32.14/0.9287</strong></td>
+</tr>
+<tr>
+<td>2</td>
 <td><a href="https://huggingface.co/eugenesiow/msrn-bam">msrn-bam</a></td>
 <td>5.9m</td>
-<td><strong>38.02/0.9608</strong></td>
-<td><strong>33.73/0.9186</strong></td>
+<td>38.02/0.9608</td>
+<td>33.73/0.9186</td>
 <td><strong>33.78/0.9253</strong></td>
-<td><strong>32.08/0.9276</strong></td>
+<td>32.08/0.9276</td>
 </tr>
 <tr>
 <td>2</td>
@@ -888,6 +921,24 @@ All training was to 1000 epochs (some publications, like a2n, train to &gt;1000 
 <td>33.67/0.9244</td>
 <td>31.71/0.9240</td>
 </tr>
+<tr>
+<td>4</td>
+<td><a href="https://huggingface.co/eugenesiow/carn-bam">carn-bam</a></td>
+<td>1.6m</td>
+<td>37.83/0.96</td>
+<td>33.51/0.9166</td>
+<td>33.64/0.924</td>
+<td>31.53/0.922</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://huggingface.co/eugenesiow/pan-bam">pan-bam</a></td>
+<td>260k</td>
+<td>37.7/0.9596</td>
+<td>33.4/0.9161</td>
+<td>33.6/0.9234</td>
+<td>31.35/0.92</td>
+</tr>
 </tbody>
 </table>
 <h3 id="scale-x3">Scale x3<a class="headerlink" href="#scale-x3" title="Permanent link">#</a></h3>
@@ -906,21 +957,57 @@ All training was to 1000 epochs (some publications, like a2n, train to &gt;1000 
 <tbody>
 <tr>
 <td>1</td>
-<td><a href="https://huggingface.co/eugenesiow/msrn-bam">msrn-bam</a></td>
-<td>5.9m</td>
-<td><strong>35.13/0.9408</strong></td>
-<td><strong>31.06/0.8588</strong></td>
-<td><strong>29.65/0.8196</strong></td>
-<td><strong>29.26/0.8736</strong></td>
+<td><a href="https://huggingface.co/eugenesiow/msrn">msrn</a></td>
+<td>6.1m</td>
+<td>35.12/0.9409</td>
+<td><strong>31.08/0.8593</strong></td>
+<td><strong>29.67/0.8198</strong></td>
+<td><strong>29.31/0.8743</strong></td>
 </tr>
 <tr>
 <td>2</td>
+<td><a href="https://huggingface.co/eugenesiow/msrn-bam">msrn-bam</a></td>
+<td>5.9m</td>
+<td><strong>35.13/0.9408</strong></td>
+<td>31.06/0.8588</td>
+<td>29.65/0.8196</td>
+<td>29.26/0.8736</td>
+</tr>
+<tr>
+<td>3</td>
 <td><a href="https://huggingface.co/eugenesiow/edsr-base">edsr-base</a></td>
 <td>1.5m</td>
 <td>35.01/0.9402</td>
 <td>31.01/0.8583</td>
 <td>29.63/0.8190</td>
 <td>29.19/0.8722</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="https://huggingface.co/eugenesiow/a2n">a2n</a></td>
+<td>1.0m</td>
+<td>34.8/0.9387</td>
+<td>30.94/0.8568</td>
+<td>29.56/0.8173</td>
+<td>28.95/0.8671</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://huggingface.co/eugenesiow/carn-bam">carn-bam</a></td>
+<td>1.6m</td>
+<td>34.82/0.9385</td>
+<td>30.9/0.8558</td>
+<td>29.54/0.8166</td>
+<td>28.84/0.8648</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="https://huggingface.co/eugenesiow/pan-bam">pan-bam</a></td>
+<td>260k</td>
+<td>34.62/0.9371</td>
+<td>30.83/0.8545</td>
+<td>29.47/0.8153</td>
+<td>28.64/0.861</td>
 </tr>
 </tbody>
 </table>
@@ -973,6 +1060,33 @@ All training was to 1000 epochs (some publications, like a2n, train to &gt;1000 
 <td>28.68/0.7830</td>
 <td>28.44/0.7624</td>
 <td>25.89/0.7787</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://huggingface.co/eugenesiow/carn">carn</a></td>
+<td>1.6m</td>
+<td>32.05/0.8931</td>
+<td>28.67/0.7828</td>
+<td>28.44/0.7625</td>
+<td>25.85/0.7768</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="https://huggingface.co/eugenesiow/carn-bam">carn-bam</a></td>
+<td>1.6m</td>
+<td>32.0/0.8923</td>
+<td>28.62/0.7822</td>
+<td>28.41/0.7614</td>
+<td>25.77/0.7741</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="https://huggingface.co/eugenesiow/pan-bam">pan-bam</a></td>
+<td>270k</td>
+<td>31.9/0.8911</td>
+<td>28.54/0.7795</td>
+<td>28.32/0.7591</td>
+<td>25.6/0.7691</td>
 </tr>
 </tbody>
 </table>
