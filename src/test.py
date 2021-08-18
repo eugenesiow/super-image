@@ -2,7 +2,7 @@ import torch
 import cv2
 import numpy as np
 from PIL import Image
-from super_image.models import EdsrModel, EdsrConfig, MsrnModel, A2nConfig, A2nModel, PanModel, CarnModel
+from super_image.models import EdsrModel, EdsrConfig, MsrnModel, A2nConfig, A2nModel, PanModel, CarnModel, MdsrModel
 from torch.utils.data import Dataset
 from torch import nn
 from torch.utils.data.dataloader import DataLoader
@@ -107,6 +107,8 @@ def output_image(input_dir, eval_file, scale, model_type='edsr'):
         model = PanModel.from_pretrained(input_dir, scale=scale)
     elif model_type == 'carn':
         model = CarnModel.from_pretrained(input_dir, scale=scale)
+    elif model_type == 'mdsr':
+        model = MdsrModel.from_pretrained(input_dir, scale=scale)
     else:
         model = MsrnModel.from_pretrained(input_dir, scale=scale)
     for i, data in enumerate(eval_dataloader):
@@ -179,7 +181,7 @@ def output_image(input_dir, eval_file, scale, model_type='edsr'):
 # output_image('eugenesiow/edsr-base', '../../../super-image-models/test/Set5_x2.h5', 2)
 # output_image('eugenesiow/edsr-base', '../../../super-image-models/test/Set5_x4.h5', 4)
 # output_image('eugenesiow/a2n', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='a2n')
-output_image('../../../super-image-models/carn', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='carn')
+output_image('../../../super-image-models/mdsr-bam', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='mdsr')
 # output_image('../../../super-image-models/msrn-bam', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='msrn')
 # load_pretrained('eugenesiow/a2n', '../../../super-image-models/test/Set14_x4.h5', 4, model_type='a2n')
 # load_pretrained('../../../super-image-models/a2n', '../../../super-image-models/test/BSD100_x4.h5', 4, model_type='a2n')

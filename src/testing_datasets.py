@@ -1,5 +1,5 @@
 from datasets import load_dataset
-from super_image import EdsrModel, MsrnModel, A2nModel, PanModel, CarnModel
+from super_image import EdsrModel, MsrnModel, A2nModel, PanModel, CarnModel, MdsrModel
 from super_image.data import EvalDataset, EvalMetrics
 
 
@@ -13,7 +13,8 @@ dataset = load_dataset('eugenesiow/Urban100', 'bicubic_x4', split='validation')
 eval_dataset = EvalDataset(dataset)
 # model = A2nModel.from_pretrained('eugenesiow/a2n', scale=2)
 # model = A2nModel.from_pretrained('../../super-image-models/a2n', scale=3)
-model = CarnModel.from_pretrained('../../super-image-models/carn', scale=4)
+# model = CarnModel.from_pretrained('../../super-image-models/carn', scale=4)
+model = MdsrModel.from_pretrained('../../super-image-models/mdsr-bam', scale=4)
 # model = MsrnModel.from_pretrained('../../super-image-models/msrn', scale=2)
 print(count_parameters(model))
 # model = EdsrModel.from_pretrained('./results', scale=2)
