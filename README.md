@@ -1,6 +1,9 @@
 <h1 align="center">super-image</h1>
 
 <p align="center">
+    <a href="https://pypi.org/project/super-image/">
+        <img alt="downloads" src="https://img.shields.io/pypi/dm/super-image">
+    </a>
     <a href="https://eugenesiow.github.io/super-image/">
         <img alt="documentation" src="https://img.shields.io/badge/docs-mkdocs-blue.svg?style=flat">
     </a>
@@ -64,8 +67,9 @@ All training was to 1000 epochs (some publications, like a2n, train to >1000 epo
 |2      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|5.9m           |38.02/0.9608       |33.73/0.9186  	    |**33.78/0.9253**   |32.08/0.9276       |
 |2      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|1.5m           |38.02/0.9607       |33.66/0.9180       |33.77/0.9254       |32.04/0.9276       |
 |3      |[a2n](https://huggingface.co/eugenesiow/a2n)   	        |1.0m           |37.87/0.9602       |33.54/0.9171       |33.67/0.9244       |31.71/0.9240       |
-|4      |[carn-bam](https://huggingface.co/eugenesiow/carn-bam)     |1.6m           |37.83/0.96         |33.51/0.9166       |33.64/0.924        |31.53/0.922        |
-|5      |[pan-bam](https://huggingface.co/eugenesiow/pan-bam)       |260k           |37.7/0.9596        |33.4/0.9161        |33.6/0.9234        |31.35/0.92         |
+|4      |[carn](https://huggingface.co/eugenesiow/carn)             |1.6m           |37.89/0.9602       |33.53/0.9173       |33.66/0.9242       |31.62/0.9229       |
+|5      |[carn-bam](https://huggingface.co/eugenesiow/carn-bam)     |1.6m           |37.83/0.96         |33.51/0.9166       |33.64/0.924        |31.53/0.922        |
+|6      |[pan-bam](https://huggingface.co/eugenesiow/pan-bam)       |260k           |37.7/0.9596        |33.4/0.9161        |33.6/0.9234        |31.35/0.92         |
 
 ### Scale x3
 
