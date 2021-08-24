@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- New model: `PhysicssrModel`
+- New model: `DrnModel`
 
 ## [0.1.4] - 2021-08-17
 ### Added

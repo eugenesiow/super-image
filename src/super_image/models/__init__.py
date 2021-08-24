@@ -22,3 +22,7 @@ from .rcan.modeling_rcan import RcanModel
 from .rcan.configuration_rcan import RcanConfig
 from .mdsr.modeling_mdsr import MdsrModel
 from .mdsr.configuration_mdsr import MdsrConfig
+from .drn.configuration_drn import DrnConfig
+from .drn.modeling_drn import DrnModel
+from .physicssr.configuration_physicssr import PhysicssrConfig
+from .physicssr.modeling_physicssr import PhysicssrModel
