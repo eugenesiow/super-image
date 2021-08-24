@@ -26,3 +26,5 @@ from .drn.configuration_drn import DrnConfig
 from .drn.modeling_drn import DrnModel
 from .physicssr.configuration_physicssr import PhysicssrConfig
 from .physicssr.modeling_physicssr import PhysicssrModel
+from .han.configuration_han import HanConfig
+from .han.modeling_han import HanModel
