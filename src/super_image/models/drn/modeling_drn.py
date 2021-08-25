@@ -96,6 +96,10 @@ class DrnModel(PreTrainedModel):
         self.opt = args
         self.scale = args.scale
         self.phase = len(args.scale)
+        self.dual_models = []
+        for _ in self.scale:
+            dual_model = DownBlock(args, 2).to(torch.device("cuda:0" if torch.cuda.is_available() else "cpu"))
+            self.dual_models.append(dual_model)
         n_blocks = args.n_blocks
         n_feats = args.n_feats
         kernel_size = 3

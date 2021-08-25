@@ -1,6 +1,7 @@
 from datasets import load_dataset
 from super_image import Trainer, TrainingArguments, CarnModel, CarnConfig, EdsrModel, EdsrConfig, \
-    MasaModel, MasaConfig, JiifConfig, JiifModel, LiifConfig, LiifModel, SmsrModel, SmsrConfig
+    MasaModel, MasaConfig, JiifConfig, JiifModel, LiifConfig, LiifModel, SmsrModel, SmsrConfig, \
+    HanModel, HanConfig, PhysicssrModel, PhysicssrConfig, DrnModel, DrnConfig, TrainerDrn
 from super_image.data import EvalDataset, TrainDataset, augment_five_crop
 
 
@@ -38,12 +39,33 @@ training_args = TrainingArguments(
 # )
 # model = LiifModel(config)
 
-config = SmsrConfig(
+# config = SmsrConfig(
+#     scale=2,
+# )
+# model = SmsrModel(config)
+
+# config = HanConfig(
+#     scale=2,
+# )
+# model = HanModel(config)
+
+# config = PhysicssrConfig(
+#     scale=2,
+# )
+# model = PhysicssrModel(config)
+
+config = DrnConfig(
     scale=2,
 )
-model = SmsrModel(config)
+model = DrnModel(config)
 
-trainer = Trainer(
+# trainer = Trainer(
+#     model=model,                            # the instantiated model to be trained
+#     args=training_args,                     # training arguments, defined above
+#     train_dataset=train_dataset,            # training dataset
+#     eval_dataset=eval_dataset               # evaluation dataset
+# )
+trainer = TrainerDrn(
     model=model,                            # the instantiated model to be trained
     args=training_args,                     # training arguments, defined above
     train_dataset=train_dataset,            # training dataset

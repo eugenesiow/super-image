@@ -7,6 +7,7 @@ A library of image super resolution algorithms in PyTorch. For upscaling images.
 from .configuration_utils import PretrainedConfig
 from .modeling_utils import PreTrainedModel
 from .trainer import Trainer
+from .trainer_drn import TrainerDrn
 from .training_args import TrainingArguments
 
 from .models import (
@@ -33,7 +34,7 @@ from .data import (
 
 from typing import List
 
-__all__: List[str] = ['TrainingArguments', 'Trainer',
+__all__: List[str] = ['TrainingArguments', 'Trainer', 'TrainerDrn',
                       'EdsrModel', 'EdsrConfig',
                       'MsrnModel', 'MsrnConfig',
                       'A2nModel', 'A2nConfig',
