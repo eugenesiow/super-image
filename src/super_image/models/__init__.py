@@ -28,3 +28,5 @@ from .physicssr.configuration_physicssr import PhysicssrConfig
 from .physicssr.modeling_physicssr import PhysicssrModel
 from .han.configuration_han import HanConfig
 from .han.modeling_han import HanModel
+from .awsrn.configuration_awsrn import AwsrnConfig
+from .awsrn.modeling_awsrn import AwsrnModel

@@ -26,6 +26,7 @@ from .models import (
     DrnModel, DrnConfig,
     PhysicssrModel, PhysicssrConfig,
     HanModel, HanConfig,
+    AwsrnModel, AwsrnConfig,
 )
 
 from .data import (
@@ -50,4 +51,5 @@ __all__: List[str] = ['TrainingArguments', 'Trainer', 'TrainerDrn',
                       'DrnModel', 'DrnConfig',
                       'HanModel', 'HanConfig',
                       'PhysicssrModel', 'PhysicssrConfig',
+                      'AwsrnModel', 'AwsrnConfig',
                       'ImageLoader']  # noqa: WPS410 (the only __variable__ we use)

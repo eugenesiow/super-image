@@ -7,7 +7,7 @@ def count_parameters(model): return sum(p.numel() for p in model.parameters() if
 
 
 # dataset = dataset.map(map_to_array)
-dataset = load_dataset('eugenesiow/Urban100', 'bicubic_x4', split='validation')
+dataset = load_dataset('eugenesiow/Set14', 'bicubic_x2', split='validation')
 # dataset = load_dataset('eugenesiow/Set5', 'bicubic_x2', split='validation')
 # dataset = load_dataset('eugenesiow/PIRM', 'bicubic_x2', split='test')
 eval_dataset = EvalDataset(dataset)
@@ -15,7 +15,7 @@ eval_dataset = EvalDataset(dataset)
 # model = A2nModel.from_pretrained('../../super-image-models/a2n', scale=3)
 # model = CarnModel.from_pretrained('../../super-image-models/carn', scale=3)
 # model = PanModel.from_pretrained('../../super-image-models/pan', scale=3)
-model = MdsrModel.from_pretrained('../../super-image-models/mdsr', scale=4)
+model = MdsrModel.from_pretrained('../../super-image-models/mdsr', scale=2)
 # model = MsrnModel.from_pretrained('../../super-image-models/msrn', scale=2)
 print(count_parameters(model))
 # model = EdsrModel.from_pretrained('./results', scale=2)
