@@ -157,10 +157,19 @@ class AwsrnModel(PreTrainedModel):
                 try:
                     own_state[name].copy_(param)
                 except Exception:
-                    if name.find('tail') == -1:
-                        raise RuntimeError(f'While copying the parameter named {name}, '
-                                           f'whose dimensions in the model are {own_state[name].size()} and '
-                                           f'whose dimensions in the checkpoint are {param.size()}.')
+                    if name.find('tail') >= 0 or  name.find('skip') >= 0:
+                        print('Replace pre-trained upsampler to new one...')
+                    else:
+                        raise RuntimeError('While copying the parameter named {}, '
+                                           'whose dimensions in the model are {} and '
+                                           'whose dimensions in the checkpoint are {}.'
+                                           .format(name, own_state[name].size(), param.size()))
             elif strict:
                 if name.find('tail') == -1:
-                    raise KeyError(f'unexpected key "{name}" in state_dict')
+                    raise KeyError('unexpected key "{}" in state_dict'
+                                   .format(name))
+
+        if strict:
+            missing = set(own_state.keys()) - set(state_dict.keys())
+            if len(missing) > 0:
+                raise KeyError('missing keys in state_dict: "{}"'.format(missing))

@@ -1,4 +1,4 @@
-from super_image import Trainer, TrainingArguments, CarnConfig, CarnModel
+from super_image import Trainer, TrainingArguments, AwsrnConfig, AwsrnModel
 from super_image.data import EvalDataset, TrainAugmentDataset
 
 
@@ -11,11 +11,11 @@ def train_model(train_file, eval_file, scale, output_dir):
         num_train_epochs=1000,                  # total number of training epochs
     )
 
-    config = CarnConfig(
+    config = AwsrnConfig(
         scale=scale,                                # train a model to upscale 4x
         bam=True,                                   # use balanced attention
     )
-    model = CarnModel(config)
+    model = AwsrnModel(config)
 
     trainer = Trainer(
         model=model,                            # the instantiated model to be trained
