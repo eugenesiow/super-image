@@ -92,6 +92,7 @@ class AwsrnModel(PreTrainedModel):
         # hyper-params
         self.args = args
         self.bam = args.bam
+        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         scale = args.scale
         n_resblocks = args.n_resblocks
         n_feats = args.n_feats
@@ -136,7 +137,7 @@ class AwsrnModel(PreTrainedModel):
 
     def forward(self, x):
         if not self.bam:
-            x = (x - self.rgb_mean * 255) / 127.5
+            x = (x - self.rgb_mean.to(self.device) * 255) / 127.5
         s = self.skip(x)
         x = self.head(x)
         x = self.body(x)
@@ -145,7 +146,7 @@ class AwsrnModel(PreTrainedModel):
         x = self.tail(x)
         x += s
         if not self.bam:
-            x = x * 127.5 + self.rgb_mean * 255
+            x = x * 127.5 + self.rgb_mean.to(self.device) * 255
         return x
 
     def load_state_dict(self, state_dict, strict=True):

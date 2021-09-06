@@ -1,4 +1,4 @@
-from super_image import Trainer, TrainingArguments, MdsrConfig, MdsrModel
+from super_image import Trainer, TrainingArguments, EdsrConfig, EdsrModel
 from super_image.data import EvalDataset, TrainAugmentDataset
 
 
@@ -11,11 +11,12 @@ def train_model(train_file, eval_file, scale, output_dir):
         num_train_epochs=1000,                  # total number of training epochs
     )
 
-    config = MdsrConfig(
+    config = EdsrConfig(
         scale=scale,                                # train a model to upscale 4x
-        bam=True,                                   # use balanced attention
+        n_resblocks=32,
+        n_feats=256
     )
-    model = MdsrModel(config)
+    model = EdsrModel(config)
 
     trainer = Trainer(
         model=model,                            # the instantiated model to be trained
@@ -27,6 +28,6 @@ def train_model(train_file, eval_file, scale, output_dir):
     trainer.train()
 
 
-train_model('../BAM/DIV2K_train_HR_x4_train.h5', '../BAM/DIV2K_val_HR_x4_val.h5', 4, './results_mdsr_4x')
-train_model('../BAM/DIV2K_train_HR_x2_train.h5', '../BAM/DIV2K_val_HR_x2_val.h5', 2, './results_mdsr_2x')
-train_model('../BAM/DIV2K_train_HR_x3_train.h5', '../BAM/DIV2K_val_HR_x3_val.h5', 3, './results_mdsr_3x')
+train_model('../BAM/DIV2K_train_HR_x4_train.h5', '../BAM/DIV2K_val_HR_x4_val.h5', 4, './results_edsr_no_bam_4x')
+train_model('../BAM/DIV2K_train_HR_x2_train.h5', '../BAM/DIV2K_val_HR_x2_val.h5', 2, './results_edsr_no_bam_2x')
+train_model('../BAM/DIV2K_train_HR_x3_train.h5', '../BAM/DIV2K_val_HR_x3_val.h5', 3, './results_edsr_no_bam_3x')

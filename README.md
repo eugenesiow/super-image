@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-    <img align="center" alt="the super-image library's MSRN x4 model" src="docs/banner.png">
+    <img align="center" alt="the super-image library's MSRN x4 model" src="https://github.com/eugenesiow/super-image/raw/main/docs/banner.png">
 </p>
 
 <h3 align="center">
@@ -88,11 +88,12 @@ All training was to 1000 epochs (some publications, like a2n, train to >1000 epo
 |3      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|5.9m           |**35.13/0.9408**   |31.06/0.8588  	    |29.65/0.8196       |29.26/0.8736       |
 |4      |[mdsr-bam](https://huggingface.co/eugenesiow/mdsr-bam)  	|2.9m           |35.07/0.9402       |31.04/0.8582       |29.62/0.8188       |29.16/0.8717       |
 |5      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|1.5m           |35.01/0.9402       |31.01/0.8583       |29.63/0.8190       |29.19/0.8722       |
-|6      |[carn](https://huggingface.co/eugenesiow/carn)             |1.6m           |34.88/0.9391       |30.93/0.8566       |29.56/0.8173       |28.95/0.867        |
-|7      |[a2n](https://huggingface.co/eugenesiow/a2n)   	        |1.0m           |34.8/0.9387        |30.94/0.8568       |29.56/0.8173       |28.95/0.8671       |
-|8      |[carn-bam](https://huggingface.co/eugenesiow/carn-bam)     |1.6m           |34.82/0.9385       |30.9/0.8558        |29.54/0.8166       |28.84/0.8648       |
-|9      |[pan-bam](https://huggingface.co/eugenesiow/pan-bam)       |260k           |34.62/0.9371       |30.83/0.8545       |29.47/0.8153       |28.64/0.861        |
-|10     |[pan](https://huggingface.co/eugenesiow/pan)               |260k           |34.64/0.9376       |30.8/0.8544        |29.47/0.815        |28.61/0.8603       |
+|6      |[awsrn-bam](https://huggingface.co/eugenesiow/awsrn-bam)   |1.5m           |35.05/0.9403       |31.01/0.8581       |29.63/0.8188       |29.14/0.871        |
+|7      |[carn](https://huggingface.co/eugenesiow/carn)             |1.6m           |34.88/0.9391       |30.93/0.8566       |29.56/0.8173       |28.95/0.867        |
+|8      |[a2n](https://huggingface.co/eugenesiow/a2n)   	        |1.0m           |34.8/0.9387        |30.94/0.8568       |29.56/0.8173       |28.95/0.8671       |
+|9      |[carn-bam](https://huggingface.co/eugenesiow/carn-bam)     |1.6m           |34.82/0.9385       |30.9/0.8558        |29.54/0.8166       |28.84/0.8648       |
+|10     |[pan-bam](https://huggingface.co/eugenesiow/pan-bam)       |260k           |34.62/0.9371       |30.83/0.8545       |29.47/0.8153       |28.64/0.861        |
+|11     |[pan](https://huggingface.co/eugenesiow/pan)               |260k           |34.64/0.9376       |30.8/0.8544        |29.47/0.815        |28.61/0.8603       |
 
 ### Scale x4
 

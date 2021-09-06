@@ -39,6 +39,7 @@ class EdsrModel(PreTrainedModel):
     def __init__(self, args, conv=default_conv):
         super(EdsrModel, self).__init__(args)
 
+        self.args = args
         n_resblocks = args.n_resblocks
         n_feats = args.n_feats
         n_colors = args.n_colors

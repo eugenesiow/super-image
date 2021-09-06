@@ -8,7 +8,7 @@ def count_parameters(model): return sum(p.numel() for p in model.parameters() if
 
 if __name__ == '__main__':
     dataset_names = ['eugenesiow/Set5', 'eugenesiow/Set14', 'eugenesiow/BSD100', 'eugenesiow/Urban100']
-    scales = [4, 2]
+    scales = [4]
     for scale in scales:
         for dataset_name in dataset_names:
             # dataset = dataset.map(map_to_array)
@@ -21,7 +21,7 @@ if __name__ == '__main__':
             # model = CarnModel.from_pretrained('../../super-image-models/carn', scale=3)
             # model = PanModel.from_pretrained('../../super-image-models/pan', scale=3)
             # model = MdsrModel.from_pretrained('../../super-image-models/mdsr', scale=3)
-            model = AwsrnModel.from_pretrained('../../super-image-models/awsrn-bam', scale=scale)
+            model = AwsrnModel.from_pretrained('../../super-image-models/awsrn', scale=scale)
             # model = MsrnModel.from_pretrained('../../super-image-models/msrn', scale=2)
             print(count_parameters(model))
             # model = EdsrModel.from_pretrained('./results', scale=2)
