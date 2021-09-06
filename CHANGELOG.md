@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 
+## [0.1.6] - 2021-09-06
+### Updated
+- Update `EdsrModel` to fix `no_upsampling` bug where `self.args` was not stored.
+
 ## [0.1.5] - 2021-08-30
 ### Added
 - New model: `PhysicssrModel`
