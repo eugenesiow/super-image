@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 from PIL import Image
 from super_image.models import EdsrModel, EdsrConfig, MsrnModel, A2nConfig, A2nModel, PanModel, CarnModel, MdsrModel, \
-    AwsrnModel
+    AwsrnModel, HanModel, DrlnModel, RcanModel
 from torch.utils.data import Dataset
 from torch import nn
 from torch.utils.data.dataloader import DataLoader
@@ -149,6 +149,12 @@ def output_image(input_dir, eval_file, scale, model_type='edsr'):
         model = MdsrModel.from_pretrained(input_dir, scale=scale)
     elif model_type == 'awsrn':
         model = AwsrnModel.from_pretrained(input_dir, scale=scale)
+    elif model_type == 'han':
+        model = HanModel.from_pretrained(input_dir, scale=scale)
+    elif model_type == 'drln':
+        model = DrlnModel.from_pretrained(input_dir, scale=scale)
+    elif model_type == 'rcan':
+        model = RcanModel.from_pretrained(input_dir, scale=scale)
     else:
         model = MsrnModel.from_pretrained(input_dir, scale=scale)
     for i, data in enumerate(eval_dataloader):
@@ -222,7 +228,8 @@ def output_image(input_dir, eval_file, scale, model_type='edsr'):
 # output_image('eugenesiow/edsr-base', '../../../super-image-models/test/Set5_x4.h5', 4)
 # output_image('eugenesiow/a2n', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='a2n')
 # output_singles('../../../super-image-models/msrn', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='msrn')
-output_image('../../../super-image-models/awsrn-bam', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='awsrn')
+# output_image('../../../super-image-models/edsr', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='edsr')
+output_image('../../../super-image-models/rcan-bam', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='rcan')
 # output_image('../../../super-image-models/pan', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='pan')
 # output_image('../../../super-image-models/msrn-bam', '../../../super-image-models/test/Set5_x4.h5', 4, model_type='msrn')
 # load_pretrained('eugenesiow/a2n', '../../../super-image-models/test/Set14_x4.h5', 4, model_type='a2n')

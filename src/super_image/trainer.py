@@ -132,6 +132,9 @@ class Trainer:
         #     # release memory
         #     del state_dict
 
+        if args.n_gpu > 1:
+            self.model = nn.DataParallel(self.model)
+
         optimizer = Adam(self.model.parameters(), lr=learning_rate)
         scheduler = lr_scheduler.StepLR(optimizer, step_size=step_size, gamma=self.args.gamma)
 
@@ -150,13 +153,6 @@ class Trainer:
 
                     inputs = inputs.to(device)
                     labels = labels.to(device)
-
-                    if self.model.config.model_type == 'SMSR':
-                        # update tau for gumbel softmax
-                        tau = max(1 - (epoch - 1) / 500, 0.4)
-                        for m in self.model.modules():
-                            if hasattr(m, '_set_tau'):
-                                m._set_tau(tau)
 
                     preds = self.model(inputs)
                     criterion = nn.L1Loss()
