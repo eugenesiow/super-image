@@ -9,6 +9,7 @@ def count_parameters(model): return sum(p.numel() for p in model.parameters() if
 
 if __name__ == '__main__':
     dataset_names = ['eugenesiow/Set5', 'eugenesiow/Set14', 'eugenesiow/BSD100', 'eugenesiow/Urban100']
+    # dataset_names = ['eugenesiow/Urban100']
     scales = [2]
     for scale in scales:
         for dataset_name in dataset_names:
@@ -23,11 +24,11 @@ if __name__ == '__main__':
             # model = PanModel.from_pretrained('../../super-image-models/pan', scale=scale)
             # model = MdsrModel.from_pretrained('../../super-image-models/mdsr', scale=scale)
             # model = AwsrnModel.from_pretrained('../../super-image-models/awsrn', scale=scale)
-            # model = HanModel.from_pretrained('../../super-image-models/han', scale=scale)
+            model = HanModel.from_pretrained('../../super-image-models/han', scale=scale)
             # model = DrlnModel.from_pretrained('../../super-image-models/drln-bam', scale=scale)
             # model = RcanModel.from_pretrained('../../super-image-models/rcan-bam', scale=scale)
             # model = MsrnModel.from_pretrained('../../super-image-models/msrn', scale=scale)
-            model = EdsrModel.from_pretrained('../../super-image-models/edsr', scale=scale)
+            # model = EdsrModel.from_pretrained('../../super-image-models/edsr', scale=scale)
             # model = EdsrModel.from_pretrained('eugenesiow/edsr-base', scale=scale)
             # model = MsrnModel.from_pretrained('eugenesiow/msrn-bam', scale=scale)
             # model = MsrnModel.from_pretrained('eugenesiow/msrn', scale=scale)

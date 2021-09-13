@@ -70,26 +70,29 @@ All training was to 1000 epochs (some publications, like a2n, train to >1000 epo
 
 |Rank   |Model  	                                                |Params         |Set5  	            |Set14  	        |BSD100  	        |Urban100  	        |
 |---    |---	                                                    |---            |---                |---	            |---	            |---	            |
-|1      |[edsr](https://huggingface.co/eugenesiow/edsr)  	        |41m            |**38.19/0.9612**   |**33.99/0.9215**  	|**33.89/0.9266**   |**32.68/0.9331**   |
-|2      |[msrn](https://huggingface.co/eugenesiow/msrn)  	        |5.9m           |38.08/0.9609       |33.75/0.9183  	    |33.82/0.9258       |32.14/0.9287       |
-|3      |[mdsr](https://huggingface.co/eugenesiow/mdsr)             |2.7m           |38.04/0.9608       |33.71/0.9184       |33.79/0.9256       |32.14/0.9283       |
-|4      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|5.9m           |38.02/0.9608       |33.73/0.9186  	    |33.78/0.9253       |32.08/0.9276       |
-|5      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|1.5m           |38.02/0.9607       |33.66/0.9180       |33.77/0.9254       |32.04/0.9276       |
-|6      |[mdsr-bam](https://huggingface.co/eugenesiow/mdsr-bam)     |2.7m           |38/0.9607          |33.68/0.9182       |33.77/0.9253       |32.04/0.9272       |
-|7      |[awsrn-bam](https://huggingface.co/eugenesiow/awsrn-bam)   |1.4m           |37.99/0.9606       |33.66/0.918        |33.76/0.9253       |31.95/0.9265       |
-|8      |[a2n](https://huggingface.co/eugenesiow/a2n)   	        |1.0m           |37.87/0.9602       |33.54/0.9171       |33.67/0.9244       |31.71/0.9240       |
-|9      |[carn](https://huggingface.co/eugenesiow/carn)             |1.6m           |37.89/0.9602       |33.53/0.9173       |33.66/0.9242       |31.62/0.9229       |
-|10     |[carn-bam](https://huggingface.co/eugenesiow/carn-bam)     |1.6m           |37.83/0.96         |33.51/0.9166       |33.64/0.924        |31.53/0.922        |
-|11     |[pan](https://huggingface.co/eugenesiow/pan)               |260k           |37.77/0.9599       |33.42/0.9162       |33.6/0.9235        |31.31/0.9197       |
-|12     |[pan-bam](https://huggingface.co/eugenesiow/pan-bam)       |260k           |37.7/0.9596        |33.4/0.9161        |33.6/0.9234        |31.35/0.92         |
+|1      |[drln-bam](https://huggingface.co/eugenesiow/drln-bam)     |34m            |**38.23/0.9614**   |33.95/0.9206  	    |**33.95/0.9269**   |**32.81/0.9339**   |
+|2      |[edsr](https://huggingface.co/eugenesiow/edsr)  	        |41m            |38.19/0.9612       |**33.99/0.9215**  	|33.89/0.9266       |32.68/0.9331       |
+|3      |[msrn](https://huggingface.co/eugenesiow/msrn)  	        |5.9m           |38.08/0.9609       |33.75/0.9183  	    |33.82/0.9258       |32.14/0.9287       |
+|4      |[mdsr](https://huggingface.co/eugenesiow/mdsr)             |2.7m           |38.04/0.9608       |33.71/0.9184       |33.79/0.9256       |32.14/0.9283       |
+|5      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|5.9m           |38.02/0.9608       |33.73/0.9186  	    |33.78/0.9253       |32.08/0.9276       |
+|6      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|1.5m           |38.02/0.9607       |33.66/0.9180       |33.77/0.9254       |32.04/0.9276       |
+|7      |[mdsr-bam](https://huggingface.co/eugenesiow/mdsr-bam)     |2.7m           |38/0.9607          |33.68/0.9182       |33.77/0.9253       |32.04/0.9272       |
+|8      |[awsrn-bam](https://huggingface.co/eugenesiow/awsrn-bam)   |1.4m           |37.99/0.9606       |33.66/0.918        |33.76/0.9253       |31.95/0.9265       |
+|9      |[a2n](https://huggingface.co/eugenesiow/a2n)   	        |1.0m           |37.87/0.9602       |33.54/0.9171       |33.67/0.9244       |31.71/0.9240       |
+|10     |[carn](https://huggingface.co/eugenesiow/carn)             |1.6m           |37.89/0.9602       |33.53/0.9173       |33.66/0.9242       |31.62/0.9229       |
+|11     |[carn-bam](https://huggingface.co/eugenesiow/carn-bam)     |1.6m           |37.83/0.96         |33.51/0.9166       |33.64/0.924        |31.53/0.922        |
+|12     |[pan](https://huggingface.co/eugenesiow/pan)               |260k           |37.77/0.9599       |33.42/0.9162       |33.6/0.9235        |31.31/0.9197       |
+|13     |[pan-bam](https://huggingface.co/eugenesiow/pan-bam)       |260k           |37.7/0.9596        |33.4/0.9161        |33.6/0.9234        |31.35/0.92         |
 
 ### Scale x3
 
 |Rank   |Model  	                                                |Params         |Set5  	            |Set14  	        |BSD100  	        |Urban100  	        |
 |---    |---	                                                    |---            |---                |---	            |---	            |---	            |
-|1      |[msrn](https://huggingface.co/eugenesiow/msrn)             |6.1m           |35.12/0.9409       |**31.08/0.8593**   |**29.67/0.8198**   |**29.31/0.8743**   |
+|1      |[drln-bam](https://huggingface.co/eugenesiow/drln-bam)     |34m            |35.3/0.9422        |**31.27/0.8624**   |**29.78/0.8224**   |**29.82/0.8828**   |
+|1      |[edsr](https://huggingface.co/eugenesiow/edsr)             |44m            |**35.31/0.9421**   |31.18/0.862        |29.77/0.8224       |29.75/0.8825       |
+|1      |[msrn](https://huggingface.co/eugenesiow/msrn)             |6.1m           |35.12/0.9409       |31.08/0.8593       |29.67/0.8198       |29.31/0.8743       |
 |2      |[mdsr](https://huggingface.co/eugenesiow/mdsr)  	        |2.9m           |35.11/0.9406       |31.06/0.8593  	    |29.66/0.8196       |29.29/0.8738       |
-|3      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|5.9m           |**35.13/0.9408**   |31.06/0.8588  	    |29.65/0.8196       |29.26/0.8736       |
+|3      |[msrn-bam](https://huggingface.co/eugenesiow/msrn-bam)  	|5.9m           |35.13/0.9408       |31.06/0.8588  	    |29.65/0.8196       |29.26/0.8736       |
 |4      |[mdsr-bam](https://huggingface.co/eugenesiow/mdsr-bam)  	|2.9m           |35.07/0.9402       |31.04/0.8582       |29.62/0.8188       |29.16/0.8717       |
 |5      |[edsr-base](https://huggingface.co/eugenesiow/edsr-base)  	|1.5m           |35.01/0.9402       |31.01/0.8583       |29.63/0.8190       |29.19/0.8722       |
 |6      |[awsrn-bam](https://huggingface.co/eugenesiow/awsrn-bam)   |1.5m           |35.05/0.9403       |31.01/0.8581       |29.63/0.8188       |29.14/0.871        |
