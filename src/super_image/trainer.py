@@ -173,7 +173,10 @@ class Trainer:
     def eval(self, epoch):
         args = self.args
 
-        scale = self.model.config.scale
+        if isinstance(self.model, nn.DataParallel):
+            scale = self.model.module.config.scale
+        else:
+            scale = self.model.config.scale
         device = args.device
         eval_dataloader = self.get_eval_dataloader()
         epoch_psnr = AverageMeter()

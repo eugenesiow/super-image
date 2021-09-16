@@ -27,6 +27,7 @@ class EvalMetrics:
             inputs, labels = data
             inputs = inputs.to(self.device)
             labels = labels.to(self.device)
+            model.to(self.device)
             with torch.no_grad():
                 preds = model(inputs)
 

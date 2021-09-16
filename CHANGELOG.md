@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - New model: `DdbpnModel`
 - New model: `RnanModel`
 
+### Updated
+- Fix `EvalMetrics` shifting model to `self.device` for evaluation on GPU.
+
 ## [0.1.6] - 2021-09-06
 ### Updated
 - Update `EdsrModel` to fix `no_upsampling` bug where `self.args` was not stored.

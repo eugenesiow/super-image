@@ -228,6 +228,7 @@ class NLMaskBranchDownUp(nn.Module):
         return mx
 
 
+
 class ResAttModuleDownUpPlus(nn.Module):
     def __init__(
             self, conv, n_feat, kernel_size,
@@ -333,20 +334,25 @@ class RnanModel(PreTrainedModel):
         self.tail = nn.Sequential(*modules_tail)
 
     def forward(self, x):
+        if self.training:
+            x = self.sub_mean(x)
+            feats_shallow = self.head(x)
 
-        x = self.sub_mean(x)
-        feats_shallow = self.head(x)
+            res = self.body_nl_low(feats_shallow)
+            res = self.body(res)
+            res = self.body_nl_high(res)
+            res += feats_shallow
 
-        res = self.body_nl_low(feats_shallow)
-        res = self.body(res)
-        res = self.body_nl_high(res)
-        res += feats_shallow
+            res_main = self.tail(res)
 
-        res_main = self.tail(res)
+            res_main = self.add_mean(res_main)
 
-        res_main = self.add_mean(res_main)
-
-        return res_main
+            return res_main
+        else:
+            # need to implement a forward chopping function as the authors use f = torch.matmul(theta_x, phi_x)
+            # which consumes a huge amount of memory on the eval SR image
+            # https://github.com/yulunzhang/RNAN/issues/12
+            print('eval')
 
     def load_state_dict(self, state_dict, strict=False):
         own_state = self.state_dict()
