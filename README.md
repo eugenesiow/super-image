@@ -33,6 +33,12 @@ With `pip`:
 pip install super-image
 ```
 
+## Demo
+
+Try the various [models](#pre-trained-models) on your images instantly.
+
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/eugenesiow/super-image)
+
 ## Quick Start
 
 Quickly utilise pre-trained models for upscaling your images 2x, 3x and 4x. See the full list of models [below](#pre-trained-models).
