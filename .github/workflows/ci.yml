@@ -98,3 +98,48 @@ jobs:
 
     - name: Run the test suite
       run: poetry run duty test
+
+  build:
+    needs: test
+    strategy:
+      fail-fast: false
+      matrix:
+        runs-on:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+    runs-on: ${{ matrix.runs-on }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - name: Install dependencies
+        run: |
+          pip install build
+      - name: Build
+        run: |
+          python -m build
+      - uses: actions/upload-artifact@v3
+        if: runner.os == 'Linux' && ! startsWith(github.ref, 'refs/tags/')
+        with:
+          path: |
+            dist/*
+            build/resources/*
+      - name: Get changelog
+        if: startsWith(github.ref, 'refs/tags/')
+        run: >
+          mkdir -p build;
+          perl -0777 -ne'/## .*?\n(.*?)\n\n## /s; print $1' CHANGELOG.md >
+          build/CHANGELOG.md
+      - uses: softprops/action-gh-release@v1
+        if: runner.os == 'Linux' && startsWith(github.ref, 'refs/tags/')
+        with:
+          body_path: build/CHANGELOG.md
+          files: |
+            dist/*
+            build/resources/*
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        if: runner.os == 'Linux' && startsWith(github.ref, 'refs/tags/')
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
