@@ -2,11 +2,14 @@ name: ci
 
 on:
   push:
-    branches:
-      - master
+    paths-ignore:
+      - "**.md"
+      - docs/*
   pull_request:
-    branches:
-      - master
+    paths-ignore:
+      - "**.md"
+      - docs/*
+  workflow_dispatch:
 
 defaults:
   run:
