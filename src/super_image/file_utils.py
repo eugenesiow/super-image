@@ -3,18 +3,17 @@ Utilities for working with the local cache and the HuggingFace hub.
 Functions are adapted from the HuggingFace transformers library at
 https://github.com/huggingface/transformers/.
 """
+
 import os
 from pathlib import Path
+from typing import Optional
 from urllib.parse import urlparse
-from typing import Any, BinaryIO, Dict, List, Optional, Tuple, Union
 
-from tqdm.auto import tqdm
+from huggingface_hub import hf_hub_download, hf_hub_url
 
-from huggingface_hub import hf_hub_url, cached_download
-
-WEIGHTS_NAME = 'pytorch_model.pt'
-WEIGHTS_NAME_SCALE = 'pytorch_model_{scale}x.pt'
-CONFIG_NAME = 'config.json'
+WEIGHTS_NAME = "pytorch_model.pt"
+WEIGHTS_NAME_SCALE = "pytorch_model_{scale}x.pt"
+CONFIG_NAME = "config.json"
 
 
 def is_remote_url(url_or_filename):
@@ -22,9 +21,7 @@ def is_remote_url(url_or_filename):
     return parsed.scheme in ("http", "https")
 
 
-def get_model_url(
-    model_id: str, filename: str, revision: Optional[str] = None
-) -> str:
+def get_model_url(model_id: str, filename: str, revision: Optional[str] = None) -> str:
     """
     Resolve a model identifier, a file name, and an optional revision id, to a huggingface hub url.
     """
@@ -65,7 +62,7 @@ def get_model_path(
 
     if is_remote_url(url_or_filename):
         # URL, so get it from the cache (downloading if necessary)
-        output_path = cached_download(url_or_filename, cache_dir=cache_dir)
+        output_path = hf_hub_download(url_or_filename, cache_dir=cache_dir)
     elif os.path.exists(url_or_filename):
         # File, and it exists.
         output_path = url_or_filename
