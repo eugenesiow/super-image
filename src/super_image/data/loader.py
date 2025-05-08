@@ -11,7 +11,7 @@ class ImageLoader:
     def load_image(image: Image):
         lr = np.array(image.convert('RGB'))
         lr = lr[::].astype(np.float32).transpose([2, 0, 1]) / 255.0
-        return torch.as_tensor(np.array([lr]))
+        return torch.as_tensor(np.array(np.array([lr])))
 
     @staticmethod
     def _process_image_to_save(pred: Tensor):
