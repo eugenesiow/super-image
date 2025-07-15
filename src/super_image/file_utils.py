@@ -61,8 +61,22 @@ def get_model_path(
         cache_dir = str(cache_dir)
 
     if is_remote_url(url_or_filename):
-        # URL, so get it from the cache (downloading if necessary)
-        output_path = hf_hub_download(url_or_filename, cache_dir=cache_dir)
+        parsed = urlparse(url_or_filename)
+        parts = parsed.path.strip("/").split("/")
+        # Expecting format: /<namespace>/<repo>/resolve/<revision>/<filename>
+        if "resolve" in parts:
+            idx = parts.index("resolve")
+            repo_id = "/".join(parts[:idx])        # 'eugenesiow/edsr-base'
+            revision = parts[idx + 1]              # 'main'
+            filename = "/".join(parts[idx + 2:])   # 'config.json', or deeper
+            output_path = hf_hub_download(
+                repo_id=repo_id,
+                filename=filename,
+                revision=revision,
+                cache_dir=cache_dir,
+            )
+        else:
+            raise ValueError(f"Invalid HuggingFace model URL: {url_or_filename}")
     elif os.path.exists(url_or_filename):
         # File, and it exists.
         output_path = url_or_filename

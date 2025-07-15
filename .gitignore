@@ -12,3 +12,4 @@ site/
 poetry.lock
 .venv/
 venv/
+uv.lock
